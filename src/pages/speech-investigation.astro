@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Speech Investigation - Research Methods";
+const description = "Details about the speech research investigation methodology.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="investigation" />
+  
+  <article>
+    <Breadcrumb currentPage="Speech Investigation" />
+
+    <header class="page-header">
+      <h1>Speech Investigation</h1>
+      <p class="subtitle">Research Methods and Approach</p>
+    </header>
+
+    <section class="content">
+      <h2>Passive Research Methodology</h2>
+      <p>
+        Unlike controlled laboratory experiments, our research employs a passive observation 
+        methodology. This approach captures natural, spontaneous speech without prompting 
+        or artificial stimuli, providing insight into genuine language use.
+      </p>
+
+      <h2>Documentation Process</h2>
+      <p>
+        Each speech event is carefully documented with the following information:
+      </p>
+      <ul>
+        <li>The exact utterance (transcription)</li>
+        <li>Audio recording when possible</li>
+        <li>Context and environmental factors</li>
+        <li>Time and date</li>
+        <li>Observer notes on bird behavior</li>
+        <li>Any preceding events or interactions</li>
+      </ul>
+
+      <h2>Analysis Framework</h2>
+      <p>
+        Speech samples are analyzed for several key factors:
+      </p>
+      <ul>
+        <li><strong>Novelty:</strong> Is the utterance original or a direct repetition?</li>
+        <li><strong>Context appropriateness:</strong> Does the speech fit the situation?</li>
+        <li><strong>Grammatical structure:</strong> Does the bird apply grammar rules?</li>
+        <li><strong>Pronoun usage:</strong> Does the bird understand pronouns?</li>
+        <li><strong>Verb conjugation:</strong> Are verbs correctly matched to subjects?</li>
+      </ul>
+
+      <h2>Key Findings</h2>
+      <p>
+        Our investigation has revealed several significant findings about Arielle's 
+        language abilities:
+      </p>
+      <ul>
+        <li>Consistent pronoun substitution (I, you, she)</li>
+        <li>Correct verb conjugation to match subjects</li>
+        <li>Contextually appropriate vocabulary selection</li>
+        <li>Novel combinations of learned phrases</li>
+        <li>Emotional tone modulation</li>
+      </ul>
+
+      <h2>Ongoing Research</h2>
+      <p>
+        This research continues as we document more examples of Arielle's speech. 
+        Each new observation adds to our understanding of avian language capabilities 
+        and the potential for meaningful interspecies communication.
+      </p>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    color: #663300;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .content {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .content h2 {
+    color: #009966;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  .content h2:first-child {
+    margin-top: 0;
+  }
+
+  .content p {
+    margin-bottom: 1.5em;
+    color: #333;
+  }
+
+  .content ul {
+    margin: 20px 0;
+    padding-left: 30px;
+  }
+
+  .content li {
+    margin-bottom: 12px;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .content li strong {
+    color: #663300;
+  }
+</style>

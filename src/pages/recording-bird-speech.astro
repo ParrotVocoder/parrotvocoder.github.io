@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Recording Bird Speech";
+const description = "Methods and techniques for recording and analyzing bird speech.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="recording" />
+  
+  <article>
+    <Breadcrumb currentPage="Recording Bird Speech" />
+
+    <header class="page-header">
+      <h1>Recording Bird Speech</h1>
+    </header>
+
+    <section class="content">
+      <p>
+        Recording bird speech for research purposes requires specialized techniques and 
+        equipment. Unlike controlled laboratory settings, capturing natural speech from 
+        a companion parrot involves patience and preparation.
+      </p>
+
+      <h2>Equipment Considerations</h2>
+      <p>
+        High-quality audio recording equipment is essential for capturing the nuances of 
+        bird speech. Digital recorders with good frequency response can capture the full 
+        range of a macaw's vocalizations, from low rumbles to high-pitched calls.
+      </p>
+
+      <h2>Recording Environment</h2>
+      <p>
+        The recording environment significantly affects audio quality. Background noise, 
+        room acoustics, and microphone placement all play important roles. A quiet setting 
+        with minimal echo produces the clearest recordings.
+      </p>
+
+      <h2>Natural vs. Prompted Speech</h2>
+      <p>
+        For research purposes, natural, unprompted speech provides the most valuable data. 
+        When a bird speaks spontaneously without cues, we gain insight into genuine 
+        language use rather than trained responses.
+      </p>
+
+      <h2>Documentation</h2>
+      <p>
+        Proper documentation accompanies each recording:
+      </p>
+      <ul>
+        <li>Date and time of recording</li>
+        <li>Environmental conditions</li>
+        <li>Context before and after the utterance</li>
+        <li>The bird's apparent emotional state</li>
+        <li>Any relevant preceding events</li>
+      </ul>
+
+      <h2>Analysis Methods</h2>
+      <p>
+        Recorded speech can be analyzed using various methods, including:
+      </p>
+      <ul>
+        <li>Spectrographic analysis for acoustic properties</li>
+        <li>Phonetic transcription for linguistic content</li>
+        <li>Contextual analysis for meaning and intent</li>
+        <li>Comparative analysis with human speech patterns</li>
+      </ul>
+
+      <h2>Preservation</h2>
+      <p>
+        Audio recordings are preserved in multiple formats and locations to ensure 
+        long-term availability for research and reference purposes.
+      </p>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header h1 {
+    font-size: 2rem;
+    color: #663300;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .content h2 {
+    color: #009966;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+
+  .content p {
+    margin-bottom: 1.5em;
+    color: #333;
+  }
+
+  .content ul {
+    margin: 20px 0;
+    padding-left: 30px;
+  }
+
+  .content li {
+    margin-bottom: 10px;
+    color: #444;
+  }
+</style>

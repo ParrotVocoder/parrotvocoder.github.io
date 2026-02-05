@@ -1,0 +1,102 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = "" } = Astro.props;
+
+const navItems = [
+  { href: "/", label: "Home", id: "home" },
+  { href: "/welcome", label: "Welcome", id: "welcome" },
+  { href: "/history-background", label: "History & Background", id: "history" },
+  { href: "/photo-album", label: "Photo Album", id: "photos" },
+  { href: "/macaw-speech", label: "Macaw Speech", id: "speech" },
+  { href: "/difficulties-interspecies-communication", label: "Difficulties with Interspecies Communication", id: "difficulties" },
+  { href: "/recording-bird-speech", label: "Recording Bird Speech", id: "recording" },
+  { href: "/related-links", label: "Related Links", id: "links" },
+  { href: "/another-mind", label: "Another Mind", id: "book" },
+  { href: "/contact", label: "Contact Us", id: "contact" },
+  { href: "/speech-investigation", label: "Speech Investigation", id: "investigation" },
+  { href: "/services", label: "Services", id: "services" },
+];
+---
+
+<nav class="nav-sidebar" aria-label="Main navigation">
+  <ul class="nav-list">
+    {navItems.map((item) => (
+      <li class="nav-item">
+        <a 
+          href={item.href} 
+          class:list={["nav-link", { active: currentPage === item.id }]}
+          aria-current={currentPage === item.id ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .nav-sidebar {
+    padding: 10px;
+  }
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 12px 15px;
+    background-color: #006644;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .nav-link:hover {
+    background-color: #008855;
+    transform: translateX(3px);
+  }
+
+  .nav-link:visited {
+    color: #ffffff;
+  }
+
+  .nav-link.active {
+    background-color: #00aa66;
+    border-left: 4px solid #ffcc00;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 850px) {
+    .nav-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .nav-link {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    .nav-link:hover {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Services - Presentations, Transcription, and More";
+const description = "Services offered including presentations about talking birds, speech transcription, and merchandise.";
+
+const services = [
+  {
+    title: "Educational Presentations",
+    description: "Engaging presentations about Arielle's remarkable speech abilities and interspecies communication. Suitable for schools, libraries, bird clubs, and conferences.",
+    features: [
+      "Live audio recordings of Arielle speaking",
+      "Video demonstrations",
+      "Interactive Q&A sessions",
+      "Age-appropriate content for all audiences"
+    ]
+  },
+  {
+    title: "Conference Speaking",
+    description: "Academic and professional presentations for conferences, symposiums, and research gatherings focusing on animal cognition and communication.",
+    features: [
+      "Research methodology discussions",
+      "Data presentation and analysis",
+      "Peer engagement opportunities"
+    ]
+  },
+  {
+    title: "Speech Transcription Services",
+    description: "Professional transcription of bird vocalizations and speech recordings. Useful for researchers and bird owners documenting their birds' language development.",
+    features: [
+      "Detailed phonetic transcription",
+      "Context documentation",
+      "Analysis notes included"
+    ]
+  },
+  {
+    title: "Book Sales",
+    description: "Copies of 'Another Kind of Mind: A Talking Bird Masters English' are available for purchase. Books can be signed upon request.",
+    features: [
+      "Signed copies available",
+      "Bulk discounts for organizations",
+      "Available at speaking events"
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="services" />
+  
+  <article>
+    <Breadcrumb currentPage="Services" />
+
+    <header class="page-header">
+      <h1>Services</h1>
+      <p class="subtitle">Presentations, Resources, and More</p>
+    </header>
+
+    <section class="intro">
+      <p>
+        We offer various services related to parrot speech research, education, and 
+        outreach. Whether you're planning an event, conducting research, or simply 
+        want to learn more, we're here to help.
+      </p>
+    </section>
+
+    <div class="services-grid">
+      {services.map((service) => (
+        <section class="service-card">
+          <h2>{service.title}</h2>
+          <p class="service-desc">{service.description}</p>
+          <ul class="feature-list">
+            {service.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+
+    <section class="booking">
+      <h2>Booking Information</h2>
+      <p>
+        To inquire about services, availability, and pricing, please visit our 
+        <a href="/contact">Contact page</a>. We recommend booking speaking engagements 
+        at least 4-6 weeks in advance.
+      </p>
+    </section>
+
+    <section class="past-events">
+      <h2>Past Presentations</h2>
+      <p>
+        Michael Dalton has presented at numerous venues including:
+      </p>
+      <ul>
+        <li>Comparative Cognition Society Conferences</li>
+        <li>American Federation of Aviculture Conventions</li>
+        <li>Gateway Parrot Club Events</li>
+        <li>Public Libraries</li>
+        <li>Television and Radio Programs</li>
+      </ul>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    color: #663300;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .service-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 4px solid #009966;
+  }
+
+  .service-card h2 {
+    color: #663300;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .service-desc {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-list li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .feature-list li:last-child {
+    border-bottom: none;
+  }
+
+  .feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #009966;
+    font-weight: bold;
+  }
+
+  .booking,
+  .past-events {
+    background: #fff9e6;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 4px solid #ff9900;
+  }
+
+  .booking h2,
+  .past-events h2 {
+    color: #663300;
+    margin-bottom: 15px;
+  }
+
+  .booking p,
+  .past-events p {
+    line-height: 1.7;
+    color: #555;
+  }
+
+  .past-events ul {
+    margin-top: 15px;
+    padding-left: 25px;
+  }
+
+  .past-events li {
+    margin-bottom: 8px;
+    color: #444;
+  }
+</style>

@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Related Links - Animal Communication Resources";
+const description = "External links to animal communication resources, writing organizations, and research.";
+
+const linkCategories = [
+  {
+    title: "Animal Communication Research",
+    links: [
+      {
+        name: "Comparative Cognition Society",
+        url: "https://comparativecognition.org",
+        description: "Society dedicated to the study of animal cognition"
+      },
+      {
+        name: "Alex Foundation",
+        url: "https://alexfoundation.org",
+        description: "Research on parrot cognition and communication"
+      }
+    ]
+  },
+  {
+    title: "Parrot Care and Information",
+    links: [
+      {
+        name: "American Federation of Aviculture",
+        url: "https://afabirds.org",
+        description: "Organization promoting aviculture and bird conservation"
+      }
+    ]
+  },
+  {
+    title: "Writing and Publishing",
+    links: [
+      {
+        name: "Writing Organizations",
+        description: "Resources for authors and researchers"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="links" />
+  
+  <article>
+    <Breadcrumb currentPage="Related Links" />
+
+    <header class="page-header">
+      <h1>Related Links</h1>
+      <p class="subtitle">Resources for Learning More</p>
+    </header>
+
+    <section class="intro">
+      <p>
+        The following links provide additional information about animal communication, 
+        parrot care, and related research. These resources have been selected for their 
+        quality and relevance to understanding talking birds.
+      </p>
+    </section>
+
+    <div class="links-container">
+      {linkCategories.map((category) => (
+        <section class="link-category">
+          <h2>{category.title}</h2>
+          <ul class="link-list">
+            {category.links.map((link) => (
+              <li class="link-item">
+                {link.url ? (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.name}
+                  </a>
+                ) : (
+                  <span class="link-name">{link.name}</span>
+                )}
+                {link.description && <p class="link-desc">{link.description}</p>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+
+    <section class="disclaimer">
+      <p>
+        <strong>Note:</strong> External links are provided for informational purposes only. 
+        ParrotSpeech.org is not responsible for the content of external websites.
+      </p>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+    color: #663300;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  .links-container {
+    display: grid;
+    gap: 40px;
+  }
+
+  .link-category h2 {
+    color: #009966;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .link-item {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #009966;
+  }
+
+  .link-item a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  .link-item a:hover {
+    text-decoration: underline;
+  }
+
+  .link-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .link-desc {
+    margin: 8px 0 0;
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  .disclaimer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #fff9e6;
+    border-radius: 8px;
+    border-left: 4px solid #ff9900;
+    font-size: 0.9rem;
+    color: #666;
+  }
+</style>

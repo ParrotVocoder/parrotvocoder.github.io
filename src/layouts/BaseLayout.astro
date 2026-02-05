@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string
+  description?: string
+  keywords?: string
+  currentPage?: string
+}
+
+const {
+  title,
+  description = "Arielle the Blue and Gold Macaw speaks English - Research on talking birds and interspecies communication",
+  keywords = "talking bird, macaw speech, Arielle, blue and gold macaw, parrot communication, bird language",
+  currentPage = "",
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="ParrotSpeech.org" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} - ParrotSpeech.org</title>
+
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <slot name="navigation" />
+      <main class="main-content">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>

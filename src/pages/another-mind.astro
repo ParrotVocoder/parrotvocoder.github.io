@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Another Kind of Mind: A Talking Bird Masters English";
+const description = "Information about the book documenting Arielle's remarkable language abilities.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="book" />
+  
+  <article>
+    <Breadcrumb currentPage="Another Mind (Book)" />
+
+    <header class="page-header">
+      <h1>Another Kind of Mind</h1>
+      <h2>A Talking Bird Masters English</h2>
+    </header>
+
+    <section class="book-info">
+      <div class="book-cover">
+        <img src="/images/image001-413x600.png" alt="Book cover: Another Kind of Mind" />
+      </div>
+
+      <div class="book-details">
+        <h3>About the Book</h3>
+        <p>
+          <em>Another Kind of Mind: A Talking Bird Masters English</em> documents the 
+          remarkable journey of Arielle, a Blue and Gold macaw who demonstrates genuine 
+          understanding and use of the English language.
+        </p>
+
+        <p>
+          Unlike previous books about talking birds, this work focuses on spontaneous, 
+          unprompted speech—words and phrases that Arielle uses without direct instruction 
+          or prompting. The book provides detailed documentation of over 100 instances of 
+          purposeful, contextually appropriate speech.
+        </p>
+
+        <h3>What You'll Learn</h3>
+        <ul>
+          <li>How Arielle learned to understand English concepts</li>
+          <li>Evidence of pronoun substitution and verb conjugation</li>
+          <li>Examples of novel, untutored speech</li>
+          <li>The methodology behind passive speech research</li>
+          <li>Practical insights for parrot owners</li>
+        </ul>
+
+        <h3>For Researchers and Bird Lovers</h3>
+        <p>
+          Whether you're a scientist interested in animal cognition, a linguist curious 
+          about language acquisition, or simply a bird lover wanting to understand your 
+          feathered companion better, this book offers valuable insights into the 
+          remarkable capabilities of talking birds.
+        </p>
+      </div>
+    </section>
+
+    <section class="press-section">
+      <h2>Press Information</h2>
+      <p>
+        For press inquiries, review copies, or interview requests, please visit our 
+        <a href="/contact">Contact page</a>.
+      </p>
+      <p>
+        <a href="/files/AKOM_Press_Release.pdf" target="_blank" class="btn">
+          Download Press Release (PDF)
+        </a>
+      </p>
+    </section>
+
+    <section class="availability">
+      <h2>Availability</h2>
+      <p>
+        The book is available at author events and through direct contact. 
+        For information about purchasing or upcoming events, please visit our 
+        <a href="/services">Services page</a>.
+      </p>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    color: #663300;
+    margin-bottom: 5px;
+  }
+
+  .page-header h2 {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .book-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .book-cover img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  }
+
+  .book-details h3 {
+    color: #009966;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+
+  .book-details h3:first-child {
+    margin-top: 0;
+  }
+
+  .book-details p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1em;
+  }
+
+  .book-details ul {
+    padding-left: 25px;
+    margin: 15px 0;
+  }
+
+  .book-details li {
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .press-section,
+  .availability {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .press-section h2,
+  .availability h2 {
+    color: #663300;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #009966;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+
+  .btn:hover {
+    background: #007755;
+  }
+
+  @media (max-width: 768px) {
+    .book-info {
+      grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
+import HighlightBox from '../components/HighlightBox.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Welcome to Arielle's World";
+const description = "Meet Arielle, a Blue and Gold macaw with remarkable speech abilities.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="welcome" />
+  
+  <article>
+    <Breadcrumb currentPage="Welcome Page" />
+
+    <header class="page-header">
+      <h1>Welcome to Arielle's world!</h1>
+    </header>
+
+    <section class="intro-text">
+      <p>
+        It would be unfair to avoid the subject of speaking abilities of macaws and other parrots. 
+        Macaws can reproduce the sound of human speech quite well or with various types of distortion. 
+        The matter becomes difficult because some sources state that macaws are not very good talkers, 
+        while others claim that macaws are excellent speakers.
+      </p>
+      <p>
+        There is insufficient space here to explain why. In a nutshell: Arielle achieves a level of 
+        speech that is unparalleled. Her words in the speech clip below reveal that she can do 
+        something unusual.
+      </p>
+    </section>
+
+    <figure class="main-image">
+      <img src="/images/Close_up_H_S-426x276-495x327.jpg" alt="Arielle the Blue and Gold Macaw" />
+      <figcaption>Photo by Linda Carpenter</figcaption>
+    </figure>
+
+    <HighlightBox>
+      <p>
+        Arielle often assembles series of untutored statements. In this example she makes a
+        pronoun substitution that shows a small portion of her understanding of English.
+        Click the play button to hear her speak.
+      </p>
+    </HighlightBox>
+
+    <AudioPlayer 
+      src="/sounds/I_m_a_pretty_girl2.wav" 
+      caption="Arielle demonstrating pronoun substitution"
+    />
+
+    <section class="about-macaws">
+      <p class="drop-cap">
+        <strong>A</strong>rielle hopes that you find her story informative and interesting.
+        She is a parrot-like bird whose relatives originally lived in tropical environments 
+        including the savannahs and rain forests of South America. Arielle is a member of the 
+        species <em>Ara ararauna</em> commonly known as the Blue and Gold macaw.
+      </p>
+
+      <p>
+        Brightly colored macaws are the largest parrot-like birds in the New World; their 
+        usual imposing size is between 33 to 36 inches from the crown of their head to the tip 
+        of their tail. If you imagine a macaw without its 20-24 inch tail feathers, the parrot 
+        would be about the size of a two-pound chicken.
+      </p>
+
+      <p>
+        Hobbyists and pet owners keep more Blue and Gold macaws than any other type of 
+        macaw, so a Blue and Gold macaw, like Arielle, is not considered a rare bird. What 
+        makes macaws popular parrots?
+      </p>
+
+      <p>
+        People are attracted to macaws by their sleek beauty and brilliant colors. Beyond their 
+        physical beauty, the birds have common endearing traits and develop individual 
+        personalities. Some macaws are very active birds, and they love to play with toys and 
+        disassemble things.
+      </p>
+
+      <p>
+        A macaw's antics keep the bird amused and can entertain its owners; however, care 
+        needs to be taken because large parrots can inadvertently ruin things in and around a 
+        home. Owners need to provide the birds with wooden-chew toys and people need to 
+        be vigilant about the bird's activities.
+      </p>
+
+      <p>
+        As an example, a playful macaw, when unsupervised, can destroy household objects. 
+        Arielle has at times chewed on wood molding around a doorway near her cage. When 
+        she is free in the house, she can walk up a spiral staircase and mount a wooden rail 
+        along the edge of our loft. She damaged the railing by breaking small chunks from the 
+        wood. This behavior is not done in spite; the bird is doing what comes naturally: wood 
+        is for chewing, and girls just like to have fun!
+      </p>
+
+      <p>
+        Macaws, like other parrots, benefit from what many people consider to be an 
+        inordinate amount of time with their owners. This is no coincidence. In the wild many 
+        parrot species pair off as monogamous couples and spend a lifetime together.
+      </p>
+
+      <p>
+        People ask me how much time one needs to properly care for a bird like Arielle. My 
+        answer is 4 hours a day extending over 365 days a year.
+      </p>
+
+      <p>
+        So, for a number of reasons, four hours is not an overly generous accounting for the 
+        time it takes to look after one's bird. It's like having a second wife, but each of us 
+        knows that before we buy a bird. The trouble is that most birds are short changed and 
+        it's not right. Don't buy a large bird unless you can forever devote four hours of each 
+        day to your feathered friend.
+      </p>
+    </section>
+
+    <HighlightBox label="Key Insight:">
+      <p>
+        Arielle said spontaneously, "I'm a pretty, ... pretty girl!" The significance of her 
+        statement exceeds the simplicity of the words she speaks. Arielle is substituting 
+        pronouns in her speech, creating a new variation of what she was told.
+      </p>
+    </HighlightBox>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header h1 {
+    font-size: 2.5rem;
+    color: #663300;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .intro-text {
+    color: #000066;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  .main-image {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .main-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .main-image figcaption {
+    color: #999;
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+
+  .about-macaws {
+    color: #663300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .about-macaws p {
+    margin-bottom: 1.5em;
+  }
+
+  .drop-cap strong {
+    font-size: 3rem;
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+    color: #663300;
+  }
+</style>

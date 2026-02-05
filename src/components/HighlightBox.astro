@@ -1,0 +1,40 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label = "" } = Astro.props;
+---
+
+<div class="highlight-box">
+  {label && <span class="label">{label}</span>}
+  <div class="content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .highlight-box {
+    background-color: #FFFF00;
+    padding: 12px 18px;
+    margin: 15px 0;
+    border-radius: 4px;
+  }
+
+  .label {
+    display: block;
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .content {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .content :global(strong) {
+    color: #FF0000;
+  }
+</style>

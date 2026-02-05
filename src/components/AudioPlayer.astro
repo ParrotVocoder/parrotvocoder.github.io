@@ -1,0 +1,57 @@
+---
+interface Props {
+  src: string;
+  caption?: string;
+  autoplay?: boolean;
+  controls?: boolean;
+  loop?: boolean;
+}
+
+const { 
+  src, 
+  caption = "", 
+  autoplay = false, 
+  controls = true,
+  loop = false 
+} = Astro.props;
+
+// Generate a unique ID for the audio element
+const audioId = `audio-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class="audio-player">
+  <audio 
+    id={audioId}
+    src={src}
+    controls={controls}
+    autoplay={autoplay}
+    loop={loop}
+    preload="metadata"
+  >
+    <p>Your browser does not support the audio element. 
+      <a href={src}>Download the audio file</a>.
+    </p>
+  </audio>
+  {caption && <p class="caption">{caption}</p>}
+</div>
+
+<style>
+  .audio-player {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .audio-player audio {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .caption {
+    font-style: italic;
+    margin: 8px 0 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+</style>

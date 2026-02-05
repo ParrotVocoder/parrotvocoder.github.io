@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Photo Album - Arielle the Talking Macaw";
+const description = "Photo gallery of Arielle the Blue and Gold macaw.";
+
+const photos = [
+  {
+    src: "/images/ARIELLE_HeadFFs.jpg",
+    alt: "Arielle head shot",
+    caption: "Arielle - A beautiful Blue and Gold macaw"
+  },
+  {
+    src: "/images/Close_up_H_S-426x276-495x327.jpg",
+    alt: "Arielle close-up",
+    caption: "Close-up of Arielle - Photo by Linda Carpenter"
+  },
+  {
+    src: "/images/Goblin_facsimile_4.jpg",
+    alt: "Halloween decoration",
+    caption: "The goblin decoration that Arielle learned to identify"
+  },
+  {
+    src: "/images/image005-451x301.jpg",
+    alt: "Arielle in the grapefruit tree",
+    caption: "Arielle playing in the grapefruit tree"
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="photos" />
+  
+  <article>
+    <Breadcrumb currentPage="Photo Album" />
+
+    <header class="page-header">
+      <h1>Photo Album</h1>
+      <p class="subtitle">Pictures of Arielle the Talking Macaw</p>
+    </header>
+
+    <section class="photo-intro">
+      <p>
+        Browse through photos of Arielle, our remarkable Blue and Gold macaw. These images 
+        capture various moments of her life, from playful activities to quiet contemplation.
+      </p>
+    </section>
+
+    <div class="photo-gallery">
+      {photos.map((photo) => (
+        <figure class="photo-item">
+          <img src={photo.src} alt={photo.alt} loading="lazy" />
+          <figcaption>{photo.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <section class="photo-notes">
+      <h2>About These Photos</h2>
+      <p>
+        Arielle has been photographed countless times over the years. She is a photogenic bird 
+        who often poses for the camera, though she can be shy at times. Her brilliant blue and 
+        gold plumage makes her a stunning subject.
+      </p>
+      <p>
+        On occasion, Arielle gets herself into precarious situations, as illustrated in some of 
+        these photos. In one memorable incident, she flew into a tall pine tree and had to be 
+        rescued with a specially designed pole and T-perch.
+      </p>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    color: #663300;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+  }
+
+  .photo-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .photo-item {
+    margin: 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .photo-item figcaption {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    background: #f9f9f9;
+  }
+
+  .photo-notes {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+  }
+
+  .photo-notes h2 {
+    color: #663300;
+    margin-bottom: 20px;
+  }
+
+  .photo-notes p {
+    line-height: 1.8;
+    margin-bottom: 1em;
+    color: #444;
+  }
+</style>

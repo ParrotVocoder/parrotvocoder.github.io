@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
+import HighlightBox from '../components/HighlightBox.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "The home of the pioneering macaw Arielle";
+const description = "A macaw called Arielle is the world's most communicative nonhuman animal.";
+
+const events = [
+  {
+    who: "Mike",
+    when: "14 July 2019",
+    where: "Clearwater Library, FL",
+    what: "Meet the Author"
+  },
+  {
+    who: "Mike",
+    when: "27-30 June 2012",
+    where: "Tenerife, Canary Islands, Spain",
+    what: "Disrupted Dialogue: A Macaw Learning Language"
+  },
+  {
+    who: "Mike",
+    when: "25-26 August 2012",
+    where: "Gateway Parrot Club, St. Louis",
+    what: "Beyond Polly Wants a Cracker"
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation slot="navigation" currentPage="home" />
+  
+  <article>
+    <header class="page-header">
+      <h1>ParrotSpeech.org</h1>
+      <h2>The home of the pioneering talking macaw called Arielle</h2>
+    </header>
+
+    <AudioPlayer 
+      src="/TrackD211T29_BB.wav" 
+      caption="Arielle speaking"
+      autoplay={false}
+    />
+
+    <section class="intro">
+      <p class="lead">
+        Welcome to the world of Arielle, a Blue and Gold macaw who demonstrates remarkable 
+        cognitive speech abilities. Arielle doesn't just mimic—she understands and speaks 
+        thoughtfully using English words, phrases, and sentences.
+      </p>
+    </section>
+
+    <section class="events-section">
+      <h2>Events and Appearances</h2>
+      <table class="events-table">
+        <thead>
+          <tr>
+            <th>Who</th>
+            <th>When</th>
+            <th>Where</th>
+            <th>What</th>
+          </tr>
+        </thead>
+        <tbody>
+          {events.map((event) => (
+            <tr>
+              <td>{event.who}</td>
+              <td>{event.when}</td>
+              <td>{event.where}</td>
+              <td>{event.what}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="speech-sample">
+      <h2>Hear Arielle Speak</h2>
+      
+      <HighlightBox>
+        <p>
+          Arielle often assembles series of untutored statements. In this example she makes a
+          pronoun substitution that shows a small portion of her understanding of English.
+        </p>
+      </HighlightBox>
+
+      <AudioPlayer 
+        src="/sounds/I_m_a_pretty_girl2.wav" 
+        caption="Arielle saying: I'm a pretty, pretty girl!"
+      />
+
+      <HighlightBox label="Transcription:">
+        <p>
+          <strong>Arielle said spontaneously: I'm a pretty, pretty girl!</strong> (followed by kisses)
+        </p>
+        <p>
+          The significance of her statement exceeds the simplicity of the words she speaks. Arielle is 
+          substituting pronouns in her speech. She was told "Arielle is a pretty girl" and "You are a pretty girl" 
+          but here she voluntarily inserts "I" as the subject to refer to herself.
+        </p>
+        <p>
+          Beyond the pronoun substitution, she correctly conjugates the verb to match the subject, 
+          "I am," which she correctly contracts to "I'm." Neither of these phrases were modeled for her.
+        </p>
+      </HighlightBox>
+    </section>
+
+    <Footer />
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    color: #663300;
+    margin-bottom: 10px;
+  }
+
+  .page-header h2 {
+    font-size: 1.8rem;
+    color: #663300;
+    font-weight: normal;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+
+  .intro {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .events-section {
+    margin: 40px 0;
+  }
+
+  .events-section h2 {
+    color: #FF0000;
+  }
+
+  .speech-sample {
+    margin: 40px 0;
+  }
+
+  .speech-sample h2 {
+    color: #663300;
+  }
+</style>

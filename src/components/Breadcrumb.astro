@@ -1,0 +1,23 @@
+---
+interface Props {
+  currentPage: string;
+}
+
+const { currentPage } = Astro.props;
+---
+
+<div class="breadcrumb">
+  <span>You are here: {currentPage}</span>
+</div>
+
+<style>
+  .breadcrumb {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00CCCC;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+</style>
