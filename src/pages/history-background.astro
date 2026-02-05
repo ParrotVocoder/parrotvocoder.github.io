@@ -6,37 +6,6 @@ import Footer from '../components/Footer.astro';
 
 const title = "History & Background - Talking Birds Research References";
 const description = "References for talking birds and cognitive speech by a macaw who speaks English voluntarily.";
-
-const tvAppearances = [
-  {
-    title: "Interview about speech research at WTVT-13 FOX, Tampa",
-    date: "29 September 2010",
-    description: "Cognitive speech clip and discussion about Arielle's abilities"
-  },
-  {
-    title: "Book Announcement on WTSP TV-10",
-    date: "July 2008",
-    description: "Arielle's appearance announcing the book"
-  }
-];
-
-const publications = [
-  {
-    title: "Another Kind of Mind: A Talking Bird Masters English",
-    type: "Book",
-    description: "Comprehensive research on Arielle's language abilities"
-  },
-  {
-    title: "AFA Convention 2009 Proceedings",
-    type: "Conference Paper",
-    link: "/files/AFA_2009Proceedings_CovPSR.pdf"
-  },
-  {
-    title: "Book Club Review by John Austin on WTAN Radio",
-    type: "Radio Interview",
-    description: "Discussion about the book and research"
-  }
-];
 ---
 
 <BaseLayout title={title} description={description}>
@@ -46,64 +15,305 @@ const publications = [
     <Breadcrumb currentPage="History & Background" />
 
     <header class="page-header">
-      <h1>History & Background</h1>
-      <p class="subtitle">References and Research on Talking Birds</p>
+      <h1>History/Background</h1>
+      <p class="subtitle">In Retrospect ... Records are necessary</p>
     </header>
 
+    <!-- Hero Image Section -->
+    <section class="hero-image-section">
+      <div class="hero-content">
+        <div class="you-are-here">
+          <span class="arrow">«-</span>
+          <span>You are here:<br/>Background</span>
+        </div>
+        <div class="hero-image-container">
+          <img src="/images/Abba_Kissing_Arielle_s_tummy.jpg" alt="Abba Kissing Arielle's tummy" class="hero-image" />
+          <p class="photo-credit">Photo by Linda Carpenter</p>
+          <p class="image-caption">Does Arielle look calm as I kiss her?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reliable Sources Section -->
+    <section class="reliable-sources">
+      <h2>RELIABLE SOURCES OF INFORMATION</h2>
+      <p>One important factor is to keep detailed written notes about a bird's behavior and speech. Without a written account as the years pass, it is more difficult to remember events of long ago.</p>
+      <p>I know, because I have been keeping records for more than ten years. Those notes are invaluable in evaluating what happened, the meaning, and the relationship between events. In my case, I discovered that there were patterns in Arielle's speech and that she used words knowingly to refer to objects, places, and animals that she experienced in her environment.</p>
+      <p>At the suggestion of a friend, ten years ago I started recording Arielle's speech. Low cost methods include tape, CD, or digital recording as ways to document a shy bird's speech! (Does your bird clam-up when strangers visit?)</p>
+      <p>Even if you or friends do not understand what your bird says, recorded sounds can be evaluated by others. Arielle says many things that people do not understand without clues. There are many reasons for a person unfamiliar with a parrot's speech to find strings of speech incomprehensible. A few of the reasons are that she speaks in different voices, her dialect is that of a bird, and she uses a wide variety of words that most people do not conceive that a bird would know, let alone utter. For more information, click on the link to go to the <a href="/difficulties-interspecies-communication">Words & Sound</a> page.</p>
+      <p>Keep recording your bird's speech. Others interested in this topic and I will help you to evaluate what your bird is saying.</p>
+    </section>
+
+    <!-- References Header -->
+    <section class="references-header">
+      <h2 class="references-title">References & Background Material</h2>
+      <img src="/images/booksDetailBeige.gif" alt="Books" class="books-image" />
+      <h3 class="videos-title">See Videos about Arielle</h3>
+    </section>
+
+    <!-- Intro Text -->
     <section class="intro">
       <p class="text-red bold">
-        Below is a list of references with an emphasis on my work about birds using human 
-        language and the characteristics of bird speech.
+        Below is a list of references with an emphasis on my work about birds using human language and the characteristics of bird speech.
       </p>
     </section>
 
-    <section class="tv-section">
-      <h2>Television Appearances by Arielle</h2>
+    <!-- Television Appearances -->
+    <section class="content-section">
+      <h2>TELEVISION APPEARANCES BY ARIELLE</h2>
       
-      <div class="appearances-list">
-        {tvAppearances.map((appearance) => (
-          <div class="appearance-card">
-            <h3>{appearance.title}</h3>
-            <p class="date">{appearance.date}</p>
-            <p>{appearance.description}</p>
-          </div>
-        ))}
+      <div class="content-block">
+        <p><strong class="brown-text large-text">Interview about speech research</strong><strong class="brown-text">/cognitive speech clip @ WTVT-13 FOX, Tampa</strong> <span class="small-text">(29 September 2010)</span></p>
+        <p class="brown-text">The original link at the station has been removed (May 2012), CLICK ON LINK TO SEE TV INTERVIEW:</p>
+        <div class="video-link">
+          <a href="/videos/Fox13_News_Animal_Talk_1.mp4" target="_blank" class="btn-large">
+            See Arielle on TV ... Hear her talking
+          </a>
+        </div>
+        <p class="brown-text">If this link does not work, please contact me.</p>
       </div>
 
-      <div class="video-link">
-        <a href="/videos/Fox13_News_Animal_Talk_1.mp4" target="_blank" class="btn-large">
-          See Arielle on TV ... Hear her talking
-        </a>
+      <div class="content-block">
+        <p class="brown-text"><strong>BOOK ANNOUNCEMENT WITH TELEVISION APPEARANCE BY ARIELLE</strong></p>
+        <p class="brown-text">To see a video clip of Arielle's appearance on WTSP TV-10 from July 2008 click the link below.</p>
+        <div class="video-link">
+          <a href="/videos/WTSP_July2008.mp4" target="_blank" class="btn-large">WTSP TV-10 Video</a>
+        </div>
+        <p class="brown-text">(This is a large video file and may take a while to load depending on your connection speed.)</p>
       </div>
     </section>
 
-    <section class="publications-section">
-      <h2>Parrot Related Publications</h2>
+    <!-- Book Review -->
+    <section class="content-section">
+      <h2>REVIEW OF BOOK, ANOTHER KIND OF MIND: <span class="normal-weight">A TALKING BIRD MASTERS ENGLISH</span></h2>
+      <p class="brown-text"><strong>BOOK CLUB REVIEW</strong> by John Austin on WTAN Radio. Listen to the interview on the Internet Podcast:</p>
+      <p><a href="http://www.internetradiopros.com/bookclub/?p=episode&name=2012-10-18_zbookclub_for_102312_2nd_segment_michael_dalton.mp3" target="_blank">http://www.internetradiopros.com/bookclub/?p=episode&name=2012-10-18_zbookclub_for_102312_2nd_segment_michael_dalton.mp3</a></p>
+    </section>
+
+    <!-- Parrot Related Publications -->
+    <section class="content-section">
+      <h2>PARROT RELATED PUBLICATIONS</h2>
+      <p class="brown-text">announcing the book <em class="large-text"><strong>Another Kind of Mind</strong>: A Talking Bird Masters English</em> (<a href="/files/AKOM_Press_Release.pdf"><em><strong>Click to read press release.</strong></em></a>)</p>
+      <p class="brown-text"><em><strong>Bird Talk</strong></em> Magazine (May 2008): Announcement for <em><strong>Another Kind of Mind:</strong> A Talking Bird Masters English</em></p>
+      <p class="brown-text"><strong>Parrots Magazine UK</strong> (May 2008): Announcement for <em><strong>Another Kind of Mind:</strong> A Talking Bird Masters English</em></p>
+      <p class="brown-text"><em><strong>The Australian Birdkeeper</strong></em> (August 2008): Announcement and book review of <em><strong>Another Kind of Mind</strong>: A Talking Bird Masters English</em></p>
+    </section>
+
+    <!-- New World Encyclopedia -->
+    <section class="content-section">
+      <h2>INFORMATION ABOUT ARIELLE IN THE NEW WORLD ENCYCLOPEDIA</h2>
+      <p class="brown-text"><strong>New World Encyclopedia</strong> briefly describes "passive speech research" in section about parrots.</p>
+      <p><a href="http://www.newworldencyclopedia.org/entry/Parrot" target="_blank">http://www.newworldencyclopedia.org/entry/Parrot</a></p>
+      <p class="brown-text">Additional information about our speech experiment appears in the paragraph "Speech and language learning" on the page describing macaws.</p>
+      <p><a href="http://www.newworldencyclopedia.org/entry/Macaw#Speech_and_language_learning" target="_blank">http://www.newworldencyclopedia.org/entry/Macaw#Speech_and_language_learning</a></p>
+    </section>
+
+    <!-- Newspaper Articles -->
+    <section class="content-section">
+      <h2><em>NEWSPAPER ARTICLES</em></h2>
       
-      <div class="publications-list">
-        {publications.map((pub) => (
-          <div class="publication-card">
-            <h3>{pub.title}</h3>
-            <span class="type-badge">{pub.type}</span>
-            {pub.description && <p>{pub.description}</p>}
-            {pub.link && <a href={pub.link} target="_blank">Download PDF</a>}
-          </div>
-        ))}
+      <p class="brown-text"><em><strong>I</strong></em><strong>f you would like to read about my investigations of speech with Arielle,</strong> a long article by Rob Farley called "MORE THAN A 'PRETTY BIRD' // From the beak of a macaw ..." was published on May 12, 2003 as a lead story in local sections of the St. Petersburg Times. The reference to the article appears below; unfortunately, you will not be able to retrieve the professional 8 x 10 inch photograph of Arielle that accompanied the printed article.</p>
+      <p><a href="http://www.sptimes.com/2003/05/12/Northpinellas/From_the_beak_of_a_ma.shtml" target="_blank">http://www.sptimes.com/2003/05/12/Northpinellas/From_the_beak_of_a_ma.shtml</a></p>
+      <p class="brown-text">(Click link above to read the article at the St. Petersburg Times site.)</p>
+      
+      <p class="separator">..................</p>
+      
+      <p class="brown-text"><strong>December 2007</strong> ... Rita Sobot wrote a news article about Arielle for the Tenerife News (A newspaper in the Canary Islands). The on-line edition can be read at the following address:</p>
+      <p><a href="http://www.tenerifenews.com/cms/front_content.php?client=1&lang=1&idcat=19&idart=7008">http://www.tenerifenews.com/cms/front_content.php?client=1&lang=1&idcat=19&idart=7008</a></p>
+      
+      <p class="separator">.................</p>
+      
+      <p class="brown-text"><strong>25 March 2008</strong> ... An article by St. Pete Times staff writer LaRita Jacobs provides her ideas about bird speech and opinions about my work in an article called: Yes parrots speak, but do they really understand? http://www.tampabay.com/news/humaninterest/article431283.ece A similar article with a picture of Arielle holding a small bucket on a chain was printed 1 Apr 2008 in a Clearwater Times article, page 4, by LaRita Jacobs --- Yes, parrots speak, but do they really understand? Click link to read: <a href="http://www.tampabay.com/news/humaninterest/yes-parrots-speak-but-do-they-really-understand/431283">LaRita Jacobs' article 2008</a></p>
+      
+      <p class="separator">................</p>
+      
+      <p class="brown-text"><strong>From Orlando Sentinel.... May 18, 2008</strong><br/>
+      Column: AnimalCrazy Headline: This talkative bird has the last word -- 4,000 of them</p>
+      <p><a href="http://articles.orlandosentinel.com/2008-05-18/news/orcrazy18_1_boo-wet-food-arielle" target="_blank" class="small-text">http://www.orlandosentinel.com/services/newspaper/printedition/sunday/orange/orl-orcrazy1808may18,0,895746.story</a></p>
+    </section>
+
+    <!-- Articles & Conference Presentations -->
+    <section class="content-section">
+      <h2><em>ARTICLES & CONFERENCE PRESENTATIONS</em> <span class="normal-weight blue-text"><em>By Michael Dalton</em></span></h2>
+      
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2012)</strong><br/>
+        "Beyond ... 'Polly Wants a Cracker:'—Humans Limit Interspecies Communication with Parrots" Presentation made before The 2012 All-American Hookbill Fair & Seminar sponsored by the Gateway Parrot Club at the Machinists Hall, Bridgeton MO (St. Louis), 25 August 2012 (25th Fair Anniversary).<br/>
+        Bird owners and others do not understand novel speech by talking birds. The author played speech samples from species of talking birds to illustrate how poorly we perceive our own language spoken by a bird. Recordings of bird speech reveal that some parrots understand English.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2012)</strong> "Beyond ... 'Polly Wants a Cracker:'—Parrots Using Language" Presentation made before The 2012 All-American Hookbill Fair & Seminar sponsored by the Gateway Parrot Club at the Machinists Hall, Bridgeton MO (St. Louis), 25 August 2012. (Similar topics to those above with emphasis on the ability of parrots to learn language.)<br/>
+        Speech recordings demonstrate that parrot-like birds are learning English. The speaker's bird, Arielle, substitutes pronouns, conjugates verbs, speaks series of synonymous terms, and can pose and answer her own questions. Recordings of free bird speech illustrate that some parrots understand English; a macaw understands language—sequences of up to four sentences about a single topic are evidence. The bird's speech reveals that she is a conscious being with a "Theory of Mind."</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2012)</strong> "Goblin." <em>Squawk 'n Talk</em>, Vol. 12, 6, pp. 2-4.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2012)</strong> "Word Repetition." <em>Squawk 'n Talk</em>, Vol. 12, 5, pp. 2-4.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2012)</strong><br/>
+        "Disrupted Dialogue: A Macaw Learning Language" In: <em>Book of Abstracts: 5th EASLCE International Conference on "Natura Loquens: Eruptive Dialogues, Disruptive Discourses."</em> Tenerife, Canary Islands, Spain (June 27-30, 2012).<br/>
+        (Communication between bird and man ruptures due to inattention.)</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2012)</strong> [Beyond … "Polly wants a Cracker!"™: Humans Limit Interspecies Communication with Parrots] Parrot Festival 2012 Conference Presentation 21 January 2012 at the Doubletree Hilton (HIA), Houston, Texas</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2011)</strong> "Speech Productivity by a Talking Bird." <em>Flappers</em> Vol 2 #11, November 2011, pp. 25-29. Reprinted by permission of the International Listening Association. For more information contact the editor, Sheldon Orloff: editor@flappingfeathers.org</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2011)</strong> "Speech Productivity by a Talking Bird." <em>Listening Post</em>, (International Listening Association) Volume 106, November 2011, pp. 18-22.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2011)</strong> "Griffin Was Right: Language Reveals an Animal's Thoughts" Conference presentation, <em>Acoustic Communication by Animals Extended Abstracts</em>, Third International Symposium on Acoustic Communication by Animals, (1-5 August 2011) Cornell University, Ithaca, NY, p. 25.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2011)</strong> "Speech Productivity by a Talking Bird" International Listening Association, Conference presentation 2 April 2011 at the Carnegie Hotel, Johnson City, Tennessee.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2010)</strong> "Matthew and Paco" <em>Flappers</em> Vol 1 #9, November 2010, pp. 13-14. For more information contact the editor, Sheldon Orloff: editor@flappingfeathers.org</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2010)</strong> "Why Record Parrot Speech?" <em>Flappers</em> Vol 1 #6, August 2010, pp. 5-8. For more information contact the editor, Sheldon Orloff: editor@flappingfeathers.org</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2010)</strong> "<em>Beyond ... 'Polly Wants a Cracker'</em>" Conference paper and presentation made before The American Federation of Aviculture at the Hilton (Bayfront), St. Petersburg FL, (6 August 2010). The <em>American Federation of Aviculture 36th Annual Convention Proceedings</em>, St. Petersburg, FL, August 4-7, 2009, pp. 36-44. <a href="/files/Copy_of_2010_AFA_Convention_Paper_Beyond_Polly_Wants_a_Cracker_opt.pdf" target="_blank" class="green-link">Click here to read "Beyond ... 'Polly Wants a Cracker'"</a><br/>
+        Bird owners and others do not understand novel speech by talking birds. The author played speech samples from five species of talking birds to illustrate how poorly we understand our own language spoken by a bird. From speech recordings, the paper shows how a parrot-like bird, a macaw, is learning English. The bird, Arielle, substitutes pronouns, conjugates verbs, speaks series of synonymous terms. The author reveals new information about birds understanding English through recorded evidence of free speech consisting of sequences of up to four sentences about a single topic. Through speech we learn that Arielle is a conscious being with a "Theory of Mind."</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2010)</strong> "Beyond ... 'Polly Wants a Cracker'" (early rendition) Presentation at the Exotic Bird Society of America, June 2010, October 2010 at Orlando, FL. (Improved version 23 Oct 2010)</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2010)</strong> "Dialect as a Factor in Interspecies Communication" International Linguistics Association, Conference presentation 17 April 2010 at State University of New York at New Paltz.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2010)</strong> "Interspecies communication Depends on Listening Skills" International Listening Association, Conference presentation 27 March 2010 at the Hyatt Regency, Albuquerque, NM.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2009)</strong> "Arielle" (originally called 'Soliciting a Macaw') IN: Birds of a Feather (Rebecca Stockslager, Ed.). Sarasota, FL: Published by the Author/Editor. Pp. 40-41 For more information or to buy Birds of a Feather, go to http://www.BirdsOfaFeather.embarqspace.com</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2009)</strong> Passive Speech Research, Language, and the Animal Mind. The <em>American Federation of Aviculture 35th Annual Convention Proceedings</em>, Houston, TX, August 5-8, 2009, pp. 76-82. <a href="/files/AFA_2009Proceedings_CovPSR.pdf" target="_blank" class="green-link">Click here to read "Passive Speech Research, Language, and the Animal Mind"</a><br/>
+        This article describes a non-interactive method for analyzing bird speech based on recordings of a bird's free speech. The concept of a parrot learning human language is advanced supported by recorded evidence.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (Available February 2008)</strong> <em class="large-text"><strong>Another Kind of Mind</strong>: A Talking Bird Masters English</em>. Clearwater, FL: Arielle Publishing, December 2007. A macaw's speech reveals her ability to learn language and to express thoughts in sequences of topical statements. <span class="small-text green-text">(<a href="/another-mind">Click here to go to the book page and press release</a>.)</span></p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2003)</strong> Talking with Parrots: A Ten-Year Perspective. <em>The A.F.A. Watchbird</em>, Vol. XXX, No. 1, Summer 2003, pp. 14-16. My article described learning about the speaking capabilities of a taking bird after working for ten years with Arielle.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (2002)</strong> Spontaneous Counting by an African Grey Parrot. <em>The Grey Play Round Table</em>, Winter 2002, pp. 3-4. Louie, my African Grey parrot, decides to count backwards unexpectedly.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (1996)</strong> An Amazing Story. <em>Caged Bird Hobbyist</em>, Vol. 4, No. 1, February 1996, pp. 62-64. A short article about Arielle's verbal abilities.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (1995)</strong> Camphor Wood for Exotic Birds. <em>Caged Bird Hobbyist</em>, Vol. 3, No. 2, February 1995, p. 8. I tell about using my birds unknowingly as test subject with camphor branches.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael. (1993)</strong> Adventures With A Blue And Gold Macaw. <em>American Cage-Bird Magazine</em>, Vol. 65, No. 11, November 1993, pp. 93-97. In this article, some of Arielle's early adventures with her human companion are detailed, including how she named her favorite person.</p>
       </div>
     </section>
 
-    <section class="research-notes">
-      <h2>Research Background</h2>
-      <p>
-        The research documented here represents years of careful observation and documentation 
-        of Arielle's speech patterns. Unlike controlled laboratory experiments, this passive 
-        research approach allows for natural language acquisition and usage patterns to emerge.
-      </p>
-      <p>
-        Key findings include evidence of pronoun substitution, verb conjugation, and contextually 
-        appropriate vocabulary usage - all hallmarks of genuine language comprehension rather 
-        than mere mimicry.
-      </p>
+    <!-- Books -->
+    <section class="content-section">
+      <h2>BOOKS</h2>
+      
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Barber, Theodore Xenophon.</strong> <em>The Human Nature of Birds</em>. New York: St. Martin's Press, 1993. If you wish to gain an understanding for the intelligence of birds, this is a excellent starting point. The author reviews bird behavior and shows how birds are capable of human-like thought.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Dalton, Michael.</strong> <em>Another Kind of Mind: A Talking Bird Masters English</em>. Clearwater, FL: Arielle Publishing, December 2007. (Available February 2008) Based on recordings of Arielle's speech, it is possible to learn about her thoughts through sequences of topical statements.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>de Grahl, Wolfgang.</strong> <em>The Grey Parrot</em>. Neptune City, N.J.: T.F.H. Publications, Inc., 1987. This is a specialty book about African Grey parrots, which includes notable paragraphs concerning use of human language by a parrot.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Freud, Arthur.</strong> <em>The Complete Parrot</em>. Ontario, Canada: Silvio Mattacchione & Co., 1993. The author has a different viewpoint concerning parrot care. There are good illustrations and the writer dished out advice in a light-hearted manner.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Howard, Len.</strong> <em>Birds as Individuals</em>. London: Readers Union, 1953. This book was my inspiration for close living with my pet macaw, Arielle. Ms. Howard describes interactions with wild birds that lived in and about her cottage in the English countryside.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Hurlbutt, Catherine.</strong> <em>Adventures with Talking Birds</em>. Neptune, N.J.: TFH Publications, 1981. This book piqued my interest in bird intelligence. The writer discusses her experiences with a variety of birds including Edgar, a corvid, who says: "Nevermore!"</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Patterson, Francine and Linden, Eugene.</strong> <em>The Education of Koko</em>. New York: Holy, Rinehart and Winston, 1981. The study of Koko is the longest on-going investigation of a communicative gorilla. The authors describe Koko in a way that is quite different from people's expectations; Koko "speaks" using American Sign Language.</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Savage, Candace.</strong> <em>The Intelligence of Crows, Ravens, Magpies, and Jays: Bird Brains</em>. San Francisco: Sierra Club Books, 1995. While this book has little to do with parrots or pet birds, the author makes a great case for the intelligence of corvids. The reader comes away with a new appreciation for avian intelligence, as the author chronicles one group of smart animals!</p>
+      </div>
+
+      <div class="publication-entry">
+        <p class="brown-text"><strong>Skutch, Alexander.</strong> <em>The Minds of Birds</em>. College Station: Texas A&M University Press, 1996. Dr. Skutch provides insight into bird intelligence. The book culminates the author's more than sixty years of experience as an ornithologist.</p>
+      </div>
+    </section>
+
+    <!-- Motion Picture -->
+    <section class="content-section">
+      <h2>MOTION PICTURE/VIDEO DISC ABOUT A "TALKING" BIRD</h2>
+      <p class="brown-text">A cute film is PAULIE. Paulie a story about a fictitious talking bird, but Arielle and her abilities are real.</p>
+    </section>
+
+    <!-- Article Ranking Macaws -->
+    <section class="content-section">
+      <h2>ARTICLE RANKING MACAWS AS TALKING BIRDS</h2>
+      <p class="brown-text"><strong>Wederich, Jr., Robert P.</strong> Choosing the right companion bird. <em>Caged Bird Hobbyist</em>, Spring 1993. In the rating of talking birds, macaws of the genus Ara ranked 9th overall. In an accompanying chart macaws ranked 7 on a ten scale which was above some of the other rated birds. According to the chart, the only higher ranking talkers were African Greys and Amazon Parrots.</p>
+      <p class="brown-text"><strong>Dalton, Michael. (2011)</strong> "Speech Productivity by a Talking Bird." <em>Listening Post</em>, (International Listening Association) Volume 106, November 2011, pp. 18-22.</p>
+    </section>
+
+    <!-- Internet References -->
+    <section class="content-section">
+      <h2>ARIELLE'S REFERENCES ON THE INTERNET</h2>
+      
+      <p><a href="http://www.squidoo.com/blue-gold-macaws">http://www.squidoo.com/blue-gold-macaws</a></p>
+      <p class="brown-text">Meet Arielle: A Blue and Gold Macaw -- An Example Of Interspecies Communication?</p>
+      
+      <p><a href="http://www.authorsden.com/visit/viewwork.asp?id=55006">http://www.authorsden.com/visit/viewwork.asp?id=55006</a> <span class="brown-text"><strong>Book at AuthorsDen</strong></span></p>
+      <p class="brown-text"><em><strong>Another Kind of Mind:</strong> A Talking Bird Masters English</em> by Michael S Dalton</p>
+      
+      <p class="brown-text"><strong>New World Encyclopedia</strong> briefly describes "passive speech research" in section about parrots.</p>
+      <p><a href="http://www.newworldencyclopedia.org/entry/Parrot" target="_blank">http://www.newworldencyclopedia.org/entry/Parrot</a></p>
+      
+      <p class="brown-text">Additional information about our speech experiment appears in the paragraph "Speech and language learning" on the page describing macaws.</p>
+      <p><a href="http://www.newworldencyclopedia.org/entry/Macaw#Speech_and_language_learning" target="_blank">http://www.newworldencyclopedia.org/entry/Macaw#Speech_and_language_learning</a></p>
+    </section>
+
+    <!-- Footer Quote -->
+    <section class="footer-quote">
+      <p>Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
     </section>
 
     <Footer />
@@ -117,16 +327,108 @@ const publications = [
   }
 
   .page-header h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     color: #663300;
     margin-bottom: 10px;
   }
 
   .subtitle {
-    color: #666;
-    font-size: 1.2rem;
+    color: #663300;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
+  /* Hero Image Section */
+  .hero-image-section {
+    margin-bottom: 40px;
+  }
+
+  .hero-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .you-are-here {
+    color: #00CCCC;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  .you-are-here .arrow {
+    font-size: 2.2rem;
+  }
+
+  .hero-image-container {
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 344px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .photo-credit {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .image-caption {
+    color: #663300;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* Reliable Sources */
+  .reliable-sources {
+    margin-bottom: 40px;
+  }
+
+  .reliable-sources h2 {
+    color: #000066;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .reliable-sources p {
+    color: #663300;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+
+  .reliable-sources a {
+    color: #0000FF;
+  }
+
+  /* References Header */
+  .references-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .references-title {
+    color: #663300;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .books-image {
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .videos-title {
+    color: #FF0000;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  /* Intro */
   .intro {
     margin-bottom: 40px;
   }
@@ -139,52 +441,66 @@ const publications = [
     font-weight: bold;
   }
 
-  .tv-section h2,
-  .publications-section h2,
-  .research-notes h2 {
+  /* Content Sections */
+  .content-section {
+    margin-bottom: 40px;
+  }
+
+  .content-section h2 {
     color: #000066;
     font-family: "Comic Sans MS", cursive, sans-serif;
     margin-bottom: 20px;
+    font-size: 1rem;
   }
 
-  .appearances-list,
-  .publications-list {
-    display: grid;
-    gap: 20px;
+  .content-section h2 .normal-weight {
+    font-weight: normal;
+  }
+
+  .content-section h2 .blue-text {
+    color: #000066;
+  }
+
+  .content-block {
     margin-bottom: 30px;
   }
 
-  .appearance-card,
-  .publication-card {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #009966;
-  }
-
-  .appearance-card h3,
-  .publication-card h3 {
+  .brown-text {
     color: #663300;
-    margin: 0 0 10px;
-    font-size: 1.1rem;
   }
 
-  .date {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+  .large-text {
+    font-size: 1.25rem;
   }
 
-  .type-badge {
-    display: inline-block;
-    background: #009966;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+  .small-text {
+    font-size: 0.875rem;
   }
 
+  .green-text {
+    color: #009966;
+  }
+
+  .green-link {
+    color: #009966;
+  }
+
+  .separator {
+    color: #663300;
+    font-style: italic;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .publication-entry {
+    margin-bottom: 20px;
+  }
+
+  .publication-entry p {
+    line-height: 1.6;
+  }
+
+  /* Video Link */
   .video-link {
     text-align: center;
     margin: 30px 0;
@@ -192,28 +508,53 @@ const publications = [
 
   .btn-large {
     display: inline-block;
-    background: #009966;
+    background: #0000FF;
     color: white;
     padding: 15px 30px;
-    font-size: 1.3rem;
+    font-size: 2.2rem;
     text-decoration: none;
-    border-radius: 8px;
+    font-weight: bold;
     transition: background 0.3s;
   }
 
   .btn-large:hover {
-    background: #007755;
+    background: #0000CC;
   }
 
-  .research-notes {
+  /* Footer Quote */
+  .footer-quote {
+    text-align: center;
     margin-top: 40px;
-    padding: 30px;
-    background: #f5f5f5;
-    border-radius: 8px;
+    padding: 20px;
   }
 
-  .research-notes p {
-    line-height: 1.8;
-    margin-bottom: 1em;
+  .footer-quote p {
+    color: #663300;
+    font-size: 1.5rem;
+  }
+
+  /* Links */
+  a {
+    color: #0000FF;
+  }
+
+  a:visited {
+    color: #800080;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .btn-large {
+      font-size: 1.5rem;
+      padding: 12px 20px;
+    }
   }
 </style>
