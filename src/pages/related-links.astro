@@ -3,46 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
 
-const title = "Related Links - Animal Communication Resources";
-const description = "External links to animal communication resources, writing organizations, and research.";
-
-const linkCategories = [
-  {
-    title: "Animal Communication Research",
-    links: [
-      {
-        name: "Comparative Cognition Society",
-        url: "https://comparativecognition.org",
-        description: "Society dedicated to the study of animal cognition"
-      },
-      {
-        name: "Alex Foundation",
-        url: "https://alexfoundation.org",
-        description: "Research on parrot cognition and communication"
-      }
-    ]
-  },
-  {
-    title: "Parrot Care and Information",
-    links: [
-      {
-        name: "American Federation of Aviculture",
-        url: "https://afabirds.org",
-        description: "Organization promoting aviculture and bird conservation"
-      }
-    ]
-  },
-  {
-    title: "Writing and Publishing",
-    links: [
-      {
-        name: "Writing Organizations",
-        description: "Resources for authors and researchers"
-      }
-    ]
-  }
-];
+const title = "Related Links - ParrotSpeech.org";
+const description = "Links to studies of animals using human language, experiments with interspecies communication, and parrot-related sites.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -53,43 +17,200 @@ const linkCategories = [
 
     <header class="page-header">
       <h1>Related Links</h1>
-      <p class="subtitle">Resources for Learning More</p>
+      <div class="header-image">
+        <img src="/images/Come_on_pick_me_up.jpg" alt="Arielle the macaw" />
+        <span class="photo-credit">Photo by Linda Carpenter</span>
+      </div>
     </header>
 
-    <section class="intro">
-      <p>
-        The following links provide additional information about animal communication, 
-        parrot care, and related research. These resources have been selected for their 
-        quality and relevance to understanding talking birds.
+    <!-- Audio Feature Section -->
+    <section class="audio-feature">
+      <div class="audio-box">
+        <div class="transcription-box">
+          <p>Arielle said,<br/>"I want out!"</p>
+        </div>
+        <div class="audio-content">
+          <p class="audio-description">
+            Arielle can be a demanding bird.<br/>
+            She says what one might expect<br/>
+            from a bird in this position, click<br/>
+            the play button to hear her speak.
+          </p>
+          <AudioPlayer src="/media/Track_CC.wav" title="Arielle: I want out!" />
+          <p class="audio-note">The transcription is in the yellow box below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Heading -->
+    <section class="main-intro">
+      <h2 class="fancy-heading">With a little help from her friends</h2>
+      <p class="intro-text">
+        The following links lead to studies of "animals using human language," experiments with interspecies 
+        communication, and parrot-related sites.
       </p>
     </section>
 
-    <div class="links-container">
-      {linkCategories.map((category) => (
-        <section class="link-category">
-          <h2>{category.title}</h2>
-          <ul class="link-list">
-            {category.links.map((link) => (
-              <li class="link-item">
-                {link.url ? (
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    {link.name}
-                  </a>
-                ) : (
-                  <span class="link-name">{link.name}</span>
-                )}
-                {link.description && <p class="link-desc">{link.description}</p>}
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
-    </div>
-
-    <section class="disclaimer">
+    <!-- Links About Apes -->
+    <section class="link-category">
+      <h3>Link About Apes</h3>
       <p>
-        <strong>Note:</strong> External links are provided for informational purposes only. 
-        ParrotSpeech.org is not responsible for the content of external websites.
+        This link takes you to the site for the language-using gorilla, Koko at 
+        <a href="http://www.gorilla.org/" target="_blank" rel="noopener noreferrer">The Gorilla Foundation</a>
+        <span class="url-display">• www.gorilla.org</span>
+      </p>
+    </section>
+
+    <!-- Links About Whales & Dolphins -->
+    <section class="link-category">
+      <h3>Link About Whales & Dolphins</h3>
+      <p>
+        This site is mainly about cetaceans, but it also deals with a variety of subjects related to interspecies 
+        communication. [Interspecies Inc., Friday Harbor, WA] Go to 
+        <a href="http://www.interspecies.com/" target="_blank" rel="noopener noreferrer">the interspecies site</a>
+        <span class="url-display">www.interspecies.com</span>
+      </p>
+      <p class="article-reference">
+        Article about Arielle:<br/>
+        Knollman, James. "Slow Dreaming." <em>Interspecies</em>, Winter 2004.
+      </p>
+    </section>
+
+    <!-- Links About Keeping & Training Pet Birds -->
+    <section class="link-category">
+      <h3>Links About Keeping & Training Pet Birds</h3>
+      <p>
+        <a href="http://www.afabirds.org/" target="_blank" rel="noopener noreferrer">American Federation of Aviculture</a>
+        <span class="url-display">• www.afabirds.org</span>
+      </p>
+      <p>
+        An extensive web site with information about parrots including the owner's Grey parrot, Kibibi, is at 
+        <a href="http://www.infosuperflyway.com/" target="_blank" rel="noopener noreferrer">www.infosuperflyway.com</a>
+      </p>
+      <p>
+        My article "Recording Speech by Birds" is found on the Kibibi site at<br/>
+        <a href="http://www.infosuperflyway.com/articles/recording-birds.php" target="_blank" rel="noopener noreferrer">
+          http://www.infosuperflyway.com/articles/recording-birds.php
+        </a>
+      </p>
+      <p>
+        Another site about parrots is imabird.com. You can check out information about my book, 
+        <em>Another Kind of Mind: A Talking Bird Masters English</em>, on Barry's web site at 
+        <a href="http://www.imabird.com/" target="_blank" rel="noopener noreferrer">www.imabird.com</a>
+      </p>
+    </section>
+
+    <!-- Pet Guardian Angels of America -->
+    <section class="link-category">
+      <h3>Pet Guardian Angels of America</h3>
+      <p>
+        <a href="http://www.pgaa.com" target="_blank" rel="noopener noreferrer">PGAA</a> (www.pgaa.com) is an animal rescue organization. The 
+        PGAA site features a couple of my articles below.
+      </p>
+      <ul class="article-list">
+        <li>
+          Article 1: "Recording Speech by Birds"<br/>
+          <a href="http://www.pgaa.com/avain/general/daltonrecordingbirds.html" target="_blank" rel="noopener noreferrer">
+            http://www.pgaa.com/avain/general/daltonrecordingbirds.html
+          </a>
+        </li>
+        <li>
+          Article 2: "Talking Birds, Intelligent Creatures"<br/>
+          <a href="http://www.pgaa.com/avain/general/daltontalkingbird.html" target="_blank" rel="noopener noreferrer">
+            http://www.pgaa.com/avain/general/daltontalkingbird.html
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Local Bird Clubs -->
+    <section class="link-category info-box">
+      <p>
+        Don't overlook local bird clubs for information. Check your local newspaper for 
+        information. If the clubs are not printed regularly, you might try a telephone call 
+        to the clubs editor for the most up-to-date information. You can search on the Internet too.
+      </p>
+      <p>
+        If you're interested in companion birds, including parrots and other talking birds, use 
+        the links above as a starting point. If you know of a related link that is not included 
+        here, feel free to suggest additions by e-mail.
+      </p>
+    </section>
+
+    <!-- Links About Writing -->
+    <section class="link-category">
+      <h3>Links About Writing</h3>
+      <p>
+        The author is a member of a writers' group in Florida. If you are interested in writing or wish to explore 
+        interests related to the group, it is called PINAWOR (Pinellas Authors and Writers Organization Inc.). For 
+        more information visit their web site at: 
+        <a href="http://www.pinawor.org" target="_blank" rel="noopener noreferrer">• www.pinawor.org</a>
+      </p>
+
+      <div class="writer-friend">
+        <h4>My Parrot Writer Friend</h4>
+        <div class="writer-content">
+          <img src="/images/clip_image002.jpg" alt="Parrot writer friend" class="writer-image" />
+          <p>
+            Two Parrot Stories, a children's picture book (age 6 and up), or in 
+            reading articles about parrots in history, or about speech and body 
+            language, please visit the author's website at
+            <a href="http://www.rosemarieriechelbooks.com/" target="_blank" rel="noopener noreferrer">www.rosemarieriechelbooks.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TV Links About Arielle -->
+    <section class="link-category">
+      <h3>TV Links About Arielle</h3>
+      
+      <div class="media-item">
+        <h4>Humorous interview</h4>
+        <p class="small-url">http://www.studio10.tv/category/authors/segment.aspx/84258/Another_Kind_of_Mind</p>
+        <a href="/videos/WTSP_July2008.mp4" class="video-link">Click here to see video clip</a>
+      </div>
+
+      <div class="media-item">
+        <h4>Interview about speech research/cognitive speech</h4>
+        <p>The most recent clip from WTVT-13, Tampa — 29 September 2010</p>
+        <a href="/videos/Fox13_News_Animal_Talk_1.mp4" class="video-link">Arielle on TV ... Hear Her Speak</a>
+      </div>
+
+      <div class="media-item">
+        <p class="radio-intro">
+          Radio host John Austin and the author discuss the book <em>ANOTHER KIND OF MIND: A Talking Bird Masters English</em>
+        </p>
+        <a href="http://www.internetradiopros.com/bookclub/?p=episode&name=2012-10-18_zbookclub_for_102312_2nd_segment_michael_dalton.mp3" 
+           target="_blank" rel="noopener noreferrer" class="radio-link">
+          Listen to the radio interview
+        </a>
+      </div>
+    </section>
+
+    <!-- ParrotSpeech Group -->
+    <section class="parrotspeech-group">
+      <p class="group-intro">
+        If you are interested in speech by talking birds, below are the details about the ParrotSpeech Group:
+      </p>
+      
+      <h3>Description</h3>
+      <p>
+        People interested in the study of spontaneous speech by talking birds. The topics of 
+        concern include learning theory, speech recognition, recording speech, cognitive 
+        speech by talking birds, linguistics, conversations with parrot-like birds, cognition, 
+        consciousness, and other topics related to the talking birds. To join click on the 
+        subscription link or paste the following link into your browser:
+      </p>
+      <p class="subscribe-email">
+        <a href="mailto:ParrotSpeech-subscribe@yahoogroups.com">ParrotSpeech-subscribe@yahoogroups.com</a>
+      </p>
+    </section>
+
+    <!-- Footer Quote -->
+    <section class="footer-quote">
+      <p>
+        Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.
       </p>
     </section>
 
@@ -100,85 +221,291 @@ const linkCategories = [
 <style>
   .page-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .page-header h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: #663300;
+    margin-bottom: 20px;
+  }
+
+  .header-image {
+    position: relative;
+    display: inline-block;
+  }
+
+  .header-image img {
+    max-width: 530px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .photo-credit {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #cccccc;
+    margin-top: 4px;
+  }
+
+  /* Audio Feature Section */
+  .audio-feature {
+    margin: 30px 0;
+  }
+
+  .audio-box {
+    display: flex;
+    gap: 20px;
+    background: #ffff00;
+    padding: 15px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+  }
+
+  .transcription-box {
+    background: #ffff00;
+    padding: 15px;
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .transcription-box p {
+    color: #ff0000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .audio-content {
+    flex: 1;
+  }
+
+  .audio-description {
+    color: #ff0000;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .audio-note {
+    color: #ff0000;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+
+  /* Main Intro */
+  .main-intro {
+    margin: 40px 0;
+  }
+
+  .fancy-heading {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000099;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .intro-text {
+    color: #663300;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Link Categories */
+  .link-category {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #663300;
+  }
+
+  .link-category h3 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #663300;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .link-category p {
+    color: #663300;
+    font-weight: bold;
+    line-height: 1.6;
     margin-bottom: 10px;
   }
 
-  .subtitle {
-    color: #666;
-    font-size: 1.1rem;
+  .link-category a {
+    color: #0000ff;
   }
 
-  .intro {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    text-align: center;
-    color: #444;
-    line-height: 1.7;
+  .link-category a:visited {
+    color: #800080;
   }
 
-  .links-container {
-    display: grid;
-    gap: 40px;
+  .url-display {
+    margin-left: 20px;
+    color: #663300;
   }
 
-  .link-category h2 {
-    color: #009966;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e0e0e0;
+  .article-reference {
+    margin-top: 15px;
+    padding-left: 20px;
   }
 
-  .link-list {
+  .article-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0;
   }
 
-  .link-item {
-    padding: 15px 20px;
-    background: #f9f9f9;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border-left: 4px solid #009966;
+  .article-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
   }
 
-  .link-item a {
+  .info-box {
+    background: #fff;
+    border-left-color: #009966;
+  }
+
+  /* Writer Friend Section */
+  .writer-friend {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+
+  .writer-friend h4 {
+    color: #663300;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .writer-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .writer-image {
+    width: 127px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .writer-content p {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  /* Media Items */
+  .media-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .media-item:last-child {
+    border-bottom: none;
+  }
+
+  .media-item h4 {
+    color: #663300;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .small-url {
+    font-size: 0.85rem;
+    color: #663300;
+    word-break: break-all;
+  }
+
+  .video-link, .radio-link {
+    display: inline-block;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #0066cc;
-    text-decoration: none;
+    margin-top: 8px;
   }
 
-  .link-item a:hover {
+  .radio-intro {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000066;
+  }
+
+  /* ParrotSpeech Group */
+  .parrotspeech-group {
+    margin: 40px 0;
+    padding: 25px;
+    background: #f0f8ff;
+    border-radius: 8px;
+    border-left: 4px solid #000099;
+  }
+
+  .parrotspeech-group .group-intro {
+    color: #000099;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .parrotspeech-group h3 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #000099;
+    text-decoration: underline;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .parrotspeech-group p {
+    color: #000099;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  .subscribe-email {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .subscribe-email a {
+    color: #000099;
     text-decoration: underline;
   }
 
-  .link-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
+  /* Footer Quote */
+  .footer-quote {
+    text-align: center;
+    margin: 40px 0;
+    padding: 25px;
   }
 
-  .link-desc {
-    margin: 8px 0 0;
-    color: #666;
-    font-size: 0.95rem;
+  .footer-quote p {
+    color: #663300;
+    font-size: 1.3rem;
+    line-height: 1.5;
   }
 
-  .disclaimer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #fff9e6;
-    border-radius: 8px;
-    border-left: 4px solid #ff9900;
-    font-size: 0.9rem;
-    color: #666;
+  /* Responsive */
+  @media (max-width: 600px) {
+    .audio-box {
+      flex-direction: column;
+    }
+
+    .writer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fancy-heading {
+      font-size: 1.5rem;
+    }
   }
 </style>

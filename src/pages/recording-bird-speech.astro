@@ -3,9 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
 
 const title = "Recording Bird Speech";
-const description = "Methods and techniques for recording and analyzing bird speech.";
+const description = "Reasons for recording a talking bird and suggestions for how to do it.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -15,64 +16,178 @@ const description = "Methods and techniques for recording and analyzing bird spe
     <Breadcrumb currentPage="Recording Bird Speech" />
 
     <header class="page-header">
-      <h1>Recording Bird Speech</h1>
+      <h1>Reasons for recording a talking bird</h1>
+      <h2 class="subtitle">& suggestions for how to do it</h2>
     </header>
 
     <section class="content">
-      <p>
-        Recording bird speech for research purposes requires specialized techniques and 
-        equipment. Unlike controlled laboratory settings, capturing natural speech from 
-        a companion parrot involves patience and preparation.
-      </p>
+      <div class="intro-section">
+        <div class="image-container">
+          <img src="/images/Arielle_and_Stand.jpg" alt="Arielle perched with microphones for recording" />
+          <span class="photo-credit">Photo by the author</span>
+        </div>
+        <div class="image-description">
+          <p>
+            Arielle perches on a cement perch at one end of her gym. 
+            In this picture there are two microphones in position to 
+            capture her speech. The scheme permits recording 
+            Arielle's talking sessions from inside the house.
+          </p>
+          <p>
+            I improvised the microphone supports from a tripod 
+            salvaged from a junked projection screen; the other 
+            stand is a plastic water pipe on a Christmas tree base.
+          </p>
+        </div>
+      </div>
 
-      <h2>Equipment Considerations</h2>
-      <p>
-        High-quality audio recording equipment is essential for capturing the nuances of 
-        bird speech. Digital recorders with good frequency response can capture the full 
-        range of a macaw's vocalizations, from low rumbles to high-pitched calls.
-      </p>
+      <div class="location-indicator">
+        <strong>You are here:</strong><br />
+        Recording Birds
+      </div>
 
-      <h2>Recording Environment</h2>
-      <p>
-        The recording environment significantly affects audio quality. Background noise, 
-        room acoustics, and microphone placement all play important roles. A quiet setting 
-        with minimal echo produces the clearest recordings.
-      </p>
-
-      <h2>Natural vs. Prompted Speech</h2>
-      <p>
-        For research purposes, natural, unprompted speech provides the most valuable data. 
-        When a bird speaks spontaneously without cues, we gain insight into genuine 
-        language use rather than trained responses.
-      </p>
-
-      <h2>Documentation</h2>
-      <p>
-        Proper documentation accompanies each recording:
-      </p>
-      <ul>
-        <li>Date and time of recording</li>
-        <li>Environmental conditions</li>
-        <li>Context before and after the utterance</li>
-        <li>The bird's apparent emotional state</li>
-        <li>Any relevant preceding events</li>
+      <h2>Reasons to record a bird's speech</h2>
+      <ul class="reasons-list">
+        <li>To permit friends to hear one's bird speak, as many birds do not speak when strangers are present.</li>
+        <li>To prove the identity of your bird through its speech.</li>
+        <li>As a history for study and familiarization by a new caretaker.</li>
+        <li>To listen to a bird's speech in order to gain proficiency at understanding the bird's dialect.</li>
+        <li>To permit others to study and analyze a bird's utterances, especially in investigations of meaning.</li>
+        <li>By listening to a bird's words, phrases, and sentences, one learns whether his parrot is a participant in interspecies communication by conveying messages through speech.</li>
       </ul>
 
-      <h2>Analysis Methods</h2>
-      <p>
-        Recorded speech can be analyzed using various methods, including:
-      </p>
-      <ul>
-        <li>Spectrographic analysis for acoustic properties</li>
-        <li>Phonetic transcription for linguistic content</li>
-        <li>Contextual analysis for meaning and intent</li>
-        <li>Comparative analysis with human speech patterns</li>
-      </ul>
+      <div class="audio-box">
+        <p class="audio-intro">
+          Arielle says what most Americans say,<br />
+          click the play button to hear her words.
+        </p>
+        <p class="audio-note">
+          No transcription provided, as everyone will recognize what Arielle said.
+        </p>
+        <AudioPlayer 
+          src="/media/TrackD211T29_BB1.wav" 
+          title="Arielle speaking"
+        />
+        <p class="audio-fallback">
+          (<a href="/media/TrackD211T29_BB1.wav" target="_blank">Click here to play if play button does not appear</a>.)
+        </p>
+      </div>
 
-      <h2>Preservation</h2>
+      <h2>The basics of recording bird speech</h2>
+
+      <h3>How to make your own bird-speech recordings</h3>
       <p>
-        Audio recordings are preserved in multiple formats and locations to ensure 
-        long-term availability for research and reference purposes.
+        Recording bird speech can be done with comparatively primitive machinery, and that is precisely how I began 
+        which is a device that can be carried to wherever the bird is. Either the diminutive machine or a separate 
+        microphone can be placed close to the bird's cage or the perch from which the bird speaks. The disadvantage of 
+        a self-contained recorder is that it can pick up handling noise or noise transmitted through the furniture upon 
+        which the unit rests. Surrounding noise can mask the desired speech, especially if the bird speaks softly. An 
+        excited parrot can overload the recorder unless care is taken to position the machine a distance from a loud 
+        bird. Using the automatic recording level helps avoid distortion too.
+      </p>
+      <p>
+        A separate directional microphone will yield better results. A general-purpose cardioid microphone (one with a 
+        heart-shaped sensing pattern) will reduce undesired sounds from positions behind or to the side of the 
+        microphone. The user should experiment with the microphone position to obtain best results. A home "hi-fi" 
+        component recorder is likely an alternative to a portable machine.
+      </p>
+      <p>
+        Avoid a common error: recording at too high a level. Recording at excessive levels will cause the sound to be 
+        distorted. Using an audio cassette recorder is better than making no recordings, but the analog technology 
+        suffers from different problems, especially for long-term storage. Contact the author if you have questions.
+      </p>
+      <p>
+        Some years ago, I switched to recording Arielle's speech onto compact discs. The CD format does not suffer 
+        from the same defects as taped recordings and potentially offer a more permanent, archival, storage for data. 
+        People wishing to make recordings on other digital recording devices are encouraged to use whatever devices 
+        they find convenient.
+      </p>
+      <p>
+        Recordists using digital devices should be aware that sound files, depending upon the resolution selected, can 
+        consume a great amount of memory, and, as a result, are likely to require better management than I find time 
+        to do. Digital systems often distort severely, so attention to the recording level is exceptionally important. 
+        When first starting, I advise hobbyists to steer clear of expensive devices which might prove extravagant if you 
+        lose interest in the project.
+      </p>
+      <p class="emphasis">
+        Whatever equipment you choose, the important thing is to make some recordings!
+      </p>
+
+      <h3>My purpose for recording</h3>
+      <p>
+        My bird-speech recording started to show people that Arielle could speak a variety of expressions. After a 
+        while I came to recognize, not only was I hooked, but also that I had a full-time research project on my hands.
+      </p>
+      <p>
+        Arielle generally speaks softly, so hearing her voice can be difficult. Because I had been listening to her 
+        through glass doors (visible in the picture above) for years, in the past many words were either inaudible or not 
+        understandable due to the intervening glass.
+      </p>
+      <p>
+        Confusion can result when listening to a series of extemporaneous phrases. If the listener does not initially 
+        perceive the words, there is a chance that he will completely fail to comprehend the message. When one is 
+        writing the words on paper, it is difficult to listen to rapid speech and write a transcription simultaneously. Often 
+        by the time I figured out and noted a specific syllable, I had forgotten what she had said previously.
+      </p>
+      <p>
+        It is safe to say that I might have understood many unrecognized phrases if I had been able to refer to a 
+        recording. Complicating listening is the fact that Arielle talks, sometimes continuously, for 12-20 minutes. She 
+        does not repeat unique messages for a covert observer who might be listening to her words inside.
+      </p>
+      <p>
+        I began tape recording Arielle's vocalizing sessions fourteen years ago. Now, I record her daily as she speaks 
+        while perched upon her play gym. The amplified microphone placed outside close to her (shown above) much 
+        improved my ability to hear her vocalizations. Using headphones for monitoring makes it easier to concentrate 
+        upon her words, as the earphones minimize household distractions. The sound is considerably clearer after 
+        removing the effect of the attenuating glass barrier. This system is one that I should installed years ago.
+      </p>
+      <p>
+        Arielle's speech is sometimes difficult to understand. Current technology makes it easy to review her 
+        sometimes rapid pronouncements at a slower pace. If her speech is slurred, on replaying her statements, likely 
+        target terms can be determined from the context of her speech.
+      </p>
+      <p>
+        During the first two months of recording, she generated two-and-a-half hours of articulations to analyze. Arielle 
+        spoke 426 permutations of phrases and words as established by counting the occurrences on the transcription 
+        for the recordings. Numerous common parlances were repeated. Her current rate of production, which is 
+        variable, has increased to 80 minutes of speech recorded over a period as short as two days.
+      </p>
+      <p>
+        Before recording her speech, there was no second opportunity to comprehend Arielle's expressions. Compared 
+        with simply listening through the door, I now hear many more of her expressions. It is difficult to write as fast as 
+        Arielle can speak; if she starts speaking at a high rate, it is certain that one will miss parts of her monologue. 
+        By playing back the program, it is possible to fill in the words missed during simultaneous transcription and real-
+        time listening.
+      </p>
+      <p>
+        Over the last years, the macaw's speech production has increased markedly; either that, or, perhaps, I am 
+        simply more aware of her vocal sessions. I suspect that Arielle's vocabulary will continue to grow, because she 
+        seems to be warming up to perform something more spectacular and more astounding than what she has 
+        already done. Arielle is a bashful individual; however, she generally speaks covertly when she is outside on her 
+        perch with no people present. I am in an awkward position, since I have been unable to determine what her 
+        clandestine plan is, but, in time, she will communicate it to me.
+      </p>
+
+      <div class="spectrogram-section">
+        <p>
+          Recording speech sounds ultimately leads to comparing the words 
+          using a computer as a tool for analyzing the sounds.
+        </p>
+        <p>
+          To see the sound spectrum contained in my speech and Arielle's 
+          speech click on the word to the right: <a href="/files/Spectrogram_Doc_for_web.pdf" target="_blank">Spectrogram</a>
+        </p>
+      </div>
+
+      <div class="closing-statement">
+        <p>
+          Arielle understands speech and speaks thoughtfully using English 
+          words, phrases, and sentences.
+        </p>
+      </div>
+
+      <p class="contact">
+        E-mail address: Mike@ParrotSpeech.org
       </p>
     </section>
 
@@ -81,38 +196,184 @@ const description = "Methods and techniques for recording and analyzing bird spe
 </BaseLayout>
 
 <style>
-  .page-header h1 {
-    font-size: 2rem;
-    color: #663300;
+  .page-header {
     text-align: center;
     margin-bottom: 40px;
   }
 
+  .page-header h1 {
+    font-size: 2.2rem;
+    color: #663300;
+    margin-bottom: 10px;
+  }
+
+  .page-header .subtitle {
+    font-size: 1.8rem;
+    color: #663300;
+    font-weight: bold;
+  }
+
   .content {
-    max-width: 750px;
+    max-width: 780px;
     margin: 0 auto;
     line-height: 1.8;
   }
 
+  .intro-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .image-container {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 385px;
+    height: auto;
+  }
+
+  .photo-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  }
+
+  .image-description {
+    flex: 1;
+    min-width: 200px;
+    color: #000066;
+    font-weight: bold;
+  }
+
+  .image-description p {
+    margin-bottom: 1em;
+  }
+
+  .location-indicator {
+    color: #00CCCC;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
   .content h2 {
-    color: #009966;
+    color: #663300;
     margin-top: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 1.4rem;
+  }
+
+  .content h3 {
+    color: #000066;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
   }
 
   .content p {
     margin-bottom: 1.5em;
-    color: #333;
+    color: #663300;
+    font-weight: bold;
   }
 
-  .content ul {
+  .reasons-list {
     margin: 20px 0;
-    padding-left: 30px;
+    padding-left: 40px;
   }
 
-  .content li {
+  .reasons-list li {
+    margin-bottom: 15px;
+    color: #663300;
+    font-weight: bold;
+  }
+
+  .audio-box {
+    background-color: #FFFF00;
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  .audio-intro {
+    color: #FF0000;
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #444;
+  }
+
+  .audio-note {
+    color: #FF0000;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .audio-fallback {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .audio-fallback a {
+    color: #0000FF;
+  }
+
+  .emphasis {
+    font-style: italic;
+  }
+
+  .spectrogram-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #663300;
+  }
+
+  .spectrogram-section p {
+    font-size: 1.3rem;
+    color: #663300;
+  }
+
+  .spectrogram-section a {
+    color: #0000FF;
+    font-size: 1.3rem;
+  }
+
+  .closing-statement {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+  }
+
+  .closing-statement p {
+    font-size: 1.4rem;
+    color: #663300;
+  }
+
+  .contact {
+    margin-top: 40px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .intro-section {
+      flex-direction: column;
+    }
+
+    .page-header h1 {
+      font-size: 1.8rem;
+    }
+
+    .page-header .subtitle {
+      font-size: 1.4rem;
+    }
   }
 </style>
