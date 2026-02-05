@@ -3,9 +3,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
 
-const title = "Speech Investigation - Research Methods";
-const description = "Details about the speech research investigation methodology.";
+const title = "Speech Investigation - Investigating Speech: an African Grey Parrot Speaking Italian";
+const description = "Investigating Italian vowel sounds and simple Italian words spoken by an African Grey parrot.";
+
+const audioClips = [
+  { number: 1, src: "/media/Clip_1.wav" },
+  { number: 2, src: "/media/Clip_2.wav" },
+  { number: 3, src: "/media/Clip_3.wav" },
+  { number: 4, src: "/media/Clip_4.wav" },
+  { number: 5, src: "/media/Clip_5.wav" },
+  { number: 6, src: "/media/Clip_6.wav" },
+  { number: 7, src: "/media/Clip_7.wav" },
+  { number: 8, src: "/media/Clip_8.wav" },
+  { number: 9, src: "/media/Clip_9.wav" },
+  { number: 10, src: "/media/Clip_10.wav" },
+];
 ---
 
 <BaseLayout title={title} description={description}>
@@ -15,62 +29,86 @@ const description = "Details about the speech research investigation methodology
     <Breadcrumb currentPage="Speech Investigation" />
 
     <header class="page-header">
-      <h1>Speech Investigation</h1>
-      <p class="subtitle">Research Methods and Approach</p>
+      <h1>Investigating Speech: an African Grey Parrot Speaking Italian.</h1>
     </header>
 
+    <section class="intro-section">
+      <div class="intro-content">
+        <div class="intro-image">
+          <img src="/sitebuilder/images/New_Picture-258x394.png" alt="African Grey Parrot" />
+        </div>
+        <div class="intro-questions">
+          <p class="question">Do people understand speech by a bird with which they are unfamiliar?</p>
+          <p>Help with research (below) attempting to learn more about human perception of unfamiliar and/or spontaneous speech by a talking bird.</p>
+          
+          <p class="question">Are human beings good at listening to parrots?</p>
+          <p>Participate in the listening test below.</p>
+          
+          <p class="question">What about other species of parrots?</p>
+          <p>Do you have a recording of a bird speaking that you do not understand? If so, please contact me.</p>
+          
+          <p class="question">Do you know someone interested in speech by talented talking birds?</p>
+          <p>Please pass this page to your friend.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="content">
-      <h2>Passive Research Methodology</h2>
-      <p>
-        Unlike controlled laboratory experiments, our research employs a passive observation 
-        methodology. This approach captures natural, spontaneous speech without prompting 
-        or artificial stimuli, providing insight into genuine language use.
-      </p>
+      <h2 class="section-title">Investigating Italian vowel sounds and simple Italian words.</h2>
+      
+      <div class="research-text">
+        <p>
+          Studies with parrots by Pepperberg in the United States and by Lenti-Boero, Masin, <em>et al</em>. in Italy indicate that humans perceive speech by parrots well. These studies appear to have a high degree of agreement among listeners for recordings of parrot speech.
+        </p>
+        <p>
+          It is important to determine whether bird owners and others possess the same ability to recognize the words spoken by unfamiliar talking birds as the researchers. Dr. Masin provided samples for me to use in trying to determine whether Americans understand vowel sounds and simple words spoken by an Italian-speaking parrot. The subject under investigation was an African Grey parrot.
+        </p>
+        <p>
+          In this experiment, listeners evaluate a series of very short sound clips with portions of words spoken by the parrot which have been edited to isolate the vowel sounds from the word. The listener is asked to identify the vowel as A, E, I, O, or U for seven of the clips. Three clips have repetitions of a word or a series of common Italian words that a child might know as spoken by the Grey parrot. The task of willing listeners is to identify the vowels and the words spoken on the clips.
+        </p>
+        <p>
+          If you are willing to listen and determine what you think the bird is saying, I would appreciate receiving your answers to add to my data. I encourage participants to write in a phonetic representation for what they hear in the event that you do not distinctly recognize the vowel or word. For example, if you hear the vowel "A" and it sounds like "Ahhh" or the "A" in "at" write that on your answer sheet. If you heard a vowel that sounds like the long vowel "A" in English, you could so indicate by listing a word with the sound you heard (your example might be "slate").
+        </p>
+        <p>
+          An answer sheet is provided below. [You can listen to the clips as many times as you like, and you can consult with others in your household to arrive at your final result. One submission per household unless done independently without any conferencing or discussion.]
+        </p>
+      </div>
 
-      <h2>Documentation Process</h2>
-      <p>
-        Each speech event is carefully documented with the following information:
-      </p>
-      <ul>
-        <li>The exact utterance (transcription)</li>
-        <li>Audio recording when possible</li>
-        <li>Context and environmental factors</li>
-        <li>Time and date</li>
-        <li>Observer notes on bird behavior</li>
-        <li>Any preceding events or interactions</li>
-      </ul>
+      <div class="answer-sheet-box">
+        <a href="/files/AnswerSheetMinCONV.docx" target="_blank" class="answer-sheet-link">
+          Click here for answer sheet
+        </a>
+        <p>The document is in WORD 97-2003 format and will load on most computers</p>
+      </div>
 
-      <h2>Analysis Framework</h2>
-      <p>
-        Speech samples are analyzed for several key factors:
-      </p>
-      <ul>
-        <li><strong>Novelty:</strong> Is the utterance original or a direct repetition?</li>
-        <li><strong>Context appropriateness:</strong> Does the speech fit the situation?</li>
-        <li><strong>Grammatical structure:</strong> Does the bird apply grammar rules?</li>
-        <li><strong>Pronoun usage:</strong> Does the bird understand pronouns?</li>
-        <li><strong>Verb conjugation:</strong> Are verbs correctly matched to subjects?</li>
-      </ul>
+      <div class="clips-intro">
+        <p>
+          The sound clips appear below. Please listen to them in numerical order for consistency and to avoid errors. You may listen to the sounds as many times as you need to provide an answer.
+        </p>
+      </div>
 
-      <h2>Key Findings</h2>
-      <p>
-        Our investigation has revealed several significant findings about Arielle's 
-        language abilities:
-      </p>
-      <ul>
-        <li>Consistent pronoun substitution (I, you, she)</li>
-        <li>Correct verb conjugation to match subjects</li>
-        <li>Contextually appropriate vocabulary selection</li>
-        <li>Novel combinations of learned phrases</li>
-        <li>Emotional tone modulation</li>
-      </ul>
+      <div class="clips-section">
+        <div class="clips-images">
+          <img src="/sitebuilder/images/COCKATIE-201x240.jpg" alt="Cockatiel" class="bird-image" />
+          <img src="/sitebuilder/images/BUDGIE-184x288.jpg" alt="Budgie" class="bird-image" />
+          <img src="/sitebuilder/images/Black_Headed_Caique-229x312.jpg" alt="Black Headed Caique" class="bird-image" />
+        </div>
+        <div class="clips-list">
+          {audioClips.map((clip) => (
+            <div class="clip-item">
+              <span class="clip-label">Clip {clip.number}</span>
+              <audio controls>
+                <source src={clip.src} type="audio/wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      <h2>Ongoing Research</h2>
-      <p>
-        This research continues as we document more examples of Arielle's speech. 
-        Each new observation adds to our understanding of avian language capabilities 
-        and the potential for meaningful interspecies communication.
-      </p>
+      <div class="footer-message">
+        <p>Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
+      </div>
     </section>
 
     <Footer />
@@ -80,54 +118,186 @@ const description = "Details about the speech research investigation methodology
 <style>
   .page-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .page-header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #663300;
     margin-bottom: 10px;
+    line-height: 1.3;
   }
 
-  .subtitle {
-    color: #666;
-    font-size: 1.1rem;
+  .intro-section {
+    margin-bottom: 40px;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .intro-image img {
+    max-width: 258px;
+    height: auto;
+  }
+
+  .intro-questions {
+    max-width: 350px;
+  }
+
+  .intro-questions .question {
+    color: #FF0000;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .intro-questions p {
+    color: #663300;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .section-title {
+    text-align: center;
+    color: #663300;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
   }
 
   .content {
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto;
-    line-height: 1.8;
-  }
-
-  .content h2 {
-    color: #009966;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-  }
-
-  .content h2:first-child {
-    margin-top: 0;
-  }
-
-  .content p {
-    margin-bottom: 1.5em;
-    color: #333;
-  }
-
-  .content ul {
-    margin: 20px 0;
-    padding-left: 30px;
-  }
-
-  .content li {
-    margin-bottom: 12px;
-    color: #444;
     line-height: 1.6;
   }
 
-  .content li strong {
+  .research-text {
+    margin-bottom: 30px;
+  }
+
+  .research-text p {
+    margin-bottom: 1.2em;
     color: #663300;
+    font-weight: bold;
+  }
+
+  .answer-sheet-box {
+    background-color: #FFCC00;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .answer-sheet-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0000FF;
+    text-decoration: underline;
+  }
+
+  .answer-sheet-box p {
+    color: #663300;
+    margin-top: 10px;
+  }
+
+  .clips-intro {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .clips-intro p {
+    color: #663300;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .clips-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .clips-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .bird-image {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .clips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .clip-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .clip-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #663300;
+    min-width: 70px;
+  }
+
+  .clip-item audio {
+    width: 240px;
+  }
+
+  .footer-message {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .footer-message p {
+    color: #663300;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .intro-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .clips-section {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .clips-images {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bird-image {
+      max-width: 150px;
+    }
+
+    .clip-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .clip-item audio {
+      width: 100%;
+      max-width: 300px;
+    }
   }
 </style>

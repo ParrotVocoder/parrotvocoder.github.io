@@ -1,107 +1,188 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Breadcrumb from "../components/Breadcrumb.astro"
+import Footer from "../components/Footer.astro"
 
-const title = "Services - Presentations, Transcription, and More";
-const description = "Services offered including presentations about talking birds, speech transcription, and merchandise.";
+const title = "Songs & Services - ParrotSpeech.org"
+const description =
+  "Services offered including presentations, books about Arielle's speech, transcription services, merchandise, and original songs about parrots."
 
 const services = [
-  {
-    title: "Educational Presentations",
-    description: "Engaging presentations about Arielle's remarkable speech abilities and interspecies communication. Suitable for schools, libraries, bird clubs, and conferences.",
-    features: [
-      "Live audio recordings of Arielle speaking",
-      "Video demonstrations",
-      "Interactive Q&A sessions",
-      "Age-appropriate content for all audiences"
-    ]
-  },
-  {
-    title: "Conference Speaking",
-    description: "Academic and professional presentations for conferences, symposiums, and research gatherings focusing on animal cognition and communication.",
-    features: [
-      "Research methodology discussions",
-      "Data presentation and analysis",
-      "Peer engagement opportunities"
-    ]
-  },
-  {
-    title: "Speech Transcription Services",
-    description: "Professional transcription of bird vocalizations and speech recordings. Useful for researchers and bird owners documenting their birds' language development.",
-    features: [
-      "Detailed phonetic transcription",
-      "Context documentation",
-      "Analysis notes included"
-    ]
-  },
-  {
-    title: "Book Sales",
-    description: "Copies of 'Another Kind of Mind: A Talking Bird Masters English' are available for purchase. Books can be signed upon request.",
-    features: [
-      "Signed copies available",
-      "Bulk discounts for organizations",
-      "Available at speaking events"
-    ]
-  }
-];
+  "arranging a presentation-talk at your organization",
+  "purchasing books about Arielle's speech",
+  "transcription service for talking bird speech",
+  "cups & T-shirts featuring Arielle's likeness",
+  "audio electronics hardware and consulting services",
+]
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="services" />
-  
+
   <article>
     <Breadcrumb currentPage="Services" />
 
     <header class="page-header">
-      <h1>Services</h1>
-      <p class="subtitle">Presentations, Resources, and More</p>
+      <h1>Songs & Services</h1>
+      <div class="header-image">
+        <img src="/images/P4120482_Arielle_and_Mike_vertStraight.jpg" alt="Arielle and Mike" />
+        <p class="photo-credit">Photo by Patricia Dalton</p>
+      </div>
     </header>
 
-    <section class="intro">
-      <p>
-        We offer various services related to parrot speech research, education, and 
-        outreach. Whether you're planning an event, conducting research, or simply 
-        want to learn more, we're here to help.
-      </p>
-    </section>
-
-    <div class="services-grid">
-      {services.map((service) => (
-        <section class="service-card">
-          <h2>{service.title}</h2>
-          <p class="service-desc">{service.description}</p>
-          <ul class="feature-list">
-            {service.features.map((feature) => (
-              <li>{feature}</li>
-            ))}
-          </ul>
-        </section>
-      ))}
-    </div>
-
-    <section class="booking">
-      <h2>Booking Information</h2>
-      <p>
-        To inquire about services, availability, and pricing, please visit our 
-        <a href="/contact">Contact page</a>. We recommend booking speaking engagements 
-        at least 4-6 weeks in advance.
-      </p>
-    </section>
-
-    <section class="past-events">
-      <h2>Past Presentations</h2>
-      <p>
-        Michael Dalton has presented at numerous venues including:
-      </p>
-      <ul>
-        <li>Comparative Cognition Society Conferences</li>
-        <li>American Federation of Aviculture Conventions</li>
-        <li>Gateway Parrot Club Events</li>
-        <li>Public Libraries</li>
-        <li>Television and Radio Programs</li>
+    <section class="services-section">
+      <h2>Service—How may we help you?</h2>
+      <p class="coming-soon-note">This page will provide more information in the future.</p>
+      <p>Look for information here about:</p>
+      <ul class="services-list">
+        {services.map((service) => <li>{service}</li>)}
       </ul>
+    </section>
+
+    <section class="about-arielle">
+      <div class="arielle-image">
+        <img src="/images/ARIELLE_HeadFFs.jpg" alt="Arielle" />
+      </div>
+      <div class="about-content">
+        <p>
+          What animal speaks using coherent language that is understandable by man? A talking bird called Arielle does.
+          The interspecies barrier broke when Arielle began to communicate by volunteering information through English
+          statements. She is a beautiful, now 21-year-old, tropical bird that has expressed herself spontaneously using
+          more than 6000 English words, phrases, and sentences. Her verbal progress compares to that of a young child.
+        </p>
+        <p>
+          The Beatles tune, "Got to get you into my life," presented a nagging riddle. The puzzle resolved after years
+          of walking down a road with my macaw, Arielle. The cryptic lyric, "… find another kind of mind there,"
+          inspired me to describe my linguistic adventure with a talking bird.
+        </p>
+        <p>
+          Arielle has the ability to communicate across species using human speech when she wishes to do so. Those who
+          know Arielle and listen carefully to recordings of her voluntarily spoken private monologues discover that her
+          speech reveals her thoughts. Readers understand Arielle's speech by considering her statements with the
+          provided background information.
+        </p>
+        <p>
+          Transcriptions of Arielle's voluntary speech reveal meaningful messages that form the core of <em
+            >Another Kind of Mind</em
+          >. An unanticipated statement by Arielle reveals that she listens to what people say and that she is capable
+          of attributing speech to an individual by name. Many of her statements provide concrete examples that a
+          talking bird can learn to communicate ideas through human language.
+        </p>
+        <p>
+          <em>Another Kind of Mind</em> traces a bird's speech development. The book provides details about how Arielle can:
+        </p>
+        <ul>
+          <li>vocalize in a previously little recognized purr-like voice,</li>
+          <li>construct a monologue or dialogue about a topic,</li>
+          <li>reveal her sensory impressions about the environment,</li>
+          <li>substitutes nouns and personal pronouns correctly,</li>
+          <li>rhyme, express emotion, and construct verbal jokes,</li>
+          <li>apply logic in her speech and speak using proper syntax,</li>
+          <li>organize thoughts using phrases and sequences of statements.</li>
+        </ul>
+        <p>
+          <em>Another Kind of Mind</em> guides readers toward understanding Arielle's English words, phrases, and sentences,
+          as her expressions provide insight into her mind, personality, and thoughts. Her meaningful speech communicates
+          something never before evident from utterances made by a bird. Arielle is a conscious being.
+        </p>
+        <p>
+          <a href="/another-mind">Click here to advance to the book page.</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="songs-section">
+      <h2><span class="songs-blue">SONGS</span> <span class="songs-red">SONGS</span></h2>
+
+      <div class="song-content">
+        <p>
+          Many years ago, I wrote my first song; I figured out the melody by picking out each note on a guitar. I don't
+          play an instrument now and I don't have a great singing voice. My interest in parrots has brought me to write
+          about them; I have others in the concept stage.
+        </p>
+        <p>
+          My interest is the birds, so I am motivated to put together a basic song. At a local writers' group, I met my
+          co-writer, Steve Keteltas. Steve is talented; he is a poet, sings, and plays the guitar. Together we have put
+          together two parody songs, which are songs set to a familiar tune with original lyrics.
+        </p>
+        <p>
+          The first song will be posted to <em>YouTube</em>. This is a song about my macaw Arielle, and her capacity to
+          learn English. I explain about her abilities to learn language, not merely repeat things, in my book <em
+            >Another Kind of Mind.</em
+          > So listen to the song called Pretty Parrot by clicking on the link below.
+        </p>
+
+        <div class="song-feature">
+          <h3><em><u>Pretty Parrot</u></em> <span class="song-subtitle">song & slide show/(video)</span></h3>
+          <p>
+            This is an effort to present pictures representing the joy of owning a large bird. It takes a great deal of
+            work to care properly for a macaw and the bird should not be taken lightly.
+          </p>
+          <p>
+            Because macaws are highly intelligent, as are most parrots, owners must be willing to spend considerable
+            time with the parrot. A portion of the time should be aimed at educating the bird. That means teaching it
+            the meaning of words. If done well, <em
+              >parrots are one of the few animals capable of communicating using our languages</em
+            >.
+          </p>
+          <p>
+            That is what Arielle does. Communicate. She on occasion speaks directly to me; we have had conversations
+            with up to four turns. Most frequently, she volunteers speech when no one is present. She creates statements
+            that are original and she presents novel ideas from her viewpoint as an educated bird. This does not she is
+            a human being, but she is a creature with her own mind and thoughts. That is the reason for the book about
+            her ability to use language called <u>Another Kind of Mind</u>: A Talking Bird Masters English. Enjoy the
+            song about her!
+          </p>
+          <p class="youtube-link">
+            <!-- <a href="https://youtu.be/qfeKKwGbbQk" target="_blank">http://youtu.be/qfeKKwGbbQk</a> -->
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/qfeKKwGbbQk?si=TXVxdZzK0imdp0Zg"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </p>
+          <p>
+            <a href="/another-mind">Click here to go to the book page</a>
+          </p>
+        </div>
+
+        <div class="coming-soon">
+          <h3><span class="coming-soon-text">COMING SOON</span></h3>
+          <p>
+            There are many beautiful birds. Parrots are like people because different species and individuals within the
+            species have interesting personalities. That is a theme for the second song; I had most of the stereotypical
+            characteristics of four species of large parrots in mind when I formulated the second song.
+          </p>
+          <p>
+            The song mentions several types of parrots, Cockatoos, African Grey parrots, Amazon parrots, and macaws,
+            with an emphasis on Blue & Gold macaws. I have a fondness for macaws because of Arielle.
+          </p>
+          <p>
+            I haven't currently secured enough video clips to construct the film I want to piece together. If you are
+            reading this and are willing to permit me to use your interesting or unusual short clips about your bird in
+            an up-coming posting of the song, I will appreciate the help. Contributors will be included in the published
+            credits in the production.
+          </p>
+          <p>There will be a spot here to click to hear and view the second production called</p>
+          <h4><u>Blue & Gold Macaws</u></h4>
+          <p class="coming-soon-label"><span class="coming-soon-text">COMING SOON</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info">
+      <p>
+        To contact us about any of the above matters, simply send an e-mail to<br />
+        <strong>mike@ParrotSpeech.org</strong>
+      </p>
+    </section>
+
+    <section class="footer-quote">
+      <p>Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
     </section>
 
     <Footer />
@@ -115,104 +196,223 @@ const services = [
   }
 
   .page-header h1 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     color: #663300;
-    margin-bottom: 10px;
-  }
-
-  .subtitle {
-    color: #666;
-    font-size: 1.1rem;
-  }
-
-  .intro {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #444;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-
-  .service-card {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 12px;
-    border-top: 4px solid #009966;
-  }
-
-  .service-card h2 {
-    color: #663300;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-  }
-
-  .service-desc {
-    color: #555;
-    line-height: 1.7;
     margin-bottom: 20px;
   }
 
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .feature-list li {
-    padding: 8px 0 8px 25px;
+  .header-image {
     position: relative;
-    color: #444;
-    border-bottom: 1px solid #e0e0e0;
+    display: inline-block;
   }
 
-  .feature-list li:last-child {
-    border-bottom: none;
+  .header-image img {
+    max-width: 385px;
+    height: auto;
+    border-radius: 8px;
   }
 
-  .feature-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #009966;
-    font-weight: bold;
+  .photo-credit {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
   }
 
-  .booking,
-  .past-events {
-    background: #fff9e6;
+  .services-section {
+    background: #f9f9f9;
     padding: 30px;
     border-radius: 12px;
-    margin-bottom: 30px;
-    border-left: 4px solid #ff9900;
+    margin-bottom: 40px;
   }
 
-  .booking h2,
-  .past-events h2 {
+  .services-section h2 {
+    font-size: 1.8rem;
     color: #663300;
+    margin-bottom: 20px;
+  }
+
+  .coming-soon-note {
+    font-style: italic;
+    color: #666;
     margin-bottom: 15px;
   }
 
-  .booking p,
-  .past-events p {
-    line-height: 1.7;
-    color: #555;
+  .services-list {
+    list-style: disc;
+    padding-left: 40px;
+    color: #663300;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 2;
   }
 
-  .past-events ul {
-    margin-top: 15px;
+  .services-list li {
+    margin-bottom: 10px;
+  }
+
+  .about-arielle {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+
+  .arielle-image img {
+    width: 81px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .about-content {
+    flex: 1;
+    color: #663300;
+    line-height: 1.6;
+  }
+
+  .about-content p {
+    margin-bottom: 15px;
+  }
+
+  .about-content ul {
+    margin: 15px 0;
     padding-left: 25px;
   }
 
-  .past-events li {
-    margin-bottom: 8px;
-    color: #444;
+  .about-content li {
+    margin-bottom: 5px;
+  }
+
+  .about-content em {
+    font-style: italic;
+  }
+
+  .about-content a {
+    color: #0000ff;
+  }
+
+  .songs-section {
+    margin-bottom: 50px;
+  }
+
+  .songs-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .songs-blue {
+    color: #000066;
+  }
+
+  .songs-red {
+    color: #ff0033;
+  }
+
+  .song-content {
+    color: #000066;
+    line-height: 1.6;
+  }
+
+  .song-content p {
+    margin-bottom: 15px;
+  }
+
+  .song-feature {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f0f4ff;
+    border-radius: 8px;
+  }
+
+  .song-feature h3 {
+    font-size: 2rem;
+    color: #000066;
+    margin-bottom: 15px;
+  }
+
+  .song-subtitle {
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  .youtube-link {
+    font-size: 1.4rem;
+  }
+
+  .youtube-link a {
+    color: #0000ff;
+  }
+
+  .coming-soon {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff0f0;
+    border-radius: 8px;
+  }
+
+  .coming-soon h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .coming-soon h4 {
+    font-size: 1.8rem;
+    color: #ff0033;
+    margin-top: 20px;
+  }
+
+  .coming-soon p {
+    color: #ff0033;
+  }
+
+  .coming-soon-text {
+    color: #006600;
+  }
+
+  .coming-soon-label {
+    margin-top: 20px;
+  }
+
+  .contact-info {
+    background: #e6f0ff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-info p {
+    font-size: 1.1rem;
+    color: #000066;
+    line-height: 1.8;
+  }
+
+  .contact-info strong {
+    font-size: 1.2rem;
+  }
+
+  .footer-quote {
+    background: #fff9e6;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-quote p {
+    font-size: 1.4rem;
+    color: #663300;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .about-arielle {
+      flex-direction: column;
+    }
+
+    .header-image img {
+      max-width: 100%;
+    }
   }
 </style>

@@ -1,17 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import AudioPlayer from '../components/AudioPlayer.astro';
-import HighlightBox from '../components/HighlightBox.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import AudioPlayer from "../components/AudioPlayer.astro"
+import HighlightBox from "../components/HighlightBox.astro"
+import Footer from "../components/Footer.astro"
 
-const title = "The home of the pioneering macaw Arielle";
-const description = "This site deals with the abilities of one talking bird and is intended to be a resource for potential bird owners, anyone interested in speech perception, people who are interested in the development of language in nonhumans, and bird keepers who wish to share information about their talking birds.";
+const title = "The home of the pioneering macaw Arielle"
+const description =
+  "This site deals with the abilities of one talking bird and is intended to be a resource for potential bird owners, anyone interested in speech perception, people who are interested in the development of language in nonhumans, and bird keepers who wish to share information about their talking birds."
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="home" />
-  
+
   <article>
     <div class="breadcrumb">
       <strong>You are here:</strong><br />Index Page
@@ -24,27 +25,41 @@ const description = "This site deals with the abilities of one talking bird and 
 
     <section class="intro-section">
       <p class="intro-text">
-        This site deals with the abilities of one talking bird and is intended to be a resource 
-        for potential bird owners, anyone interested in speech perception, people who are 
-        interested in the development of language in nonhumans, and bird keepers who 
-        wish to share information about their talking birds.
+        This site deals with the abilities of one talking bird and is intended to be a resource for potential bird
+        owners, anyone interested in speech perception, people who are interested in the development of language in
+        nonhumans, and bird keepers who wish to share information about their talking birds.
       </p>
       <p class="book-info">
-        For information about my book describing Arielle's speech, 
-        <a href="/another-mind">click here</a> to transfer to the site page for 
+        For information about my book describing Arielle's speech,
+        <a href="/another-mind">click here</a> to transfer to the site page for
         <em>Another Kind of Mind</em>.
       </p>
     </section>
 
     <section class="main-content">
       <div class="arielle-image">
-        <img src="/images/Arielle_standing_on_her_cup.jpg" alt="Arielle the Blue & Gold macaw" width="300" height="449" />
+        <img
+          src="/images/Arielle_standing_on_her_cup.jpg"
+          alt="Arielle the Blue & Gold macaw"
+          width="300"
+          height="449"
+        />
       </div>
       <div class="arielle-description">
         <p>Arielle is a friendly Blue & Gold macaw. Macaws, like other parrots, can talk.</p>
-        <p>She has a large vocabulary and has spoken more than 4000 different expressions. Arielle understands English. At times she speaks directly to her human friend.</p>
-        <p>She freely vocalizes most days. Her speech contains sequences of statements about many topics, and she carries on conversations with herself and imagined friends.</p>
-        <p>She is one of a handful of birds around the world who can communicate ideas through speech. The author formulated the idea of listening to her voluntarily spoken words as a new approach to interspecies communication.</p>
+        <p>
+          She has a large vocabulary and has spoken more than 4000 different expressions. Arielle understands English.
+          At times she speaks directly to her human friend.
+        </p>
+        <p>
+          She freely vocalizes most days. Her speech contains sequences of statements about many topics, and she carries
+          on conversations with herself and imagined friends.
+        </p>
+        <p>
+          She is one of a handful of birds around the world who can communicate ideas through speech. The author
+          formulated the idea of listening to her voluntarily spoken words as a new approach to interspecies
+          communication.
+        </p>
       </div>
     </section>
 
@@ -58,23 +73,27 @@ const description = "This site deals with the abilities of one talking bird and 
         <p class="greeting-text">
           To hear Arielle's greeting, click the play button to the right.<br />
           Arielle says, "Hi! ... Hello."<br />
-          <small>(<a href="/media/TrackD211T26_HI.wav">If player does not appear, click on this text to play speech.</a>)</small>
+          <small
+            >(<a href="/media/TrackD211T26_HI.wav">If player does not appear, click on this text to play speech.</a
+            >)</small
+          >
         </p>
       </HighlightBox>
-      <AudioPlayer 
-        src="/media/TrackD211T26_HI2.wav" 
-        caption="Arielle's greeting: Hi! ... Hello."
-      />
+      <AudioPlayer src="/media/TrackD211T26_HI2.wav" caption="Arielle's greeting: Hi! ... Hello." />
     </section>
 
     <section class="tv-section">
       <p class="tv-info">
-        To see and hear information about Arielle presented on a Florida TV show, click on the link below. Look for 
-        "Seen on TV." If segment does not come up, search for "parrot," then select article about "Is Arielle Talking?"<br />
+        To see and hear information about Arielle presented on a Florida TV show, click on the link below. Look for
+        "Seen on TV." If segment does not come up, search for "parrot," then select article about "Is Arielle Talking?"<br
+        />
         Interview about speech research/cognitive speech clip from WTVT-13 FOX, Tampa 29 September 2010
       </p>
       <p class="tv-link"><a href="/videos/Fox13_News_Animal_Talk_1.mp4">See Arielle on TV ... Hear her talking</a></p>
-      <p><a href="/videos/WTSP_July2008.mp4"><strong>Arielle's (2008) Appearance on WTSP-10 Tampa Bay's 10 TV</strong></a>. (Click to go to start and go to page.)</p>
+      <p>
+        <a href="/videos/WTSP_July2008.mp4"><strong>Arielle's (2008) Appearance on WTSP-10 Tampa Bay's 10 TV</strong></a
+        >. (Click to go to start and go to page.)
+      </p>
     </section>
 
     <section class="another-greeting">
@@ -83,28 +102,42 @@ const description = "This site deals with the abilities of one talking bird and 
           To hear another greeting said by Arielle, click the play button to the left.<br /><br />
           Arielle says, "Have a good day!" (laughs)<br />
           <small>(She learned the phrase from people in the street; this version recorded 18 August 2009)</small><br />
-          <small>(<a href="/media/HAGD_Disc_419_Track11_18Aug2009mp3.mp3">Click on this text to play speech if player does not appear</a>.)</small>
+          <small
+            >(<a href="/media/HAGD_Disc_419_Track11_18Aug2009mp3.mp3"
+              >Click on this text to play speech if player does not appear</a
+            >.)</small
+          >
         </p>
       </HighlightBox>
-      <AudioPlayer 
-        src="/media/HAGD_Disc_419_Track11_18Aug2009mp3.mp3" 
-        caption="Arielle saying: Have a good day!"
-      />
+      <AudioPlayer src="/media/HAGD_Disc_419_Track11_18Aug2009mp3.mp3" caption="Arielle saying: Have a good day!" />
     </section>
 
     <section class="events-section">
       <h2>Appearances & Events</h2>
       <p class="book-signing-info">
-        Information about appearances, presentations, events to "meet the author" and 
-        attend a book signing for <strong><em>Another Kind of Mind</em></strong>: A Talking bird Masters English
+        Information about appearances, presentations, events to "meet the author" and attend a book signing for <strong
+          ><em>Another Kind of Mind</em></strong
+        >: A Talking bird Masters English
       </p>
-      <p class="check-listings">Check for new listings because future additions may appear, including appearances by Arielle.</p>
-      <p class="more-info"><span class="red"><strong>Click for more information ></strong></span> <a href="/contact">Audio/Visual Presentations, Papers, Discussions, and Seminars</a></p>
+      <p class="check-listings">
+        Check for new listings because future additions may appear, including appearances by Arielle.
+      </p>
+      <p class="more-info">
+        <span class="red"><strong>Click for more information ></strong></span>
+        <a href="/contact">Audio/Visual Presentations, Papers, Discussions, and Seminars</a>
+      </p>
 
       <section class="youtube-section">
         <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p>
         <!-- <p><a href="https://youtu.be/qfeKKwGbbQk"><strong>https://youtu.be/qfeKKwGbbQk</strong></a></p> -->
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/qfeKKwGbbQk?si=OMRtaniFnx5W4vF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/qfeKKwGbbQk?si=OMRtaniFnx5W4vF1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
       </section>
 
       <table class="events-table">
@@ -130,7 +163,8 @@ const description = "This site deals with the abilities of one talking bird and 
             </td>
             <td>
               <strong>Meet the Author</strong><br /><br />
-              Authors speak with the public about their books. I will have a PowerPoint video playing about Arielle's speech. Books are for sale and will be signed on request.<br /><br />
+              Authors speak with the public about their books. I will have a PowerPoint video playing about Arielle's speech.
+              Books are for sale and will be signed on request.<br /><br />
               <span class="red"><strong>Bring questions about an animal learning language.</strong></span>
             </td>
           </tr>
@@ -142,7 +176,8 @@ const description = "This site deals with the abilities of one talking bird and 
               <span class="red">Speaking</span>: Thursday<br />28 June 2012 @ ~2:30 p.m
             </td>
             <td>
-              5th EASLCE International Conference on "Natura Loquens: Eruptive Dialogues, Disruptive Discourses"<br />Tenerife, Canary Islands, Spain
+              5th EASLCE International Conference on "Natura Loquens: Eruptive Dialogues, Disruptive Discourses"<br
+              />Tenerife, Canary Islands, Spain
             </td>
             <td>
               Convention Paper/Presentation--<br />"Disrupted Dialogue: A Macaw Learning Language"<br /><br />
@@ -154,14 +189,19 @@ const description = "This site deals with the abilities of one talking bird and 
             <td>
               <strong>25-26 August 2012</strong><br />
               <span class="red">Speaking</span>: Saturday 3 p.m.<br />Sunday: 2 p.m.<br /><br />
-              <a href="/files/Flyer2012.pdf" target="_blank">Click for brochure about 2012 All-American Hookbill Fair & Seminar--Gateway Parrot Club</a>
+              <a href="/files/Flyer2012.pdf" target="_blank"
+                >Click for brochure about 2012 All-American Hookbill Fair & Seminar--Gateway Parrot Club</a
+              >
             </td>
             <td>
-              2012 All-American Hookbill Fair & Seminar--Gateway Parrot Club<br />Machinists Hall<br />12365 St. Charles Rock Rd., Bridgeton MO (St. Louis)
+              2012 All-American Hookbill Fair & Seminar--Gateway Parrot Club<br />Machinists Hall<br />12365 St. Charles
+              Rock Rd., Bridgeton MO (St. Louis)
             </td>
             <td>
-              (Saturday) <em class="red">Beyond … "Polly Wants a Cracker"™:</em> <em>Parrots Using Language</em><br /><br />
-              (Sunday) <em class="red">Beyond … "Polly Wants a Cracker"™:</em> <em>Humans Limit Interspecies Communication with Parrots</em>
+              (Saturday) <em class="red">Beyond … "Polly Wants a Cracker"™:</em>
+              <em>Parrots Using Language</em><br /><br />
+              (Sunday) <em class="red">Beyond … "Polly Wants a Cracker"™:</em>
+              <em>Humans Limit Interspecies Communication with Parrots</em>
             </td>
           </tr>
           <tr><td colspan="4">&nbsp;</td></tr>
@@ -178,7 +218,8 @@ const description = "This site deals with the abilities of one talking bird and 
             </td>
             <td>
               <em class="red">Speech-Language Disparity</em><br />
-              Lack of perception for elements of language ... "Passive Speech Research": cognitive speech, use of synonym & pronoun substitution
+              Lack of perception for elements of language ... "Passive Speech Research": cognitive speech, use of synonym
+              & pronoun substitution
             </td>
           </tr>
           <tr><td colspan="4">&nbsp;</td></tr>
@@ -188,41 +229,53 @@ const description = "This site deals with the abilities of one talking bird and 
 
     <section class="about-arielle">
       <p>
-        In June 2009, she will be 18 years old. Arielle is a shy bird, especially around strangers, and as a "free-speaking 
-        talking bird," she speaks voluntarily. She accompanies me on a daily visit to a park or a walk about the 
-        neighborhood, and during our outings, she occasionally speaks directly to me.
+        In June 2009, she will be 18 years old. Arielle is a shy bird, especially around strangers, and as a
+        "free-speaking talking bird," she speaks voluntarily. She accompanies me on a daily visit to a park or a walk
+        about the neighborhood, and during our outings, she occasionally speaks directly to me.
       </p>
       <p>
-        A form of interspecies communication results when she speaks to me. I call Arielle "an educated bird" rather 
-        than a trained parrot. The term educated means that she continues to learn language, and Arielle speaks as a 
-        result of learning things from lessons. She also learns on her own by associative learning. A speech sample can 
-        be heard by clicking identified sound selections located near yellow boxes throughout this site; transcription of 
-        Arielle's words appear in another yellow box near the bottom of the same page. Many speech samples appear 
-        on the "Another_Mind" page; the transcriptions are in the book <em>Another Kind of Mind</em>.
+        A form of interspecies communication results when she speaks to me. I call Arielle "an educated bird" rather
+        than a trained parrot. The term educated means that she continues to learn language, and Arielle speaks as a
+        result of learning things from lessons. She also learns on her own by associative learning. A speech sample can
+        be heard by clicking identified sound selections located near yellow boxes throughout this site; transcription
+        of Arielle's words appear in another yellow box near the bottom of the same page. Many speech samples appear on
+        the "Another_Mind" page; the transcriptions are in the book <em>Another Kind of Mind</em>.
       </p>
       <p>
-        Many people consider macaws to be mediocre talking birds. Arielle might be an exception. She vocalizes 
-        daily from her gym on the porch; her remarks often contain sequences of invented statements that express her 
-        thoughts. Listeners initially find her recorded speech difficult to understand, but after seeing a transcription of 
-        her statements they are startled by the range of her conversational topics as well as her general comments.
+        Many people consider macaws to be mediocre talking birds. Arielle might be an exception. She vocalizes daily
+        from her gym on the porch; her remarks often contain sequences of invented statements that express her thoughts.
+        Listeners initially find her recorded speech difficult to understand, but after seeing a transcription of her
+        statements they are startled by the range of her conversational topics as well as her general comments.
       </p>
     </section>
 
     <section class="linguistic-abilities">
-      <p><strong>Arielle is learning English at an advanced grade-school level. Her linguistic abilities include:</strong></p>
+      <p>
+        <strong
+          >Arielle is learning English at an advanced grade-school level. Her linguistic abilities include:</strong>
+      </p>
       <ul>
         <li>Arielle speaks of her free will and communicates many different messages.</li>
         <li>Arielle speaks with as many as five (5) different voice characteristics.</li>
         <li>Arielle is learning the English language and can make complicated statements.</li>
         <li>Arielle asks questions, and she sometimes answers her own query (ha, ha).</li>
-        <li>Arielle identifies other animals as ants, butterfly, cat, dog, rabbit, and snake; her vocabulary to describe birds includes: bird, cardinal, crow, egret, "feathered friend," hawk, parrot, and stork.</li>
-        <li>Arielle knows common words that begin with most letters of the alphabet, but she hasn't needed to speak words that begin with "X" or "Z" yet.</li>
+        <li>
+          Arielle identifies other animals as ants, butterfly, cat, dog, rabbit, and snake; her vocabulary to describe
+          birds includes: bird, cardinal, crow, egret, "feathered friend," hawk, parrot, and stork.
+        </li>
+        <li>
+          Arielle knows common words that begin with most letters of the alphabet, but she hasn't needed to speak words
+          that begin with "X" or "Z" yet.
+        </li>
         <li>Arielle speaks about many every day things and speaks sequences about a single topic.</li>
       </ul>
     </section>
 
     <section class="parrot-interest">
-      <p><strong>How many people are interested in parrot speech?</strong><br />The counter shows how many new friends Arielle made.</p>
+      <p>
+        <strong>How many people are interested in parrot speech?</strong><br />The counter shows how many new friends
+        Arielle made.
+      </p>
     </section>
 
     <section class="parrot-group">
@@ -236,10 +289,11 @@ const description = "This site deals with the abilities of one talking bird and 
         <p><strong>Here are the details about the ParrotSpeech Group:</strong></p>
         <h3>Description</h3>
         <p>
-          People interested in the study of spontaneous speech by talking birds. The topics of concern include learning theory, speech 
-          recognition, recording speech, cognitive speech by talking birds, linguistics, conversations with parrot-like birds, cognition, 
-          consciousness, and other topics related to the talking birds. To join click on the button to the left or enter the subscription into your 
-          e-mail address: ParrotSpeech-subscribe@yahoogroups.com
+          People interested in the study of spontaneous speech by talking birds. The topics of concern include learning
+          theory, speech recognition, recording speech, cognitive speech by talking birds, linguistics, conversations
+          with parrot-like birds, cognition, consciousness, and other topics related to the talking birds. To join click
+          on the button to the left or enter the subscription into your e-mail address:
+          ParrotSpeech-subscribe@yahoogroups.com
         </p>
       </div>
     </section>
@@ -247,12 +301,18 @@ const description = "This site deals with the abilities of one talking bird and 
     <section class="caution">
       <p class="red"><strong>CAUTION!</strong></p>
       <p>All of the pictures and materials contained on this web site are the property of the author.</p>
-      <p>None of the pictures or written material may be used, quoted, or reproduced in any form what so ever without the expressed written consent of the author.</p>
+      <p>
+        None of the pictures or written material may be used, quoted, or reproduced in any form what so ever without the
+        expressed written consent of the author.
+      </p>
       <p>© 2003-2019 by Michael Dalton</p>
     </section>
 
     <section class="arielle-summary">
-      <p class="summary-text">Arielle speaks and understands hundreds of English words, phrases, and sentences. This capacity is called cognitive speech.</p>
+      <p class="summary-text">
+        Arielle speaks and understands hundreds of English words, phrases, and sentences. This capacity is called
+        cognitive speech.
+      </p>
     </section>
 
     <div class="top-sites">
@@ -267,7 +327,7 @@ const description = "This site deals with the abilities of one talking bird and 
 
 <style>
   .breadcrumb {
-    color: #00CCCC;
+    color: #00cccc;
     font-family: Arial, sans-serif;
     font-size: 18px;
     margin-bottom: 20px;
@@ -337,11 +397,11 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .site-update .cyan {
-    color: #00CCCC;
+    color: #00cccc;
   }
 
   .site-update .red {
-    color: #FF0000;
+    color: #ff0000;
   }
 
   .greeting-section,
@@ -354,7 +414,7 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .greeting-text {
-    color: #FF0000;
+    color: #ff0000;
     font-size: 20px;
   }
 
@@ -385,19 +445,19 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .events-section h2 {
-    color: #FF0000;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff0000;
+    font-family: "Comic Sans MS", cursive, sans-serif;
   }
 
   .book-signing-info {
     color: #663300;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
   }
 
   .check-listings {
-    color: #FF0000;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff0000;
+    font-family: "Comic Sans MS", cursive, sans-serif;
   }
 
   .more-info {
@@ -405,7 +465,7 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .more-info .red {
-    color: #FF0000;
+    color: #ff0000;
     font-size: 18px;
   }
 
@@ -421,7 +481,7 @@ const description = "This site deals with the abilities of one talking bird and 
 
   .events-table {
     width: 100%;
-    border: 2px outset #DCDCDC;
+    border: 2px outset #dcdcdc;
     border-collapse: separate;
     border-spacing: 2px;
     margin-top: 20px;
@@ -429,16 +489,16 @@ const description = "This site deals with the abilities of one talking bird and 
 
   .events-table th {
     background-color: #f5f5f5;
-    color: #FF0000;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    border: 1px inset #DCDCDC;
+    color: #ff0000;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border: 1px inset #dcdcdc;
     padding: 8px;
     text-align: left;
     vertical-align: top;
   }
 
   .events-table td {
-    border: 1px inset #DCDCDC;
+    border: 1px inset #dcdcdc;
     padding: 8px;
     vertical-align: top;
     color: #009966;
@@ -450,7 +510,7 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .events-table .red {
-    color: #FF0033;
+    color: #ff0033;
   }
 
   .about-arielle {
@@ -512,7 +572,7 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .caution .red {
-    color: #FF0000;
+    color: #ff0000;
   }
 
   .arielle-summary {
@@ -531,10 +591,10 @@ const description = "This site deals with the abilities of one talking bird and 
   }
 
   .red {
-    color: #FF0000;
+    color: #ff0000;
   }
 
   em.red {
-    color: #FF0033;
+    color: #ff0033;
   }
 </style>
