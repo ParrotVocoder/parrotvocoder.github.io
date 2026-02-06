@@ -1,17 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import Footer from '../components/Footer.astro';
-import AudioPlayer from '../components/AudioPlayer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Breadcrumb from "../components/Breadcrumb.astro"
+import Footer from "../components/Footer.astro"
+import AudioPlayer from "../components/AudioPlayer.astro"
 
-const title = "Related Links - ParrotSpeech.org";
-const description = "Links to studies of animals using human language, experiments with interspecies communication, and parrot-related sites.";
+const title = "Related Links - ParrotSpeech.org"
+const description =
+  "Links to studies of animals using human language, experiments with interspecies communication, and parrot-related sites."
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="links" />
-  
+
   <article>
     <Breadcrumb currentPage="Related Links" />
 
@@ -27,13 +28,13 @@ const description = "Links to studies of animals using human language, experimen
     <section class="audio-feature">
       <div class="audio-box">
         <div class="transcription-box">
-          <p>Arielle said,<br/>"I want out!"</p>
+          <p>Arielle said,<br />"I want out!"</p>
         </div>
         <div class="audio-content">
           <p class="audio-description">
-            Arielle can be a demanding bird.<br/>
-            She says what one might expect<br/>
-            from a bird in this position, click<br/>
+            Arielle can be a demanding bird.<br />
+            She says what one might expect<br />
+            from a bird in this position, click<br />
             the play button to hear her speak.
           </p>
           <AudioPlayer src="/media/Track_CC.wav" title="Arielle: I want out!" />
@@ -46,7 +47,7 @@ const description = "Links to studies of animals using human language, experimen
     <section class="main-intro">
       <h2 class="fancy-heading">With a little help from her friends</h2>
       <p class="intro-text">
-        The following links lead to studies of "animals using human language," experiments with interspecies 
+        The following links lead to studies of "animals using human language," experiments with interspecies
         communication, and parrot-related sites.
       </p>
     </section>
@@ -55,7 +56,7 @@ const description = "Links to studies of animals using human language, experimen
     <section class="link-category">
       <h3>Link About Apes</h3>
       <p>
-        This link takes you to the site for the language-using gorilla, Koko at 
+        This link takes you to the site for the language-using gorilla, Koko at
         <a href="http://www.gorilla.org/" target="_blank" rel="noopener noreferrer">The Gorilla Foundation</a>
         <span class="url-display">• www.gorilla.org</span>
       </p>
@@ -65,13 +66,13 @@ const description = "Links to studies of animals using human language, experimen
     <section class="link-category">
       <h3>Link About Whales & Dolphins</h3>
       <p>
-        This site is mainly about cetaceans, but it also deals with a variety of subjects related to interspecies 
-        communication. [Interspecies Inc., Friday Harbor, WA] Go to 
+        This site is mainly about cetaceans, but it also deals with a variety of subjects related to interspecies
+        communication. [Interspecies Inc., Friday Harbor, WA] Go to
         <a href="http://www.interspecies.com/" target="_blank" rel="noopener noreferrer">the interspecies site</a>
         <span class="url-display">www.interspecies.com</span>
       </p>
       <p class="article-reference">
-        Article about Arielle:<br/>
+        Article about Arielle:<br />
         Knollman, James. "Slow Dreaming." <em>Interspecies</em>, Winter 2004.
       </p>
     </section>
@@ -80,22 +81,24 @@ const description = "Links to studies of animals using human language, experimen
     <section class="link-category">
       <h3>Links About Keeping & Training Pet Birds</h3>
       <p>
-        <a href="http://www.afabirds.org/" target="_blank" rel="noopener noreferrer">American Federation of Aviculture</a>
+        <a href="http://www.afabirds.org/" target="_blank" rel="noopener noreferrer"
+          >American Federation of Aviculture</a
+        >
         <span class="url-display">• www.afabirds.org</span>
       </p>
       <p>
-        An extensive web site with information about parrots including the owner's Grey parrot, Kibibi, is at 
+        An extensive web site with information about parrots including the owner's Grey parrot, Kibibi, is at
         <a href="http://www.infosuperflyway.com/" target="_blank" rel="noopener noreferrer">www.infosuperflyway.com</a>
       </p>
       <p>
-        My article "Recording Speech by Birds" is found on the Kibibi site at<br/>
+        My article "Recording Speech by Birds" is found on the Kibibi site at<br />
         <a href="http://www.infosuperflyway.com/articles/recording-birds.php" target="_blank" rel="noopener noreferrer">
           http://www.infosuperflyway.com/articles/recording-birds.php
         </a>
       </p>
       <p>
-        Another site about parrots is imabird.com. You can check out information about my book, 
-        <em>Another Kind of Mind: A Talking Bird Masters English</em>, on Barry's web site at 
+        Another site about parrots is imabird.com. You can check out information about my book,
+        <em>Another Kind of Mind: A Talking Bird Masters English</em>, on Barry's web site at
         <a href="http://www.imabird.com/" target="_blank" rel="noopener noreferrer">www.imabird.com</a>
       </p>
     </section>
@@ -104,18 +107,22 @@ const description = "Links to studies of animals using human language, experimen
     <section class="link-category">
       <h3>Pet Guardian Angels of America</h3>
       <p>
-        <a href="http://www.pgaa.com" target="_blank" rel="noopener noreferrer">PGAA</a> (www.pgaa.com) is an animal rescue organization. The 
-        PGAA site features a couple of my articles below.
+        <a href="http://www.pgaa.com" target="_blank" rel="noopener noreferrer">PGAA</a> (www.pgaa.com) is an animal rescue
+        organization. The PGAA site features a couple of my articles below.
       </p>
       <ul class="article-list">
         <li>
-          Article 1: "Recording Speech by Birds"<br/>
-          <a href="http://www.pgaa.com/avain/general/daltonrecordingbirds.html" target="_blank" rel="noopener noreferrer">
+          Article 1: "Recording Speech by Birds"<br />
+          <a
+            href="http://www.pgaa.com/avain/general/daltonrecordingbirds.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             http://www.pgaa.com/avain/general/daltonrecordingbirds.html
           </a>
         </li>
         <li>
-          Article 2: "Talking Birds, Intelligent Creatures"<br/>
+          Article 2: "Talking Birds, Intelligent Creatures"<br />
           <a href="http://www.pgaa.com/avain/general/daltontalkingbird.html" target="_blank" rel="noopener noreferrer">
             http://www.pgaa.com/avain/general/daltontalkingbird.html
           </a>
@@ -126,14 +133,14 @@ const description = "Links to studies of animals using human language, experimen
     <!-- Local Bird Clubs -->
     <section class="link-category info-box">
       <p>
-        Don't overlook local bird clubs for information. Check your local newspaper for 
-        information. If the clubs are not printed regularly, you might try a telephone call 
-        to the clubs editor for the most up-to-date information. You can search on the Internet too.
+        Don't overlook local bird clubs for information. Check your local newspaper for information. If the clubs are
+        not printed regularly, you might try a telephone call to the clubs editor for the most up-to-date information.
+        You can search on the Internet too.
       </p>
       <p>
-        If you're interested in companion birds, including parrots and other talking birds, use 
-        the links above as a starting point. If you know of a related link that is not included 
-        here, feel free to suggest additions by e-mail.
+        If you're interested in companion birds, including parrots and other talking birds, use the links above as a
+        starting point. If you know of a related link that is not included here, feel free to suggest additions by
+        e-mail.
       </p>
     </section>
 
@@ -141,9 +148,9 @@ const description = "Links to studies of animals using human language, experimen
     <section class="link-category">
       <h3>Links About Writing</h3>
       <p>
-        The author is a member of a writers' group in Florida. If you are interested in writing or wish to explore 
-        interests related to the group, it is called PINAWOR (Pinellas Authors and Writers Organization Inc.). For 
-        more information visit their web site at: 
+        The author is a member of a writers' group in Florida. If you are interested in writing or wish to explore
+        interests related to the group, it is called PINAWOR (Pinellas Authors and Writers Organization Inc.). For more
+        information visit their web site at:
         <a href="http://www.pinawor.org" target="_blank" rel="noopener noreferrer">• www.pinawor.org</a>
       </p>
 
@@ -152,10 +159,11 @@ const description = "Links to studies of animals using human language, experimen
         <div class="writer-content">
           <img src="/images/clip_image002.jpg" alt="Parrot writer friend" class="writer-image" />
           <p>
-            Two Parrot Stories, a children's picture book (age 6 and up), or in 
-            reading articles about parrots in history, or about speech and body 
-            language, please visit the author's website at
-            <a href="http://www.rosemarieriechelbooks.com/" target="_blank" rel="noopener noreferrer">www.rosemarieriechelbooks.com</a>
+            Two Parrot Stories, a children's picture book (age 6 and up), or in reading articles about parrots in
+            history, or about speech and body language, please visit the author's website at
+            <a href="http://www.rosemarieriechelbooks.com/" target="_blank" rel="noopener noreferrer"
+              >www.rosemarieriechelbooks.com</a
+            >
           </p>
         </div>
       </div>
@@ -164,11 +172,17 @@ const description = "Links to studies of animals using human language, experimen
     <!-- TV Links About Arielle -->
     <section class="link-category">
       <h3>TV Links About Arielle</h3>
-      
+
       <div class="media-item">
         <h4>Humorous interview</h4>
         <p class="small-url">http://www.studio10.tv/category/authors/segment.aspx/84258/Another_Kind_of_Mind</p>
-        <a href="/videos/WTSP_July2008.mp4" class="video-link">Click here to see video clip</a>
+        <!-- <a href="/videos/WTSP_July2008.mp4" class="video-link">Click here to see video clip</a> -->
+        <div class="video-container">
+          <video controls width="640" height="480">
+            <source src="/media/WTSP_July2008.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
       <div class="media-item">
@@ -179,10 +193,16 @@ const description = "Links to studies of animals using human language, experimen
 
       <div class="media-item">
         <p class="radio-intro">
-          Radio host John Austin and the author discuss the book <em>ANOTHER KIND OF MIND: A Talking Bird Masters English</em>
+          Radio host John Austin and the author discuss the book <em
+            >ANOTHER KIND OF MIND: A Talking Bird Masters English</em
+          >
         </p>
-        <a href="http://www.internetradiopros.com/bookclub/?p=episode&name=2012-10-18_zbookclub_for_102312_2nd_segment_michael_dalton.mp3" 
-           target="_blank" rel="noopener noreferrer" class="radio-link">
+        <a
+          href="http://www.internetradiopros.com/bookclub/?p=episode&name=2012-10-18_zbookclub_for_102312_2nd_segment_michael_dalton.mp3"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="radio-link"
+        >
           Listen to the radio interview
         </a>
       </div>
@@ -193,13 +213,12 @@ const description = "Links to studies of animals using human language, experimen
       <p class="group-intro">
         If you are interested in speech by talking birds, below are the details about the ParrotSpeech Group:
       </p>
-      
+
       <h3>Description</h3>
       <p>
-        People interested in the study of spontaneous speech by talking birds. The topics of 
-        concern include learning theory, speech recognition, recording speech, cognitive 
-        speech by talking birds, linguistics, conversations with parrot-like birds, cognition, 
-        consciousness, and other topics related to the talking birds. To join click on the 
+        People interested in the study of spontaneous speech by talking birds. The topics of concern include learning
+        theory, speech recognition, recording speech, cognitive speech by talking birds, linguistics, conversations with
+        parrot-like birds, cognition, consciousness, and other topics related to the talking birds. To join click on the
         subscription link or paste the following link into your browser:
       </p>
       <p class="subscribe-email">
@@ -209,9 +228,7 @@ const description = "Links to studies of animals using human language, experimen
 
     <!-- Footer Quote -->
     <section class="footer-quote">
-      <p>
-        Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.
-      </p>
+      <p>Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
     </section>
 
     <Footer />
@@ -302,7 +319,7 @@ const description = "Links to studies of animals using human language, experimen
   }
 
   .fancy-heading {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #000099;
     font-size: 2rem;
     margin-bottom: 15px;
@@ -325,7 +342,7 @@ const description = "Links to studies of animals using human language, experimen
   }
 
   .link-category h3 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #663300;
     font-size: 1.25rem;
     margin-bottom: 15px;
@@ -427,7 +444,8 @@ const description = "Links to studies of animals using human language, experimen
     word-break: break-all;
   }
 
-  .video-link, .radio-link {
+  .video-link,
+  .radio-link {
     display: inline-block;
     font-size: 1.1rem;
     font-weight: bold;
@@ -435,7 +453,7 @@ const description = "Links to studies of animals using human language, experimen
   }
 
   .radio-intro {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #000066;
   }
 
@@ -456,7 +474,7 @@ const description = "Links to studies of animals using human language, experimen
   }
 
   .parrotspeech-group h3 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #000099;
     text-decoration: underline;
     font-size: 1.25rem;
