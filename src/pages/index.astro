@@ -74,7 +74,7 @@ const description =
           >
         </p>
       </HighlightBox>
-      <AudioPlayer src="/media/TrackD211T26_HI2.wav" caption="Arielle's greeting: Hi! ... Hello." />
+      <AudioPlayer src="/media/TrackD211T26_HI2.wav" autoplay={true} caption="Arielle's greeting: Hi! ... Hello." />
     </section>
 
     <section class="tv-section">
@@ -88,7 +88,7 @@ const description =
       <p>
         <div class="video-container">
           <video controls width="640" height="480">
-            <source src="/media/WTSP_July2008.mp4" type="video/mp4">
+            <source src="/media/WTSP_July2008.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -131,14 +131,16 @@ const description =
       <section class="youtube-section">
         <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p>
         <!-- <p><a href="https://youtu.be/qfeKKwGbbQk"><strong>https://youtu.be/qfeKKwGbbQk</strong></a></p> -->
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/qfeKKwGbbQk?si=OMRtaniFnx5W4vF1"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+        <div class="" style="margin: 0 auto; text-align: center;">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/qfeKKwGbbQk?si=OMRtaniFnx5W4vF1"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
       </section>
 
       <table class="events-table">
@@ -252,8 +254,8 @@ const description =
 
     <section class="linguistic-abilities">
       <p>
-        <strong
-          >Arielle is learning English at an advanced grade-school level. Her linguistic abilities include:</strong>
+        <strong>Arielle is learning English at an advanced grade-school level. Her linguistic abilities include:</strong
+        >
       </p>
       <ul>
         <li>Arielle speaks of her free will and communicates many different messages.</li>
@@ -316,7 +318,7 @@ const description =
       </p>
     </section>
 
-     <aside class="site-update">
+    <aside class="site-update">
       <p><strong class="cyan">Site last update</strong><br /><span class="red">08 May 2019</span></p>
       <p><strong class="cyan">Last major update</strong><br /><span class="red">14 September 2015</span></p>
     </aside>
