@@ -1,34 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 
 const title = "Photo Album - Arielle the Talking Macaw";
-const description = "Photo gallery of Arielle the Blue and Gold macaw.";
-
-const photos = [
-  {
-    src: "/images/ARIELLE_HeadFFs.jpg",
-    alt: "Arielle head shot",
-    caption: "Arielle - A beautiful Blue and Gold macaw"
-  },
-  {
-    src: "/images/Close_up_H_S.jpg",
-    alt: "Arielle close-up",
-    caption: "Close-up of Arielle - Photo by Linda Carpenter"
-  },
-  {
-    src: "/images/Goblin_facsimile_4.jpg",
-    alt: "Halloween decoration",
-    caption: "The goblin decoration that Arielle learned to identify"
-  },
-  {
-    src: "/images/image005.jpg",
-    alt: "Arielle in the grapefruit tree",
-    caption: "Arielle playing in the grapefruit tree"
-  }
-];
+const description = "Original Photo Album content from ParrotSpeech featuring Arielle's communication, images, and audio examples.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -39,37 +17,116 @@ const photos = [
 
     <header class="page-header">
       <h1>Photo Album</h1>
-      <p class="subtitle">Pictures of Arielle the Talking Macaw</p>
     </header>
 
-    <section class="photo-intro">
+    <section class="hero-section">
+      <div class="hero-image-wrap">
+        <img src="/images/Arielle_on_perch_foot_up.jpg" alt="Arielle perched with one foot raised" />
+        <p class="photo-credit">Photo by Linda Carpenter</p>
+      </div>
+      <div class="hero-captions">
+        <p>Do you think I'm left footed?</p>
+        <p>Do you want to guess again whether I'm left footed?</p>
+      </div>
+    </section>
+
+    <section class="message-box blue-text">
       <p>
-        Browse through photos of Arielle, our remarkable Blue and Gold macaw. These images 
-        capture various moments of her life, from playful activities to quiet contemplation.
+        Arielle transmits a basic message. Her gesture means: "Please pick me up!"
+      </p>
+      <p>
+        She makes herself understood. If her message is misunderstood, or if the response is too slow,
+        she vocalizes repeatedly until she gets her way. By chanting "Come up! Come up! Come up!"
+        or "Want up! Want up! Want up!" she annoys her companion human and succeeds at obtaining her goal.
       </p>
     </section>
 
-    <div class="photo-gallery">
-      {photos.map((photo) => (
-        <figure class="photo-item">
-          <img src={photo.src} alt={photo.alt} loading="lazy" />
-          <figcaption>{photo.caption}</figcaption>
-        </figure>
-      ))}
-    </div>
+    <section class="yellow-box">
+      <p class="red-large">
+        Arielle composed the sentiment expressed on her own ... click "play" to hear her words.
+      </p>
+      <p class="red-small">
+        (<a href="/files/Track_DD2.wav">Click here if player image is missing.</a>)
+      </p>
+      <p class="red-medium">
+        If, after hearing her speech, you are unsure of what Arielle said, the transcription and
+        explanation appear in a yellow box near the bottom of this page.
+      </p>
+      <AudioPlayer src="/files/Track_DD2.wav" autoplay={true} caption="Arielle speech sample" />
+    </section>
 
-    <section class="photo-notes">
-      <h2>About These Photos</h2>
-      <p>
-        Arielle has been photographed countless times over the years. She is a photogenic bird 
-        who often poses for the camera, though she can be shy at times. Her brilliant blue and 
-        gold plumage makes her a stunning subject.
+    <section class="playground-section">
+      <figure class="playground-image">
+        <img src="/images/image001.png" alt="Arielle at a playground" />
+        <figcaption>&copy; Michael Dalton</figcaption>
+      </figure>
+      <div class="playground-text blue-text">
+        <p>
+          One of Arielle's favorite places is the playground at a nearby park. She enjoys climbing
+          up and down over the ladder upon which she stands. She often explores the adjacent bridge
+          and the climbing towers too.
+        </p>
+        <p>
+          She is especially fond of little children, and she investigates anyone who might be doing
+          something interesting near her. From time to time, Arielle perches upon a person's arm if he
+          or she expresses interest in her. She has made a great number of friends along our walks
+          over nineteen years.
+        </p>
+      </div>
+    </section>
+
+    <section class="yellow-box">
+      <p class="red-large">Arielle said, "He loves me."</p>
+      <p class="red-medium">
+        Her words are not taught because she is female and because her owner would not refer to her
+        as "he." This an example of a macaw using words in an appropriate fashion. Importantly,
+        she expresses a concept of self when she freely refers to herself as "me." Arielle has a
+        "Theory of Mind;" she is one of the few nonhuman animals exhibiting consciousness through speech.
+        Note than in addition to the other complexities, she has correctly adjusted the verb form to
+        match the subject "he."
       </p>
-      <p>
-        On occasion, Arielle gets herself into precarious situations, as illustrated in some of 
-        these photos. In one memorable incident, she flew into a tall pine tree and had to be 
-        rescued with a specially designed pole and T-perch.
+      <p class="red-medium">
+        If one contends that Arielle does not understand what she says, then how does one explain her statement?
       </p>
+    </section>
+
+    <section class="egg-section">
+      <h2>Arielle's First Egg</h2>
+      <p class="egg-subtitle">(January 2012, Arielle ~20+ yrs.)</p>
+      <figure>
+        <img src="/images/Arielle_s_Egg_with_scale.jpg" alt="Arielle's first egg with scale" />
+      </figure>
+    </section>
+
+    <section class="pinawor-section">
+      <h2>Pictures from PINAWOR</h2>
+      <p class="pinawor-subtitle">(Writers' Picnic)</p>
+      <div class="pinawor-grid">
+        <figure>
+          <img src="/images/Pinawor_Pix_2005_L_Williams.jpg" alt="PINAWOR 2005" />
+          <figcaption>2005</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/Pinawor_Picnic_2006.jpg" alt="PINAWOR 2006" />
+          <figcaption>2006</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="book-section">
+      <h2>Below are two pictures from the book <em>Another Kind of Mind</em></h2>
+      <div class="book-grid">
+        <figure>
+          <img src="/images/DSC_00981_On_gym_Morningside.jpg" alt="Arielle on gym at Morningside" />
+        </figure>
+        <figure>
+          <img src="/images/DSC_00271-1_On_mailbox_post.jpg" alt="Arielle on mailbox post" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="closing-statement">
+      <p>Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
     </section>
 
     <Footer />
@@ -79,78 +136,250 @@ const photos = [
 <style>
   .page-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .page-header h1 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     color: #663300;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .subtitle {
-    color: #666;
-    font-size: 1.2rem;
-  }
-
-  .photo-intro {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 40px;
+    color: #00cccc;
     font-size: 1.1rem;
-    color: #333;
+    font-weight: 700;
   }
 
-  .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
+  .hero-section {
+    margin: 20px 0 28px;
   }
 
-  .photo-item {
-    margin: 0;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .photo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-
-  .photo-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
-
-  .photo-item figcaption {
-    padding: 15px;
+  .hero-image-wrap {
+    max-width: 430px;
+    margin: 0 auto;
     text-align: center;
-    font-size: 0.95rem;
-    color: #555;
-    background: #f9f9f9;
   }
 
-  .photo-notes {
-    background: #f5f5f5;
-    padding: 30px;
-    border-radius: 12px;
-    margin-top: 40px;
+  .hero-image-wrap img {
+    width: 100%;
+    border-radius: 10px;
   }
 
-  .photo-notes h2 {
+  .photo-credit {
+    margin-top: 8px;
+    color: #cccccc;
+    font-size: 0.8rem;
+  }
+
+  .hero-captions {
+    margin-top: 18px;
+    text-align: center;
     color: #663300;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    line-height: 1.35;
   }
 
-  .photo-notes p {
-    line-height: 1.8;
-    margin-bottom: 1em;
-    color: #444;
+  .hero-captions p {
+    margin: 0 0 10px;
+  }
+
+  .message-box {
+    margin: 22px 0 30px;
+    font-size: 1.05rem;
+  }
+
+  .blue-text {
+    color: #000066;
+    line-height: 1.7;
+  }
+
+  .yellow-box {
+    background: #ffff00;
+    padding: 18px;
+    margin: 24px 0;
+    border-radius: 4px;
+  }
+
+  .red-large {
+    color: #ff0000;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .red-medium {
+    color: #ff0000;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  .red-small {
+    color: #ff0000;
+    margin-bottom: 12px;
+  }
+
+  .red-small a {
+    color: #663300;
+    text-decoration: underline;
+  }
+
+  .playground-section {
+    margin: 34px 0;
+    display: grid;
+    grid-template-columns: minmax(250px, 420px) 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .playground-image {
+    margin: 0;
+  }
+
+  .playground-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .playground-image figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #663300;
+    text-align: center;
+  }
+
+  .playground-text {
+    font-size: 1.15rem;
+    line-height: 1.45;
+  }
+
+  .playground-text p {
+    margin-bottom: 16px;
+  }
+
+  .egg-section {
+    margin: 38px 0 28px;
+    text-align: center;
+  }
+
+  .egg-section h2 {
+    color: #663300;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+
+  .egg-subtitle {
+    color: #663300;
+    margin-bottom: 16px;
+  }
+
+  .egg-section figure {
+    margin: 0;
+  }
+
+  .egg-section img {
+    max-width: 260px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .pinawor-section {
+    margin: 36px 0;
+    text-align: center;
+  }
+
+  .pinawor-section h2 {
+    color: #663300;
+    font-size: 2.25rem;
+    margin-bottom: 4px;
+  }
+
+  .pinawor-subtitle {
+    color: #663300;
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .pinawor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .pinawor-grid figure {
+    margin: 0;
+  }
+
+  .pinawor-grid img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .pinawor-grid figcaption {
+    margin-top: 6px;
+    color: #663300;
+    font-size: 0.95rem;
+  }
+
+  .book-section {
+    margin: 32px 0;
+  }
+
+  .book-section h2 {
+    text-align: center;
+    color: #663300;
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .book-grid figure {
+    margin: 0;
+  }
+
+  .book-grid img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .closing-statement {
+    margin: 26px auto 18px;
+    text-align: center;
+    color: #663300;
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 900px) {
+    .playground-section {
+      grid-template-columns: 1fr;
+    }
+
+    .pinawor-grid,
+    .book-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-header h1 {
+      font-size: 2.3rem;
+    }
+
+    .hero-captions,
+    .playground-text {
+      font-size: 1.05rem;
+    }
+
+    .egg-section h2,
+    .pinawor-section h2 {
+      font-size: 1.8rem;
+    }
   }
 </style>
