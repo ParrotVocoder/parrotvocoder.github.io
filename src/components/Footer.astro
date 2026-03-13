@@ -1,8 +1,8 @@
 <footer class="site-footer">
+  <!-- <p class="tagline">Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p> -->
   <p class="visitor-counter">
     Number of visitors: <span id="stats">Loading...</span>
   </p>
-  <p class="tagline">Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
   <p class="copyright">
     &copy; {new Date().getFullYear()} ParrotSpeech.org - All Rights Reserved
   </p>
@@ -35,7 +35,7 @@
       return encodeURIComponent(path)
     }
 
-    const url = "https://parrotspeech.goatcounter.com/counter/" + getCounterPath() + ".json"
+    // const url = "https://parrotspeech.goatcounter.com/counter/" + getCounterPath() + ".json"
 
     const r = new XMLHttpRequest()
 
@@ -58,7 +58,7 @@
       statsEl.innerText = "N/A"
     })
 
-    r.open("GET", url)
+    r.open("GET", "https://parrotspeech.goatcounter.com/counter//.json")
     r.send()
   })()
 </script>
@@ -88,5 +88,27 @@
     font-size: 0.9rem;
     color: #666;
     margin: 0;
+  }
+  .visitor-counter {
+    font-size: 1rem;
+    color: #1f4d2e;
+    margin: 0 0 12px;
+    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .visitor-counter #stats {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    padding: 0px 10px;
+    background: #009966;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 999px;
+    line-height: 1.6;
   }
 </style>
