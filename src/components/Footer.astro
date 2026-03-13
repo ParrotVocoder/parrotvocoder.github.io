@@ -1,8 +1,11 @@
 <footer class="site-footer">
-  <p class="tagline">Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
-  <p class="visitor-counter">
-    Number of visitors: <span id="stats">Loading...</span>
-  </p>
+  <section class="closing-statement">
+    <div class="quote-banner">
+      Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.
+    </div>
+  </section>
+  <!-- </footer> -->
+
   <p class="copyright">
     &copy; {new Date().getFullYear()} ParrotSpeech.org - All Rights Reserved
   </p>
@@ -110,5 +113,36 @@
     font-weight: 500;
     border-radius: 999px;
     line-height: 1.6;
+  }
+
+  .quote-banner {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* margin-top: 30px; */
+    border: 1px solid #663300;
+  }
+
+  div.quote-banner {
+    color: #663300;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .closing-statement {
+    text-align: center;
+    background: linear-gradient(135deg, #fff9e6, #f0fff0);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .closing-statement p {
+    color: #663300;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
   }
 </style>
