@@ -298,14 +298,14 @@ table {
 }
 
 .page-header h1 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Schoolbell", "Times New Roman", cursive, sans-serif;
   font-size: 2rem;
   color: #663300;
   margin-bottom: 5px;
 }
 
 .page-header h2 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", "Schoolbell", "Times New Roman", cursive, sans-serif;
   font-size: 1.3rem;
   color: #663300;
   font-weight: bold;

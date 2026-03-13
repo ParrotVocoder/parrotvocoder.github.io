@@ -1,14 +1,20 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Breadcrumb from "../components/Breadcrumb.astro"
+import Footer from "../components/Footer.astro"
 
-const title = "Another Kind of Mind: A Talking Bird Masters English";
-const description = "Information about the book documenting Arielle's remarkable language abilities.";
+const title = "Another Kind of Mind: A Talking Bird Masters English"
+const description = "Information about the book documenting Arielle's remarkable language abilities."
 
 const audioTracks = [
-  { page: "43", location: "next to last paragraph (anecdote)", type: "Phrase", file: "/media/Track_R.wav", track: "Track R" },
+  {
+    page: "43",
+    location: "next to last paragraph (anecdote)",
+    type: "Phrase",
+    file: "/media/Track_R.wav",
+    track: "Track R",
+  },
   { page: "53", location: "Near bottom", type: "Sequence of statements", file: "/files/Track_P.wav", track: "Track P" },
   { page: "66", location: "19Jan'01", type: "Innovative name (3X)", file: "/files/Track_G.wav", track: "Track G" },
   { page: "66", location: "5Feb'01", type: "Single word", file: "/files/Track_L.wav", track: "Track L" },
@@ -18,21 +24,45 @@ const audioTracks = [
   { page: "113", location: "near top", type: "End of sequence", file: "/files/Track_E.wav", track: "Track E" },
   { page: "124", location: "25Feb'01", type: "Novel response to action", file: "/files/Track_O.wav", track: "Track O" },
   { page: "126", location: "Synonyms", type: "Sequence of words", file: "/files/Track_M.wav", track: "Track M" },
-  { page: "139", location: "Bottom line", type: "Novel 2-word description", file: "/files/Track_N.wav", track: "Track N" },
+  {
+    page: "139",
+    location: "Bottom line",
+    type: "Novel 2-word description",
+    file: "/files/Track_N.wav",
+    track: "Track N",
+  },
   { page: "141", location: "7Jun'01", type: "Sequence of statements", file: "/files/Track_CC.wav", track: "Track CC" },
   { page: "142", location: "10Jun'01", type: "Innovative Statement", file: "/files/Track_DD2.wav", track: "Track DD" },
-  { page: "145", location: "1Jun'01", type: "Novel response to action", file: "/files/Track_BB.wav", track: "Track BB" },
+  {
+    page: "145",
+    location: "1Jun'01",
+    type: "Novel response to action",
+    file: "/files/Track_BB.wav",
+    track: "Track BB",
+  },
   { page: "148", location: "16Jul'01", type: "Humorous sequence", file: "/files/Track_EE.wav", track: "Track EE" },
-  { page: "165", location: "17Aug'01", type: "Novel response to action", file: "/files/Track_HH.wav", track: "Track HH" },
+  {
+    page: "165",
+    location: "17Aug'01",
+    type: "Novel response to action",
+    file: "/files/Track_HH.wav",
+    track: "Track HH",
+  },
   { page: "175", location: "8May'01", type: "Sequence of statements", file: "/files/Track_Y.wav", track: "Track Y" },
-  { page: "175", location: "18Sept'01", type: "Sequence of statements", file: "/files/Track_JJ.wav", track: "Track JJ" },
+  {
+    page: "175",
+    location: "18Sept'01",
+    type: "Sequence of statements",
+    file: "/files/Track_JJ.wav",
+    track: "Track JJ",
+  },
   { page: "196", location: "9May'01", type: "Phrase", file: "/files/Track_Z.wav", track: "Track Z" },
-];
+]
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="book" />
-  
+
   <article>
     <Breadcrumb currentPage="Another Mind (Book)" />
 
@@ -50,27 +80,35 @@ const audioTracks = [
 
     <section class="intro-section">
       <p>
-        Arielle speaks freely and through the words she has learned, she assembles coherent 
-        combinations of sentences, which represent her thoughts. She is the first macaw to 
-        reveal such a linguistic ability through her free speech. One might argue that the 
-        study of natural bird communication leads to the idea that birds have language, so 
-        by learning human language, an astute parrot is merely learning a second language.
+        Arielle speaks freely and through the words she has learned, she assembles coherent combinations of sentences,
+        which represent her thoughts. She is the first macaw to reveal such a linguistic ability through her free
+        speech. One might argue that the study of natural bird communication leads to the idea that birds have language,
+        so by learning human language, an astute parrot is merely learning a second language.
       </p>
       <p>
-        Information appears on this page related to my book, <em>Another Kind of Mind</em>, 
-        which examines many examples of how Arielle uses English correctly. Presented below 
-        are a variety of sound clips with reference to the page number in the book.
+        Information appears on this page related to my book, <em>Another Kind of Mind</em>, which examines many examples
+        of how Arielle uses English correctly. Presented below are a variety of sound clips with reference to the page
+        number in the book.
       </p>
     </section>
 
     <section class="radio-interview">
       <p><strong>Click on the following link to listen to a radio interview about the book,</strong></p>
-        <!-- <a href="/files/Book_Interview_WTAN_comp_18Oct2012.mp3" target="_blank">
+      <!-- <a href="/files/Book_Interview_WTAN_comp_18Oct2012.mp3" target="_blank">
           <em>Another Kind of Mind: A Talking Bird Masters English</em>
         </a>. -->
-        <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2261112266&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div> -->
-         
-      <iframe class="spotify-embed" data-testid="embed-iframe" src="https://open.spotify.com/embed/episode/2FOjExuuCOd0gRw4AgY6GW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2261112266&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div> -->
+
+      <iframe
+        class="spotify-embed"
+        data-testid="embed-iframe"
+        src="https://open.spotify.com/embed/episode/2FOjExuuCOd0gRw4AgY6GW?utm_source=generator"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
     </section>
 
     <section class="order-section">
@@ -81,14 +119,15 @@ const audioTracks = [
         (The book is $24.95 plus $4.95 S&amp;H).
       </p> -->
       <p>
-        To order a signed copy of Another Kind of Mind (288-page hardcover), contact the author at the site's e-mail address <a href="mailto:mike@ParrotSpeech.org">mike@ParrotSpeech.org</a> . If an inscription is desired be sure to clearly specify the name for the inscription and any special dedication you dessire. (The book is available for resale, contact us for volume pricing.)
+        To order a signed copy of Another Kind of Mind (288-page hardcover), contact the author at the site's e-mail
+        address <a href="mailto:mike@ParrotSpeech.org">mike@ParrotSpeech.org</a> . If an inscription is desired be sure to
+        clearly specify the name for the inscription and any special dedication you dessire. (The book is available for resale,
+        contact us for volume pricing.)
       </p>
-      <p class="florida-price">
-        In Florida the price is $31.65 including state sales tax and shipping.
-      </p>
+      <p class="florida-price">In Florida the price is $31.65 including state sales tax and shipping.</p>
       <p>
-        Mail orders to the publisher: Arielle Publishing, P.O. Box 4634, Clearwater, FL 33758. 
-        For large orders, write to the publisher at the address above or use the e-mail address.
+        Mail orders to the publisher: Arielle Publishing, P.O. Box 4634, Clearwater, FL 33758. For large orders, write
+        to the publisher at the address above or use the e-mail address.
       </p>
       <p>
         ** <u>Be sure to clearly specify an inscription if one is desired</u>.
@@ -100,11 +139,11 @@ const audioTracks = [
       </p>
       <div class="paypal-notice">
         <p class="paypal-text">
-          Purchase the book through PayPal from this site, click on the "Add to Cart" button. 
-          (Takes major credit or debit cards)
+          Purchase the book through PayPal from this site, click on the "Add to Cart" button. (Takes major credit or
+          debit cards)
         </p>
         <p class="inscription-notice">
-          ** If you want the book inscribed you must send e-mail instructions immediately to 
+          ** If you want the book inscribed you must send e-mail instructions immediately to
           <a href="mailto:mike@ParrotSpeech.org">mike@ParrotSpeech.org</a>
         </p>
       </div>
@@ -120,34 +159,31 @@ const audioTracks = [
 
     <section class="about-book">
       <p>
-        What animal speaks using coherent language that is understandable by man? A talking bird 
-        called Arielle does. The interspecies barrier broke when Arielle began to communicate by 
-        volunteering information through English statements. She is a beautiful 19-year-old tropical 
-        bird that expresses herself spontaneously using more than 4000 English words, phrases, and 
-        sentences. Her verbal progress compares to that of a young child.
+        What animal speaks using coherent language that is understandable by man? A talking bird called Arielle does.
+        The interspecies barrier broke when Arielle began to communicate by volunteering information through English
+        statements. She is a beautiful 19-year-old tropical bird that expresses herself spontaneously using more than
+        4000 English words, phrases, and sentences. Her verbal progress compares to that of a young child.
       </p>
       <p>
-        The Beatles tune, "Got to get you into my life," presented a nagging riddle. The puzzle 
-        resolved after years of walking down a road with my macaw, Arielle. The cryptic lyric, 
-        "… find another kind of mind there," inspired me to describe my linguistic adventure with 
-        a talking bird.
+        The Beatles tune, "Got to get you into my life," presented a nagging riddle. The puzzle resolved after years of
+        walking down a road with my macaw, Arielle. The cryptic lyric, "… find another kind of mind there," inspired me
+        to describe my linguistic adventure with a talking bird.
       </p>
       <p>
-        Arielle has the ability to communicate across species using human speech when she wishes 
-        to do so. Those who know Arielle and listen carefully to recordings of her voluntarily 
-        spoken private monologues discover that her speech reveals her thoughts. Readers understand 
-        Arielle's speech by considering her statements with the provided background information.
+        Arielle has the ability to communicate across species using human speech when she wishes to do so. Those who
+        know Arielle and listen carefully to recordings of her voluntarily spoken private monologues discover that her
+        speech reveals her thoughts. Readers understand Arielle's speech by considering her statements with the provided
+        background information.
       </p>
       <p>
-        Hundreds of transcriptions of Arielle's voluntary speech reveal meaningful messages that 
-        form the core of <em>Another Kind of Mind</em>. An unanticipated statement by Arielle reveals 
-        that she listens to what people say and that she is capable of attributing speech to an 
-        individual by name. Many of her statements provide concrete examples that one talking bird 
-        can learn to communicate ideas through human language.
+        Hundreds of transcriptions of Arielle's voluntary speech reveal meaningful messages that form the core of <em
+          >Another Kind of Mind</em
+        >. An unanticipated statement by Arielle reveals that she listens to what people say and that she is capable of
+        attributing speech to an individual by name. Many of her statements provide concrete examples that one talking
+        bird can learn to communicate ideas through human language.
       </p>
       <p>
-        <em>Another Kind of Mind</em> traces a bird's speech development. The book provides details 
-        about how Arielle can:
+        <em>Another Kind of Mind</em> traces a bird's speech development. The book provides details about how Arielle can:
       </p>
       <ul class="abilities-list">
         <li>vocalize in a previously little recognized purr-like voice,</li>
@@ -159,16 +195,14 @@ const audioTracks = [
         <li>organize thoughts using phrases and sequences of statements.</li>
       </ul>
       <p>
-        <em>Another Kind of Mind</em> guides readers toward understanding Arielle's English words, 
-        phrases, and sentences, as her expressions provide insight into her mind, personality, and 
-        thoughts. Her meaningful speech communicates something never before evident from utterances 
-        made by a bird. Arielle is a conscious being.
+        <em>Another Kind of Mind</em> guides readers toward understanding Arielle's English words, phrases, and sentences,
+        as her expressions provide insight into her mind, personality, and thoughts. Her meaningful speech communicates something
+        never before evident from utterances made by a bird. Arielle is a conscious being.
       </p>
       <p>
-        If you are not able to perfectly understand the speech samples below on first hearing, you 
-        are not alone. By coordinating the sound clips with the text in the book, readers typically 
-        understand between 65% and 95% of Arielle's utterances. The macaw speaks an unusual dialect 
-        of English.
+        If you are not able to perfectly understand the speech samples below on first hearing, you are not alone. By
+        coordinating the sound clips with the text in the book, readers typically understand between 65% and 95% of
+        Arielle's utterances. The macaw speaks an unusual dialect of English.
       </p>
     </section>
 
@@ -189,21 +223,25 @@ const audioTracks = [
               </tr>
             </thead>
             <tbody>
-              {audioTracks.map((track) => (
-                <tr>
-                  <td>{track.page}</td>
-                  <td>{track.location}</td>
-                  <td>{track.type}</td>
-                  <td>
-                    <audio controls>
-                      <source src={track.file} type="audio/wav" />
-                    </audio>
-                  </td>
-                  <td>
-                    <a href={track.file} target="_blank">{track.track}</a>
-                  </td>
-                </tr>
-              ))}
+              {
+                audioTracks.map((track) => (
+                  <tr>
+                    <td>{track.page}</td>
+                    <td>{track.location}</td>
+                    <td>{track.type}</td>
+                    <td>
+                      <audio controls>
+                        <source src={track.file} type="audio/wav" />
+                      </audio>
+                    </td>
+                    <td>
+                      <a href={track.file} target="_blank">
+                        {track.track}
+                      </a>
+                    </td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
           <p class="copyright-notice">All materials are protected under copyright laws.</p>
@@ -212,23 +250,23 @@ const audioTracks = [
         <aside class="listening-tips">
           <h4>Suggestions for listening to Arielle's speech samples</h4>
           <p>
-            Good isolating headphones offer superior listening to the speech samples because 
-            room acoustics are eliminated and they help a listener to concentrate on Arielle's words.
+            Good isolating headphones offer superior listening to the speech samples because room acoustics are
+            eliminated and they help a listener to concentrate on Arielle's words.
           </p>
           <p>
-            Frustration quickly sets in after a short time, so if you really want to understand 
-            her words, return at a later time to listen to the clip.
+            Frustration quickly sets in after a short time, so if you really want to understand her words, return at a
+            later time to listen to the clip.
           </p>
           <p>Ask children what they hear.</p>
           <p>It helps sometimes to listen from across the room from a loudspeaker.</p>
           <p>
-            As one begins to comprehend Arielle's statements, think of the millions of other 
-            birds who likely are not understood by their owners ....
+            As one begins to comprehend Arielle's statements, think of the millions of other birds who likely are not
+            understood by their owners ....
           </p>
           <p>
-            The nature of the project is that Arielle speaks more than 100,000 words a year. 
-            If one wishes to receive her messages, a listener must review all of the words she 
-            speaks. Is it a wonder that I am 6 years behind on the project?
+            The nature of the project is that Arielle speaks more than 100,000 words a year. If one wishes to receive
+            her messages, a listener must review all of the words she speaks. Is it a wonder that I am 6 years behind on
+            the project?
           </p>
         </aside>
       </div>
@@ -244,8 +282,9 @@ const audioTracks = [
 
     <section class="events-section">
       <p>
-        Information about appearances, presentations, events to "meet the author" and attend 
-        a book signing for <em>Another Kind of Mind: A Talking Bird Masters English</em>
+        Information about appearances, presentations, events to "meet the author" and attend a book signing for <em
+          >Another Kind of Mind: A Talking Bird Masters English</em
+        >
       </p>
       <!-- <p>
         <a href="/">Chart of Appearances</a>
@@ -263,13 +302,13 @@ const audioTracks = [
           <p>For pricing and to order contact by e-mail:</p>
           <p><a href="mailto:mike@ParrotSpeech.org">mike@ParrotSpeech.org</a></p>
           <p class="mug-info">
-            The mugs are ceramic; the image is a dye transfer that is permanent and safe in 
-            most automatic dishwashers. Instructions included.
+            The mugs are ceramic; the image is a dye transfer that is permanent and safe in most automatic dishwashers.
+            Instructions included.
           </p>
         </div>
       </div>
     </section>
-    
+
     <Footer />
   </article>
 </BaseLayout>
@@ -315,7 +354,7 @@ const audioTracks = [
   }
 
   .radio-interview a {
-    color: #0000FF;
+    color: #0000ff;
     font-size: 1.2rem;
   }
 
@@ -328,6 +367,7 @@ const audioTracks = [
 
   .order-section {
     background: #f9f9f9;
+    border-left: 4px solid #663300;
     padding: 25px;
     border-radius: 12px;
     margin-bottom: 30px;
@@ -354,12 +394,12 @@ const audioTracks = [
   }
 
   .paypal-text {
-    color: #FF0033;
+    color: #ff0033;
     font-size: 1.1rem;
   }
 
   .inscription-notice {
-    color: #FF0033;
+    color: #ff0033;
   }
 
   .btn {
@@ -379,14 +419,14 @@ const audioTracks = [
   }
 
   .book-title-section h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.5rem;
     color: #663300;
     margin-bottom: 5px;
   }
 
   .book-title-section h3 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1rem;
     color: #663300;
   }
@@ -422,7 +462,7 @@ const audioTracks = [
   }
 
   .audio-section h3 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #663300;
     font-size: 1.4rem;
     margin-bottom: 20px;
@@ -482,7 +522,7 @@ const audioTracks = [
   }
 
   .listening-tips {
-    background: #33FFFF;
+    background: #33ffff;
     padding: 20px;
     color: #000066;
     font-weight: bold;
@@ -499,10 +539,13 @@ const audioTracks = [
 
   .photo-section {
     margin-bottom: 30px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .hanging-photo {
     max-width: 508px;
+    margin: 0 auto;
   }
 
   .hanging-photo img {
@@ -522,7 +565,7 @@ const audioTracks = [
   }
 
   .events-section {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #663300;
     font-size: 1.1rem;
     margin-bottom: 30px;
@@ -549,7 +592,7 @@ const audioTracks = [
   }
 
   .mug-details {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #663300;
   }
 
