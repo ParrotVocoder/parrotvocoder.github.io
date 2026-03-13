@@ -100,7 +100,7 @@ const description = "References for talking birds and cognitive speech by a maca
           <!-- <a href="/videos/Fox13_News_Animal_Talk_1.mp4" target="_blank" class="btn-large">
             See Arielle on TV ... Hear her talking
           </a> -->
-          <video controls width="640" height="480">
+          <video controls class="media-frame">
             <source src="/media/Fox13_News_Animal_Talk_1.mp4" type="video/mp4" />
             See Arielle on TV ... Hear her talking
           </video>
@@ -112,7 +112,7 @@ const description = "References for talking birds and cognitive speech by a maca
         <p class="brown-text"><strong>BOOK ANNOUNCEMENT WITH TELEVISION APPEARANCE BY ARIELLE</strong></p>
         <p class="brown-text">Watch Arielle's appearance on WTSP TV-10 from July 2008:</p>
         <div class="video-container video-link">
-          <video controls width="640" height="480">
+          <video controls class="media-frame">
             <source src="/media/arielle-2008-wtsp10-tampa-bay.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -357,10 +357,10 @@ const description = "References for talking birds and cognitive speech by a maca
           Petersburg, FL, August 4-7, 2009, pp. 36-44.
           <!-- <a href="/files/Copy_of_2010_AFA_Convention_Paper_Beyond_Polly_Wants_a_Cracker_opt.pdf" target="_blank" class="green-link">Click here to read "Beyond ... 'Polly Wants a Cracker'"</a> -->
           <iframe
+            class="doc-embed"
             src="https://drive.google.com/file/d/1mLikAGvVZojFYRfhsDHJ-fVbc3q5YRns/preview"
             width="100%"
             height="600"
-            style="border: none; padding:20px;"
             allow="autoplay"
           >
           </iframe>
@@ -409,14 +409,14 @@ const description = "References for talking birds and cognitive speech by a maca
             >American Federation of Aviculture 35th Annual Convention Proceedings</em
           >, Houston, TX, August 5-8, 2009, pp. 76-82.
           <iframe
+            class="doc-embed"
             src="https://drive.google.com/file/d/1AEALFbGi5yF9O64lLx59MeDOXAcvYhO4/preview"
             width="100%"
             height="600"
-            style="border: none; padding:20px; padding-bottom: 0px;"
             allow="autoplay"
           >
           </iframe>
-          <div class="" style="align-items: center; text-align: center; font-size: small;">
+          <div class="download-row">
             <a
               href="https://drive.google.com/file/d/1AEALFbGi5yF9O64lLx59MeDOXAcvYhO4/view?usp=sharing"
               target="_blank"
@@ -810,6 +810,27 @@ const description = "References for talking birds and cognitive speech by a maca
   .video-link {
     text-align: center;
     margin: 30px 0;
+    width: min(100%, 760px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
+  }
+
+  .doc-embed {
+    width: 100%;
+    min-height: 420px;
+    border: 0;
+    padding: 12px 0;
+  }
+
+  .download-row {
+    text-align: center;
+    font-size: 0.85rem;
   }
 
   .btn-large {
@@ -846,6 +867,30 @@ const description = "References for talking birds and cognitive speech by a maca
 
   a:visited {
     color: #800080;
+  }
+
+  @media (max-width: 768px) {
+    .references-title {
+      font-size: 1.35rem;
+    }
+
+    .videos-title {
+      font-size: 1.5rem;
+    }
+
+    .large-text {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .doc-embed {
+      min-height: 250px;
+    }
+
+    .content-section {
+      margin-bottom: 30px;
+    }
   }
 
   
