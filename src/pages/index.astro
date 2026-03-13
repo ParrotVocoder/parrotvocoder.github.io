@@ -66,13 +66,15 @@ const description =
 
     <section class="greeting-section">
       <HighlightBox>
-        <p class="greeting-text">
+        <!-- <p class="greeting-text"> -->
+        <p>
           To hear Arielle's greeting, click the play button to the right.<br />
-          Arielle says, "Hi! ... Hello."<br />
-          <small
-            ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a></small
-          >
+          Arielle says, "Hi! ... Hello."
         </p>
+        <!-- <small
+            ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a></small
+          > -->
+        <!-- </p> -->
       </HighlightBox>
       <AudioPlayer src="/media/TrackD211T26_HI2.wav" autoplay={true} caption="Arielle's greeting: Hi! ... Hello." />
     </section>
@@ -263,7 +265,9 @@ const description =
         result of learning things from lessons. She also learns on her own by associative learning. A speech sample can
         be heard by clicking identified sound selections located near yellow boxes throughout this site; transcription
         of Arielle's words appear in another yellow box near the bottom of the same page. Many speech samples appear on
-        the <a href="/another-mind">Another Mind</a> page; the transcriptions are in the book <em>Another Kind of Mind</em>.
+        the <a href="/another-mind">Another Mind</a> page; the transcriptions are in the book <em
+          >Another Kind of Mind</em
+        >.
       </p>
       <p>
         Many people consider macaws to be mediocre talking birds. Arielle might be an exception. She vocalizes daily
@@ -364,9 +368,9 @@ const description =
     margin-bottom: 20px;
   }
 
-  .intro-section {
+  /* .intro-section {
     margin-bottom: 30px;
-  }
+  } */
 
   .intro-text {
     color: #000066;
@@ -392,7 +396,6 @@ const description =
   .main-content {
     display: flex;
     gap: 30px;
-    margin-bottom: 30px;
     flex-wrap: wrap;
   }
 
@@ -431,7 +434,9 @@ const description =
   }
 
   .greeting-text {
-    color: #ff0000;
+    /* color: #006644; */
+    /* #006644; */
+    font-weight: bold;
     font-size: 20px;
   }
 

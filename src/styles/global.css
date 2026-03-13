@@ -104,7 +104,7 @@ h2 {
   color: var(--primary-color);
 }
 
-p {
+section > p {
   margin: 0 0 1em;
 }
 
