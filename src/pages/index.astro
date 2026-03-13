@@ -67,16 +67,16 @@ const description =
     <section class="greeting-section">
       <HighlightBox>
         <!-- <p class="greeting-text"> -->
-        <p>
+        <p class="label">
           To hear Arielle's greeting, click the play button to the right.<br />
           Arielle says, "Hi! ... Hello."
         </p>
         <!-- <small
-            ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a></small
-          > -->
+        ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a></small
+        > -->
         <!-- </p> -->
+        <AudioPlayer src="/media/TrackD211T26_HI2.wav" autoplay={true} caption="Arielle's greeting: Hi! ... Hello." />
       </HighlightBox>
-      <AudioPlayer src="/media/TrackD211T26_HI2.wav" autoplay={true} caption="Arielle's greeting: Hi! ... Hello." />
     </section>
 
     <section class="tv-section">
@@ -114,10 +114,10 @@ const description =
             >(<a href="/HAGD_Disc_419_Track11_18Aug2009.mp3"
               >Click on this text to play speech if player does not appear</a
             >)</small
-          > -->
+            > -->
         </p>
+        <AudioPlayer src="/media/HAGD_Disc_419_Track11_18Aug2009.mp3" caption="Arielle saying: Have a good day!" />
       </HighlightBox>
-      <AudioPlayer src="/media/HAGD_Disc_419_Track11_18Aug2009.mp3" caption="Arielle saying: Have a good day!" />
     </section>
 
     <section class="events-section">
@@ -414,7 +414,7 @@ const description =
 
   .site-update {
     color: #663300;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   .site-update .cyan {
