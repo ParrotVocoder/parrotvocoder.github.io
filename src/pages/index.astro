@@ -70,8 +70,7 @@ const description =
           To hear Arielle's greeting, click the play button to the right.<br />
           Arielle says, "Hi! ... Hello."<br />
           <small
-            ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a
-            ></small
+            ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a></small
           >
         </p>
       </HighlightBox>
@@ -97,7 +96,7 @@ const description =
           <!-- Your browser does not support the video tag. -->
         </video>
 
-          <!-- <iframe width="640" height="480" src="https://www.youtube.com/embed/UcWKH9kjTVg?si=AtALqj_xYseF9ft1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        <!-- <iframe width="640" height="480" src="https://www.youtube.com/embed/UcWKH9kjTVg?si=AtALqj_xYseF9ft1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         <!-- <a href="/videos/WTSP_July2008.mp4"><strong>Arielle's (2008) Appearance on WTSP-10 Tampa Bay's 10 TV</strong></a
         >. (Click to go to start and go to page.) -->
       </div>
@@ -130,11 +129,11 @@ const description =
         Check for new listings because future additions may appear, including appearances by Arielle.
       </p>
 
-      <section class="youtube-section">
-        <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p>
-        <!-- <p><a href="https://youtu.be/qfeKKwGbbQk"><strong>https://youtu.be/qfeKKwGbbQk</strong></a></p> -->
-        <div class="video-container">
-          <!-- <iframe
+      <!-- <section class="youtube-section"> -->
+      <!-- <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p> -->
+      <!-- <p><a href="https://youtu.be/qfeKKwGbbQk"><strong>https://youtu.be/qfeKKwGbbQk</strong></a></p> -->
+      <!-- <div class="video-container"> -->
+      <!-- <iframe
             width="640"
             height="480"
             src="https://www.youtube.com/embed/qfeKKwGbbQk?si=OMRtaniFnx5W4vF1"
@@ -143,14 +142,23 @@ const description =
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe> -->
 
-          <iframe
+      <!-- <iframe
             class="media-frame"
             src="https://www.youtube.com/embed/FiW_FP_t1zg?si=UjLUrmdFQIkyIUdI"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
+            allowfullscreen></iframe> -->
+      <!-- </div> -->
+      <!-- </section> -->
+      <section class="youtube-section">
+        <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p>
+        <div class="video-container">
+          <video controls class="media-frame">
+            <source src="/media/Pretty_Parrot_VIDEO.mp4" type="video/mp4" />
+            Pretty Parrot VIDEO
+          </video>
         </div>
       </section>
 
@@ -224,7 +232,9 @@ const description =
             <td>
               <strong>06-09 March 2013</strong><br />
               <span class="red">Speaking</span>: Wednesday<br />6 March 2013 at 9:00 p.m.<br /><br />
-              <a href="http://www.comparativecognition.org/conference" target="_blank">comparativecognition.org/conference</a>
+              <a href="http://www.comparativecognition.org/conference" target="_blank"
+                >comparativecognition.org/conference</a
+              >
             </td>
             <td>
               20th Annual Conference of the <strong>Comparative Cognition Society</strong><br />
@@ -253,7 +263,7 @@ const description =
         result of learning things from lessons. She also learns on her own by associative learning. A speech sample can
         be heard by clicking identified sound selections located near yellow boxes throughout this site; transcription
         of Arielle's words appear in another yellow box near the bottom of the same page. Many speech samples appear on
-        the "Another_Mind" page; the transcriptions are in the book <em>Another Kind of Mind</em>.
+        the <a href="/another-mind">Another Mind</a> page; the transcriptions are in the book <em>Another Kind of Mind</em>.
       </p>
       <p>
         Many people consider macaws to be mediocre talking birds. Arielle might be an exception. She vocalizes daily
@@ -315,7 +325,7 @@ const description =
     </section> -->
 
     <section class="caution">
-      <p class="red"><strong>CAUTION!</strong></p>
+      <p class="red"><strong>⚠️ CAUTION !!! ⚠️</strong></p>
       <p>All of the pictures and materials contained on this web site are the property of the author.</p>
       <p>
         None of the pictures or written material may be used, quoted, or reproduced in any form what so ever without the
@@ -368,7 +378,7 @@ const description =
     color: #000066;
     background-color: #f1f1f1;
     border-radius: 8px;
-    border: 2px solid #000066;
+    border: 1px solid #dfdfdf;
     padding: 20px;
     font-weight: bold;
     font-size: 1.1rem;
@@ -414,10 +424,10 @@ const description =
 
   .greeting-section,
   .another-greeting {
-    display: flex;
+    /* display: flex; */
     gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    /* flex-wrap: wrap; */
   }
 
   .greeting-text {
@@ -449,6 +459,7 @@ const description =
 
   .tv-info {
     color: #663300;
+    text-align: left;
     font-weight: bold;
   }
 

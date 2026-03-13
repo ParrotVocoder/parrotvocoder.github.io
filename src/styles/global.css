@@ -39,6 +39,7 @@ body {
 
 /* Main layout */
 .page-wrapper {
+  width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
   display: flex;
@@ -47,7 +48,8 @@ body {
 
 /* Navigation sidebar */
 .nav-sidebar {
-  width: var(--nav-width);
+  width: min(var(--nav-width), 100%);
+  max-width: 100%;
   flex-shrink: 0;
   padding: 10px 5px;
 }
@@ -55,8 +57,10 @@ body {
 /* Main content area */
 .main-content {
   flex: 1;
+  width: 100%;
+  min-width: 0;
   padding: 20px;
-  max-width: calc(var(--page-max-width) - var(--nav-width));
+  max-width: 100%;
 }
 
 /* Links */
@@ -143,17 +147,6 @@ img {
 /* Audio player */
 .audio-player {
   margin: 15px 0;
-}
-
-.audio-player audio {
-  width: 100%;
-  max-width: 400px;
-}
-
-.audio-player .caption {
-  font-style: italic;
-  margin-top: 5px;
-  font-size: 0.9em;
 }
 
 /* Tables */
