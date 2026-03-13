@@ -20,11 +20,11 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
       <h1>The home of the pioneering talking macaw called Arielle</h1>
     </header>
 
-    <div class="image-wrapper">
-    <figure class="image-container">
-      <img src="/images/image005.jpg" alt="Arielle in the grapefruit tree" />
-      <figcaption class="photo-credit">&copy; Michael Dalton</figcaption>
-    </figure>
+    <div class="story-image">
+      <figure class="image-container">
+        <img src="/images/image005.jpg" alt="Arielle in the grapefruit tree" />
+        <figcaption class="photo-credit">&copy; Michael Dalton</figcaption>
+      </figure>
     </div>
 
     <section class="intro-section">
@@ -107,9 +107,14 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
     <section class="goblin-story">
       <h2>Goblin</h2>
 
-      <figure class="story-image">
-        <img src="/images/Goblin_facsimile_4.jpg" alt="Halloween goblin decoration" />
-      </figure>
+      <div class="story-image">
+        <figure class="image-container">
+          <img src="/images/Goblin_facsimile_4.jpg" alt="Halloween goblin decoration" />
+          <span class="photo-credit">Halloween goblin decoration</span>
+        </figure>
+      </div>
+
+      <!-- <p class="copyright">&copy; 2003, 2012 by Michael Dalton</p> -->
 
       <p>
         During our customary walk this evening, Arielle said a distorted two-syllable word, one that I did not
@@ -128,8 +133,6 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
         outdoor decorations hanging eerily from trees using the label goblin as well, so that is how Arielle learned to
         say goblin.
       </p>
-
-      <p class="copyright">&copy; 2003, 2012 by Michael Dalton</p>
     </section>
 
     <section class="npr-section">
@@ -179,11 +182,9 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
     line-height: 1.7;
   }
 
-
   .audio-section {
     margin: 20px 0;
   }
-
 
   .story-section h2,
   .goblin-story h2,
@@ -204,13 +205,6 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
 
   .story-image {
     float: left;
-    margin: 0 20px 20px 0;
-    max-width: 220px;
-  }
-
-  .story-image img {
-    width: 100%;
-    border-radius: 8px;
   }
 
   .note {
