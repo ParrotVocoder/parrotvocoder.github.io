@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 import AudioPlayer from '../components/AudioPlayer.astro';
+import NoticeSection from '../components/NoticeSection.astro';
 
 const title = "Words and Sound: Difficulties with Interspecies Communication";
 const description = "Understanding the challenges of speech as a means for interspecies communication with talking birds.";
@@ -30,9 +31,10 @@ const description = "Understanding the challenges of speech as a means for inter
           src="/media/TrackD211T12_FBPUFT3.wav" 
           title="Arielle's Speech Sample"
         />
+        <a href="/media/TrackD211T12_FBPUFT3.wav" class="audio-caption" target="_blank">(Click this text to hear sound if play button is missing)</a>
 
         <div class="challenge-box">
-          <p>(<a href="/media/TrackD211T12_FBPUFT3.wav" target="_blank">Click this text to hear sound if play button is missing</a>.)</p>
+          <!-- <p></p> -->
           <p>Check your transcription of Arielle's statements by referring to the yellow text block near the end of this page.</p>
         </div>
 
@@ -121,19 +123,7 @@ const description = "Understanding the challenges of speech as a means for inter
       </section>
     </div>
 
-    <section class="notice-section">
-      <h2>Notice</h2>
-      <p>As of February 2026, there is a new group at Google that deals with speech by talking birds and other topics of interest for bird enthusiasts, linguists, biologists, animal trainers, or anyone who wishes to explore concepts relating to communicating with a talking bird. The description appears below.</p>
-      
-      <p><strong>Parties concerned and objectives of the ParrotSpeech Group:</strong></p>
-
-      <p>
-        <strong>Google Groups</strong>: <a href="https://groups.google.com/g/parrotspeech" target="_blank" style="line-height: 20px;">https://groups.google.com/g/parrotspeech</a>
-      </p>
-      
-      <p>People interested in the study of spontaneous speech by talking birds. The topics of concern include learning about parrot-like birds, speech perception, linguistics, cognition, consciousness, and other topics related to the talking birds. To join click on the image below or submit your request to the group by entering the subscription link into your browser.</p>
-
-    </section>
+    <NoticeSection />
 
     <Footer />
   </article>
@@ -318,5 +308,11 @@ const description = "Understanding the challenges of speech as a means for inter
     font-weight: bold;
     line-height: 1.6;
     margin-bottom: 1em;
+  }
+
+  .audio-caption{
+    font-size:0.9rem;
+    padding: 0;
+    text-align: center;
   }
 </style>

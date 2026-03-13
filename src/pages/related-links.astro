@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro"
 import Breadcrumb from "../components/Breadcrumb.astro"
 import Footer from "../components/Footer.astro"
 import AudioPlayer from "../components/AudioPlayer.astro"
+import NoticeSection from "../components/NoticeSection.astro"
 
 const title = "Related Links - ParrotSpeech.org"
 const description =
@@ -245,35 +246,7 @@ const description =
       </p>
     </section> -->
 
-    <section class="notice-section">
-      <h2 class="group-title">⚠️ Notice!!!</h2>
-      <p>
-        As of February 2026, there is a new group at Google that deals with speech by talking birds and other topics of
-        interest for bird enthusiasts, linguists, biologists, animal trainers, or anyone who wishes to explore concepts
-        relating to communicating with a talking bird. The description appears below.
-      </p>
-
-      <p><strong>Parties concerned and objectives of the ParrotSpeech Group:</strong></p>
-
-      <p>
-        <strong>Google Groups</strong>: <a href="https://groups.google.com/g/parrotspeech" target="_blank"
-          >https://groups.google.com/g/parrotspeech</a
-        >
-      </p>
-
-      <p>
-        <strong>Subscribe email</strong>: <a href="mailto:parrotspeech@googlegroups.com" target="_blank"
-          >parrotspeech@googlegroups.com</a
-        >
-      </p>
-
-      <p class="">
-        People interested in the study of spontaneous speech by talking birds. The topics of concern include learning
-        about parrot-like birds, speech perception, linguistics, cognition, consciousness, and other topics related to
-        the talking birds. To join click on the image below or submit your request to the group by entering the
-        subscription link into your browser.
-      </p>
-    </section>
+    <NoticeSection />
 
     <!-- Footer Quote -->
     <!-- <section class="footer-quote">
@@ -504,48 +477,7 @@ const description =
   .radio-intro {
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: #000066;
-  }
-
-  /* ParrotSpeech Group */
-  .notice-section {
-    margin: 40px 0;
-    padding: 25px;
-    background: #f0f8ff;
-    border-radius: 8px;
-    border-left: 4px solid #000099;
-  }
-
-  .notice-section .group-title {
-    color: #000099;
-    /* text-decoration: underline; */
-    /* font-size: 1.1rem; */
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .notice-section .description {
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: #000099;
-    text-decoration: underline;
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-  }
-
-  .notice-section p {
-    color: #000099;
-    font-weight: bold;
-    line-height: 1.6;
-  }
-
-  .subscribe-email {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .subscribe-email a {
-    color: #000099;
-  }
+  }  
 
   /* Footer Quote */
   .footer-quote {
