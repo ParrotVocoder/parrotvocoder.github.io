@@ -22,57 +22,52 @@ const description =
       <h1>Words and Sound:<br />Difficulties with Speech as a Means<br />for Interspecies Communication</h1>
     </header>
 
-    <div class="">
-      <section>
-        <div class="difficulties-list">
-          <h2>Some possible difficulties in discerning a bird's speech:</h2>
-          <ol>
-            <li>rapidity of the bird's speech, as parrots often learn to speak quickly</li>
-            <li>tone of the bird's voice, a human voice sounds considerably different</li>
-            <li>intonation used in speaking, a bird may put unusual stress on syllables</li>
-            <li>the cadence of speech, the pattern could reflect an owner's speech</li>
-            <li>"clipped" syllables, are some words incompletely said?</li>
-            <li>isolated or contextual speech?</li>
-            <li>slurred words? (either indistinct or linked to other words)</li>
-            <li>unusual words in the bird's vocabulary</li>
-            <li>the listener's inexperience with the dialect of a bird</li>
-            <li>lack of common vocabulary between listener and the talking bird?</li>
-            <li>insufficient effort on the part of the listener to comprehend the bird's words</li>
-            <li>hearing loss, an age-related hearing deficit, in older adults challenges them</li>
-            <li>lack of eye contact or visual clues on sound recordings</li>
-          </ol>
-        </div>
-      </section>
-    </div>
+    <section class="intro-text">
+      <p>Some possible difficulties in discerning a bird's speech:</p>
+      <ol>
+        <li>rapidity of the bird's speech, as parrots often learn to speak quickly</li>
+        <li>tone of the bird's voice, a human voice sounds considerably different</li>
+        <li>intonation used in speaking, a bird may put unusual stress on syllables</li>
+        <li>the cadence of speech, the pattern could reflect an owner's speech</li>
+        <li>"clipped" syllables, are some words incompletely said?</li>
+        <li>isolated or contextual speech?</li>
+        <li>slurred words? (either indistinct or linked to other words)</li>
+        <li>unusual words in the bird's vocabulary</li>
+        <li>the listener's inexperience with the dialect of a bird</li>
+        <li>lack of common vocabulary between listener and the talking bird?</li>
+        <li>insufficient effort on the part of the listener to comprehend the bird's words</li>
+        <li>hearing loss, an age-related hearing deficit, in older adults challenges them</li>
+        <li>lack of eye contact or visual clues on sound recordings</li>
+      </ol>
+    </section>
+
+    <section>
+      <HighlightBox>
+        <p>
+          Challenge your listening skills with a sample of Arielle's spontaneous speech.<br />
+          (Sound slowed to help you.)
+        </p>
+
+        <AudioPlayer src="/media/TrackD211T12_FBPUFT3.wav" caption="Arielle's Speech Sample" />
+        <!-- <a href="/media/TrackD211T12_FBPUFT3.wav" class="audio-caption" target="_blank" >(Click this text to hear sound if play button is missing)</a> -->
+      </HighlightBox>
+    </section>
 
     <div class="two-column-layout">
       <!-- Left Column -->
       <aside class="sidebar">
         <div class="challenge-box">
-          <p>
-            Challenge your listening skills with a sample of Arielle's spontaneous speech. (Sound slowed to help you.)
-          </p>
-        </div>
-
-        <AudioPlayer src="/media/TrackD211T12_FBPUFT3.wav" title="Arielle's Speech Sample" />
-        <a href="/media/TrackD211T12_FBPUFT3.wav" class="audio-caption" target="_blank"
-          >(Click this text to hear sound if play button is missing)</a
-        >
-
-        <div class="challenge-box">
-          <!-- <p></p> -->
-          <p>
-            Check your transcription of Arielle's statements by referring to the yellow text block near the end of this
-            page.
-          </p>
+          Check your transcription of Arielle's statements by referring to the yellow text block near the end of this
+          page.
         </div>
 
         <figure class="sidebar-image">
-          <img src="/images/Climbing_onto_my_shoulder.jpg" alt="Arielle climbing onto shoulder" />
-          <figcaption>
+          <div class="image-container">
+            <img src="/images/Climbing_onto_my_shoulder.jpg" alt="Arielle climbing onto shoulder" />
             <span class="photo-credit">Photo by Linda Carpenter</span>
-            <span class="caption-text">Arielle climbs to her favorite spot</span>
-          </figcaption>
+            <figcaption></figcaption>
+          </div>
+          <span class="caption-text">Arielle climbs to her favorite spot</span>
         </figure>
 
         <section class="vocabulary-section">
@@ -253,7 +248,6 @@ const description =
   }
 
   @media (max-width: 560px) {
-    .challenge-box,
     .answer-box p {
       font-size: 1rem;
     }
@@ -278,19 +272,6 @@ const description =
     gap: 20px;
   }
 
-  .challenge-box {
-    background-color: #ffff00;
-    padding: 15px;
-    color: #ff0000;
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  .challenge-box a {
-    color: #0000ff;
-    font-size: 0.9rem;
-  }
-
   .sidebar-image {
     margin: 0;
   }
@@ -305,11 +286,6 @@ const description =
     display: flex;
     flex-direction: column;
     margin-top: 5px;
-  }
-
-  .photo-credit {
-    font-size: 0.75rem;
-    color: #666;
   }
 
   .caption-text {
@@ -342,33 +318,10 @@ const description =
     line-height: 1.7;
   }
 
-  .difficulties-list {
-    margin-bottom: 30px;
-  }
-
-  .difficulties-list h2 {
-    color: #663300;
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  .difficulties-list ol {
-    padding-left: 25px;
-    color: #663300;
-    font-weight: bold;
-  }
-
-  .difficulties-list li {
-    /* margin-bottom: 8px; */
-    font-size: 0.95rem;
-  }
-
   .section-title {
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: #663300;
     font-size: 1.25rem;
-    margin-top: 30px;
-    margin-bottom: 20px;
   }
 
   .main-content p {
@@ -432,5 +385,19 @@ const description =
     font-size: 0.9rem;
     padding: 0;
     text-align: center;
+  }
+
+  .challenge-box {
+    background-color: #ffffcc;
+    color: #ff0000;
+    border-left: 4px solid #ffcc00;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .intro-text {
+    color: #000066;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
 </style>

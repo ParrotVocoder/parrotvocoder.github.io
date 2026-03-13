@@ -93,7 +93,7 @@ const audioTracks = [
     </section>
 
     <section class="radio-interview">
-      <p><strong>Click on the following link to listen to a radio interview about the book,</strong></p>
+      <!-- <p><strong>Click on the following link to listen to a radio interview about the book,</strong></p> -->
       <!-- <a href="/files/Book_Interview_WTAN_comp_18Oct2012.mp3" target="_blank">
           <em>Another Kind of Mind: A Talking Bird Masters English</em>
         </a>. -->
@@ -152,13 +152,11 @@ const audioTracks = [
       </p> -->
     </section>
 
-
     <hr />
 
     <section class="book-title-section">
       <h2>Another Kind of Mind: A Talking Bird Masters English</h2>
     </section>
-
 
     <section class="about-book">
       <p>
@@ -276,10 +274,12 @@ const audioTracks = [
     </section>
 
     <section class="photo-section">
-      <div class="hanging-photo">
-        <img src="/images/Arielle_hanging_up-side_down.jpg" alt="Arielle hanging upside down" />
+      <div class="image-wrapper">
+        <div class="image-container">
+          <img src="/images/Arielle_hanging_up-side_down.jpg" alt="Arielle hanging upside down" />
+          <p class="photo-credit">Photo by Linda Carpenter</p>
+        </div>
         <p class="photo-caption">Just hanging around</p>
-        <p class="photo-credit-small">Photo by Linda Carpenter</p>
       </div>
     </section>
 
@@ -332,13 +332,6 @@ const audioTracks = [
     height: auto;
   }
 
-  .photo-credit {
-    display: block;
-    font-size: 0.85rem;
-    color: #333;
-    margin-top: 5px;
-  }
-
   .intro-section {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -375,7 +368,7 @@ const audioTracks = [
     border-radius: 12px;
     margin-bottom: 30px;
     color: #663300;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 
   .order-section h3 {
@@ -473,7 +466,6 @@ const audioTracks = [
 
   .audio-content {
     display: grid;
-    grid-template-columns: 1fr 280px;
     /* display: flex;
     flex-direction: row; */
     gap: 20px;
@@ -528,7 +520,7 @@ const audioTracks = [
 
   .listening-tips {
     /* background: #33ffff; */
-    background: rgb(176, 247, 247);
+    background: #cccce0;
     border-left: 4px solid #000066;
     border-radius: 8px;
     padding: 20px;
@@ -559,17 +551,6 @@ const audioTracks = [
   .hanging-photo img {
     width: 100%;
     height: auto;
-  }
-
-  .photo-caption {
-    color: #663300;
-    font-size: 1.1rem;
-    margin-top: 10px;
-  }
-
-  .photo-credit-small {
-    font-size: 0.85rem;
-    color: #333;
   }
 
   .events-section {
