@@ -36,6 +36,12 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+article{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 /* Main layout */
 .page-wrapper {
