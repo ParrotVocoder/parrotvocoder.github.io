@@ -342,7 +342,6 @@ table {
 
 .image-container img {
   width: 100%;
-  max-width: 385px;
   height: auto;
 }
 
@@ -365,4 +364,10 @@ table {
 
 .image-description p {
   margin-bottom: 1em;
+}
+
+.image-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
