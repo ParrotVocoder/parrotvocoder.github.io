@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro"
 import Breadcrumb from "../components/Breadcrumb.astro"
 import Footer from "../components/Footer.astro"
 import AudioPlayer from "../components/AudioPlayer.astro"
+import HighlightBox from "../components/HighlightBox.astro"
 import NoticeSection from "../components/NoticeSection.astro"
 
 const title = "Related Links - ParrotSpeech.org"
@@ -27,21 +28,19 @@ const description =
 
     <!-- Audio Feature Section -->
     <section class="audio-feature">
-      <div class="audio-box">
-        <div class="transcription-box">
-          <p>Arielle said,<br />"I want out!"</p>
+      <HighlightBox>
+        <div class="label">
+          Arielle said, "I want out!"
         </div>
-        <div class="audio-content">
-          <p class="audio-description">
+        <p class="content">
             Arielle can be a demanding bird.<br />
-            She says what one might expect<br />
-            from a bird in this position, click<br />
+            She says what one might expect 
+            from a bird in this position, click 
             the play button to hear her speak.
-          </p>
-          <AudioPlayer src="/media/Track_CC.wav" title="Arielle: I want out!" />
-          <p class="audio-note">The transcription is in the yellow box below.</p>
-        </div>
-      </div>
+        </p>
+        <AudioPlayer src="/media/Track_CC.wav" caption="Arielle: I want out!" />
+        <!-- <p class="audio-note">The transcription is in the yellow box below.</p> -->
+      </HighlightBox>
     </section>
 
     <!-- Main Heading -->
@@ -278,17 +277,9 @@ const description =
     margin-top: 4px;
   }
 
-  /* Audio Feature Section */
-  .audio-feature {
-    margin: 30px 0;
-  }
-
-  .audio-box {
+  .audio-highlight {
     display: flex;
     gap: 20px;
-    background: #ffff00;
-    padding: 15px;
-    border-radius: 8px;
     flex-wrap: wrap;
   }
 
@@ -305,23 +296,6 @@ const description =
     font-weight: bold;
     margin: 0;
     line-height: 1.4;
-  }
-
-  .audio-content {
-    flex: 1;
-  }
-
-  .audio-description {
-    color: #ff0000;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    line-height: 1.4;
-  }
-
-  .audio-note {
-    color: #ff0000;
-    font-size: 1.1rem;
-    margin-top: 10px;
   }
 
   /* Main Intro */
@@ -397,7 +371,7 @@ const description =
 
   .info-box {
     background: #fff;
-    border-left-color: #009966;
+    /* border-left-color: #009966; */
   }
 
   /* Writer Friend Section */
@@ -492,7 +466,7 @@ const description =
   .radio-intro {
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: #000066;
-  }  
+  }
 
   /* Footer Quote */
   .footer-quote {
@@ -509,7 +483,7 @@ const description =
 
   /* Responsive */
   @media (max-width: 600px) {
-    .audio-box {
+    .audio-highlight {
       flex-direction: column;
     }
 

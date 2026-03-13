@@ -156,7 +156,7 @@ const services = [
         </div>
 
         <div class="coming-soon">
-          <h3><span class="coming-soon-text">COMING SOON</span></h3>
+          <h3><span class="coming-soon-text">🔜 COMING SOON</span></h3>
           <p>
             There are many beautiful birds. Parrots are like people because different species and individuals within the
             species have interesting personalities. That is a theme for the second song; I had most of the stereotypical
@@ -173,8 +173,9 @@ const services = [
             credits in the production.
           </p>
           <p>There will be a spot here to click to hear and view the second production called</p>
-          <h4><u>Blue & Gold Macaws</u></h4>
-          <p class="coming-soon-label"><span class="coming-soon-text">COMING SOON</span></p>
+          <div><span>Blue & Gold Macaws</span></div>
+          <br/>
+          <h3><span class="coming-soon-text">COMING SOON 🔜</span></h3>
         </div>
       </div>
     </section>
@@ -351,12 +352,15 @@ const services = [
   .coming-soon {
     margin-top: 40px;
     padding: 20px;
-    background: #fff0f0;
+    /* background: #fff0f0; */
+    background-color: #fff0f0;
+    border-left: 4px solid #ff0033;
     border-radius: 8px;
   }
 
   .coming-soon h3 {
     font-size: 1.5rem;
+    color: #ff0033;
     margin-bottom: 15px;
   }
 
@@ -368,10 +372,6 @@ const services = [
 
   .coming-soon p {
     color: #ff0033;
-  }
-
-  .coming-soon-text {
-    color: #006600;
   }
 
   .coming-soon-label {
