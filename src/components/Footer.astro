@@ -2,45 +2,65 @@
   <p class="visitor-counter">
     Number of visitors: <span id="stats">Loading...</span>
   </p>
-  <p class="tagline">
-    Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.
-  </p>
+  <p class="tagline">Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
   <p class="copyright">
     &copy; {new Date().getFullYear()} ParrotSpeech.org - All Rights Reserved
   </p>
 </footer>
 
 <script is:inline>
-  (() => {
-    const statsEl = document.querySelector('#stats');
-    if (!statsEl) return;
+  ;(() => {
+    const statsEl = document.querySelector("#stats")
+    if (!statsEl) return
 
-    const r = new XMLHttpRequest();
-    r.addEventListener('load', function () {
-      try {
-        const payload = JSON.parse(this.responseText);
-        statsEl.innerText = String(payload.count ?? 0);
-      } catch {
-        statsEl.innerText = 'N/A';
+    // Encode path for GoatCounter — strip trailing slash except for root
+    function getCounterPath() {
+      let path = location.pathname
+
+      // Prefer GoatCounter's own path if available
+      if (window.goatcounter && typeof window.goatcounter.get_data === "function") {
+        const data = window.goatcounter.get_data()
+        if (data && data.p) path = data.p
       }
-    });
 
-    r.addEventListener('error', () => {
-      statsEl.innerText = 'N/A';
-    });
+      // Normalize: remove trailing slash unless it's the root "/"
+      if (path.length > 1 && path.endsWith("/")) {
+        path = path.slice(0, -1)
+      }
 
-    let path = location.pathname;
-    if (window.goatcounter && typeof window.goatcounter.get_data === 'function') {
-      const data = window.goatcounter.get_data();
-      if (data && data.p) path = data.p;
+      if (path.startsWith("/")) {
+        path = path.slice(1)
+      }
+
+      return encodeURIComponent(path)
     }
 
-    r.open(
-      'GET',
-      'https://parrotspeech.goatcounter.com/counter/' + encodeURIComponent(path) + '.json'
-    );
-    r.send();
-  })();
+    const url = "https://parrotspeech.goatcounter.com/counter/" + getCounterPath() + ".json"
+
+    const r = new XMLHttpRequest()
+
+    r.addEventListener("load", function () {
+      if (this.status < 200 || this.status >= 300) {
+        statsEl.innerText = "N/A"
+        return
+      }
+
+      try {
+        const payload = JSON.parse(this.responseText)
+        const count = Number.parseInt(String(payload?.count ?? ""), 10)
+        statsEl.innerText = Number.isFinite(count) ? String(count) : "0"
+      } catch {
+        statsEl.innerText = "N/A"
+      }
+    })
+
+    r.addEventListener("error", () => {
+      statsEl.innerText = "N/A"
+    })
+
+    r.open("GET", url)
+    r.send()
+  })()
 </script>
 
 <style>
