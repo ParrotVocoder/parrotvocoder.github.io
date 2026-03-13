@@ -132,36 +132,13 @@ const description =
         Check for new listings because future additions may appear, including appearances by Arielle.
       </p>
 
-      <!-- <section class="youtube-section"> -->
-      <!-- <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p> -->
-      <!-- <p><a href="https://youtu.be/qfeKKwGbbQk"><strong>https://youtu.be/qfeKKwGbbQk</strong></a></p> -->
-      <!-- <div class="video-container"> -->
-      <!-- <iframe
-            width="640"
-            height="480"
-            src="https://www.youtube.com/embed/qfeKKwGbbQk?si=OMRtaniFnx5W4vF1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe> -->
-
-      <!-- <iframe
-            class="media-frame"
-            src="https://www.youtube.com/embed/FiW_FP_t1zg?si=UjLUrmdFQIkyIUdI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe> -->
-      <!-- </div> -->
-      <!-- </section> -->
       <section class="youtube-section">
-        <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p>
         <div class="video-container">
           <video controls class="media-frame">
             <source src="/media/Pretty_Parrot_VIDEO.mp4" type="video/mp4" />
             Pretty Parrot VIDEO
           </video>
+          <p class="video-caption">Click video to hear the song Pretty Parrot featuring pictures of Arielle</p>
         </div>
       </section>
 
@@ -498,39 +475,42 @@ const description =
   }
 
   .youtube-section {
-    color: #000066;
-    font-size: 24px;
+    /* color: #000066; */
+    /* font-size: 24px; */
     margin: 20px 0;
+  }
+
+  .video-caption {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .events-table {
     width: 100%;
-    border: 2px outset #dcdcdc;
-    border-collapse: separate;
-    border-spacing: 2px;
-    margin-top: 20px;
+    font-size: 1rem;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 40px;
   }
 
   .events-table th {
-    background-color: #f5f5f5;
-    color: #ff0000;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    border: 1px inset #dcdcdc;
+    background: #f0f0f0;
+    color: #000066;
+    border: 1px solid #ccc;
     padding: 8px;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  .events-table td {
-    border: 1px inset #dcdcdc;
-    padding: 8px;
-    vertical-align: top;
-    color: #009966;
+    text-align: center;
+    vertical-align: middle;
     font-weight: bold;
   }
 
-  .events-table .event-row.featured td {
-    font-size: 18px;
+  .events-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: middle;
+    color: #663300;
+    /* font-weight: bold; */
+    text-align: left;
   }
 
   .events-table .red {
