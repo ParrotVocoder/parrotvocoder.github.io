@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import Footer from '../components/Footer.astro';
-import AudioPlayer from '../components/AudioPlayer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Breadcrumb from "../components/Breadcrumb.astro"
+import Footer from "../components/Footer.astro"
+import AudioPlayer from "../components/AudioPlayer.astro"
 
-const title = "Speech Investigation - Investigating Speech: an African Grey Parrot Speaking Italian";
-const description = "Investigating Italian vowel sounds and simple Italian words spoken by an African Grey parrot.";
+const title = "Speech Investigation - Investigating Speech: an African Grey Parrot Speaking Italian"
+const description = "Investigating Italian vowel sounds and simple Italian words spoken by an African Grey parrot."
 
 const audioClips = [
   { number: 1, src: "/media/Clip_1.wav" },
@@ -19,12 +19,12 @@ const audioClips = [
   { number: 8, src: "/media/Clip_8.wav" },
   { number: 9, src: "/media/Clip_9.wav" },
   { number: 10, src: "/media/Clip_10.wav" },
-];
+]
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="investigation" />
-  
+
   <article>
     <Breadcrumb currentPage="Speech Investigation" />
 
@@ -39,14 +39,17 @@ const audioClips = [
         </div>
         <div class="intro-questions">
           <p class="question">Do people understand speech by a bird with which they are unfamiliar?</p>
-          <p>Help with research (below) attempting to learn more about human perception of unfamiliar and/or spontaneous speech by a talking bird.</p>
-          
+          <p>
+            Help with research (below) attempting to learn more about human perception of unfamiliar and/or spontaneous
+            speech by a talking bird.
+          </p>
+
           <p class="question">Are human beings good at listening to parrots?</p>
           <p>Participate in the listening test below.</p>
-          
+
           <p class="question">What about other species of parrots?</p>
           <p>Do you have a recording of a bird speaking that you do not understand? If so, please contact me.</p>
-          
+
           <p class="question">Do you know someone interested in speech by talented talking birds?</p>
           <p>Please pass this page to your friend.</p>
         </div>
@@ -55,35 +58,63 @@ const audioClips = [
 
     <section class="content">
       <h2 class="section-title">Investigating Italian vowel sounds and simple Italian words.</h2>
-      
+
       <div class="research-text">
         <p>
-          Studies with parrots by Pepperberg in the United States and by Lenti-Boero, Masin, <em>et al</em>. in Italy indicate that humans perceive speech by parrots well. These studies appear to have a high degree of agreement among listeners for recordings of parrot speech.
+          Studies with parrots by Pepperberg in the United States and by Lenti-Boero, Masin, <em>et al</em>. in Italy
+          indicate that humans perceive speech by parrots well. These studies appear to have a high degree of agreement
+          among listeners for recordings of parrot speech.
         </p>
         <p>
-          It is important to determine whether bird owners and others possess the same ability to recognize the words spoken by unfamiliar talking birds as the researchers. Dr. Masin provided samples for me to use in trying to determine whether Americans understand vowel sounds and simple words spoken by an Italian-speaking parrot. The subject under investigation was an African Grey parrot.
+          It is important to determine whether bird owners and others possess the same ability to recognize the words
+          spoken by unfamiliar talking birds as the researchers. Dr. Masin provided samples for me to use in trying to
+          determine whether Americans understand vowel sounds and simple words spoken by an Italian-speaking parrot. The
+          subject under investigation was an African Grey parrot.
         </p>
         <p>
-          In this experiment, listeners evaluate a series of very short sound clips with portions of words spoken by the parrot which have been edited to isolate the vowel sounds from the word. The listener is asked to identify the vowel as A, E, I, O, or U for seven of the clips. Three clips have repetitions of a word or a series of common Italian words that a child might know as spoken by the Grey parrot. The task of willing listeners is to identify the vowels and the words spoken on the clips.
+          In this experiment, listeners evaluate a series of very short sound clips with portions of words spoken by the
+          parrot which have been edited to isolate the vowel sounds from the word. The listener is asked to identify the
+          vowel as A, E, I, O, or U for seven of the clips. Three clips have repetitions of a word or a series of common
+          Italian words that a child might know as spoken by the Grey parrot. The task of willing listeners is to
+          identify the vowels and the words spoken on the clips.
         </p>
         <p>
-          If you are willing to listen and determine what you think the bird is saying, I would appreciate receiving your answers to add to my data. I encourage participants to write in a phonetic representation for what they hear in the event that you do not distinctly recognize the vowel or word. For example, if you hear the vowel "A" and it sounds like "Ahhh" or the "A" in "at" write that on your answer sheet. If you heard a vowel that sounds like the long vowel "A" in English, you could so indicate by listing a word with the sound you heard (your example might be "slate").
+          If you are willing to listen and determine what you think the bird is saying, I would appreciate receiving
+          your answers to add to my data. I encourage participants to write in a phonetic representation for what they
+          hear in the event that you do not distinctly recognize the vowel or word. For example, if you hear the vowel
+          "A" and it sounds like "Ahhh" or the "A" in "at" write that on your answer sheet. If you heard a vowel that
+          sounds like the long vowel "A" in English, you could so indicate by listing a word with the sound you heard
+          (your example might be "slate").
         </p>
         <p>
-          An answer sheet is provided below. [You can listen to the clips as many times as you like, and you can consult with others in your household to arrive at your final result. One submission per household unless done independently without any conferencing or discussion.]
+          An answer sheet is provided below. [You can listen to the clips as many times as you like, and you can consult
+          with others in your household to arrive at your final result. One submission per household unless done
+          independently without any conferencing or discussion.]
         </p>
       </div>
 
       <div class="answer-sheet-box">
-        <a href="/files/AnswerSheetMinCONV.docx" target="_blank" class="answer-sheet-link">
+        <a
+          href="https://drive.google.com/file/d/1SPBrzFQB4POafEBm24uziXhUjNZE3p0R/view?usp=sharing"
+          target="_blank"
+          class="answer-sheet-link"
+        >
           Click here for answer sheet
+        </a>
+        <iframe
+          src="https://docs.google.com/document/d/1SPBrzFQB4POafEBm24uziXhUjNZE3p0R/preview"
+          width="100%"
+          height="900"></iframe>
+        <a href="/files/AnswerSheetMinCONV.docx" target="_blank" class="answer-sheet-link">
+          Download
         </a>
         <p>The document is in WORD 97-2003 format and will load on most computers</p>
       </div>
 
       <div class="clips-intro">
         <p>
-          The sound clips appear below. Please listen to them in numerical order for consistency and to avoid errors. You may listen to the sounds as many times as you need to provide an answer.
+          The sound clips appear below. Please listen to them in numerical order for consistency and to avoid errors.
+          You may listen to the sounds as many times as you need to provide an answer.
         </p>
       </div>
 
@@ -94,15 +125,17 @@ const audioClips = [
           <img src="/images/Black_Headed_Caique.jpg" alt="Black Headed Caique" class="bird-image" />
         </div>
         <div class="clips-list">
-          {audioClips.map((clip) => (
-            <div class="clip-item">
-              <span class="clip-label">Clip {clip.number}</span>
-              <audio controls>
-                <source src={clip.src} type="audio/wav" />
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          ))}
+          {
+            audioClips.map((clip) => (
+              <div class="clip-item">
+                <span class="clip-label">Clip {clip.number}</span>
+                <audio controls>
+                  <source src={clip.src} type="audio/wav" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            ))
+          }
         </div>
       </div>
 
@@ -149,7 +182,7 @@ const audioClips = [
   }
 
   .intro-questions .question {
-    color: #FF0000;
+    color: #ff0000;
     font-weight: bold;
     margin-bottom: 5px;
   }
@@ -185,7 +218,7 @@ const audioClips = [
   }
 
   .answer-sheet-box {
-    background-color: #FFCC00;
+    background-color: #ffcc00;
     padding: 20px;
     text-align: center;
     margin: 30px 0;
@@ -194,7 +227,7 @@ const audioClips = [
   .answer-sheet-link {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #0000FF;
+    color: #0000ff;
     text-decoration: underline;
   }
 
