@@ -140,10 +140,10 @@ section > p {
 }
 
 /* Images */
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 .image-center {
   display: block;
@@ -343,6 +343,13 @@ table {
 .image-container img {
   width: 100%;
   height: auto;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: block;
 }
 
 .photo-credit {
