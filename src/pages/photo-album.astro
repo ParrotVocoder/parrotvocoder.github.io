@@ -22,9 +22,11 @@ const description =
     </header>
 
     <section class="hero-section">
-      <div class="hero-image-wrap">
-        <img src="/images/Arielle_on_perch_foot_up.jpg" alt="Arielle perched with one foot raised" />
-        <p class="photo-credit">Photo by Linda Carpenter</p>
+      <div class="image-wrapper">
+        <div class="image-container">
+          <img src="/images/Arielle_on_perch_foot_up.jpg" alt="Arielle perched with one foot raised" />
+          <p class="photo-credit">Photo by Linda Carpenter</p>
+        </div>
       </div>
       <div class="hero-captions">
         <p>Do you think I'm left footed?</p>
@@ -147,6 +149,11 @@ const description =
       /* margin: 20px 0 28px; */
     }
 
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
     .hero-image-wrap {
       max-width: 430px;
       margin: 0 auto;
@@ -156,12 +163,6 @@ const description =
     .hero-image-wrap img {
       width: 100%;
       border-radius: 10px;
-    }
-
-    .photo-credit {
-      margin-top: 8px;
-      color: #cccccc;
-      font-size: 0.8rem;
     }
 
     .hero-captions {

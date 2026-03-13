@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro"
 import Breadcrumb from "../components/Breadcrumb.astro"
 import Footer from "../components/Footer.astro"
 import AudioPlayer from "../components/AudioPlayer.astro"
+import HighlightBox from "../components/HighlightBox.astro"
 import NoticeSection from "../components/NoticeSection.astro"
 
 const title = "Words and Sound: Difficulties with Interspecies Communication"
@@ -67,10 +68,7 @@ const description =
         </div>
 
         <figure class="sidebar-image">
-          <img
-            src="/images/Climbing_onto_my_shoulder.jpg"
-            alt="Arielle climbing onto shoulder"
-          />
+          <img src="/images/Climbing_onto_my_shoulder.jpg" alt="Arielle climbing onto shoulder" />
           <figcaption>
             <span class="photo-credit">Photo by Linda Carpenter</span>
             <span class="caption-text">Arielle climbs to her favorite spot</span>
@@ -132,8 +130,6 @@ const description =
           </p>
         </section>
       </aside>
-
-      
 
       <!-- Right Column - Main Content -->
       <section class="main-content">
@@ -221,17 +217,19 @@ const description =
         </p>
 
         <p>You may be as surprised by what your bird is saying. I was.</p>
-
-        <div class="answer-box">
-          <p>
-            Arielle spoke in a higher-than-normal-frequency voice. In her first utterance, she says a rapidly spoken and
-            shortened version of "(Do you) Feel better?" After a brief pause, she ends in a higher-pitch voice saying,
-            "Put your foot there!"
-          </p>
-          <p class="answer-credit">(From a February 2006 impromptu session.)</p>
-        </div>
       </section>
     </div>
+
+    <HighlightBox>
+      <div class="answer-box">
+        <p>
+          Arielle spoke in a higher-than-normal-frequency voice. In her first utterance, she says a rapidly spoken and
+          shortened version of "(Do you) Feel better?" After a brief pause, she ends in a higher-pitch voice saying,
+          "Put your foot there!"
+        </p>
+        <p class="answer-credit">(From a February 2006 impromptu session.)</p>
+      </div>
+    </HighlightBox>
 
     <NoticeSection />
 
@@ -394,9 +392,7 @@ const description =
   }
 
   .answer-box {
-    background-color: #ffff00;
-    padding: 20px;
-    margin-top: 30px;
+    margin-top: 6px;
   }
 
   .answer-box p {
