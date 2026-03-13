@@ -1,74 +1,28 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import Footer from '../components/Footer.astro';
-import AudioPlayer from '../components/AudioPlayer.astro';
-import NoticeSection from '../components/NoticeSection.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Breadcrumb from "../components/Breadcrumb.astro"
+import Footer from "../components/Footer.astro"
+import AudioPlayer from "../components/AudioPlayer.astro"
+import NoticeSection from "../components/NoticeSection.astro"
 
-const title = "Words and Sound: Difficulties with Interspecies Communication";
-const description = "Understanding the challenges of speech as a means for interspecies communication with talking birds.";
+const title = "Words and Sound: Difficulties with Interspecies Communication"
+const description =
+  "Understanding the challenges of speech as a means for interspecies communication with talking birds."
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="difficulties" />
-  
+
   <article>
     <Breadcrumb currentPage="Words & Sound" />
 
     <header class="page-header">
-      <h1>Words and Sound:<br>Difficulties with Speech as a Means<br>for Interspecies Communication</h1>
+      <h1>Words and Sound:<br />Difficulties with Speech as a Means<br />for Interspecies Communication</h1>
     </header>
 
-    <div class="two-column-layout">
-      <!-- Left Column -->
-      <aside class="sidebar">
-        <div class="challenge-box">
-          <p>Challenge your listening skills with a sample of Arielle's spontaneous speech. (Sound slowed to help you.)</p>
-        </div>
-
-        <AudioPlayer 
-          src="/media/TrackD211T12_FBPUFT3.wav" 
-          title="Arielle's Speech Sample"
-        />
-        <a href="/media/TrackD211T12_FBPUFT3.wav" class="audio-caption" target="_blank">(Click this text to hear sound if play button is missing)</a>
-
-        <div class="challenge-box">
-          <!-- <p></p> -->
-          <p>Check your transcription of Arielle's statements by referring to the yellow text block near the end of this page.</p>
-        </div>
-
-        <figure class="sidebar-image">
-          <img src="/images/Climbing_onto_my_shoulder.jpg" alt="Arielle climbing onto shoulder" width="308" height="194">
-          <figcaption>
-            <span class="photo-credit">Photo by Linda Carpenter</span>
-            <span class="caption-text">Arielle climbs to her favorite spot</span>
-          </figcaption>
-        </figure>
-
-        <section class="vocabulary-section">
-          <h2>Make a Vocabulary List</h2>
-          
-          <p>Most pet bird owners do not keep track of words spoken by their birds. Without notes, it is almost impossible to determine anything unusual said by the bird. A basic reporting system for words uttered by a bird is sufficient.</p>
-
-          <p>The simplest method is to write a file card for each utterance and file entries in a box, or one can jot sayings into alphabetized sections of a notebook. In either case, owners create a mechanism to refer to words, phrases, and sentences spoken by their bird. Keep track of the date for each entry with notes about new additions.</p>
-
-          <p>I'd like to learn about your results, because the data is scarce about the rate of growth for a bird's vocabulary. You might be surprised, as I was, to learn that a bird can learn words faster than young children!</p>
-
-          <p>Many people will convert their records to a computer database. Electronic filing makes it easier to sort unique entries, to count the entries, and to order and print the list in different formats.</p>
-
-          <p>Regardless of how you keep your records, it's a good idea to have an accounting for your bird's speech. There are several reasons. First, each bird's education provides an unusual way to identify one's pet. There is the likelihood that the world will learn more about the capabilities of talking birds if you have a written record for your bird's vocabulary. Memory is unreliable. There is another reason too. It is hard for some people to imagine, but we humans can learn about birds and from birds, as a result of their speaking ability.</p>
-
-          <p>One of the most important records to keep is a list of the parrot's hard-to-understand sayings. You may have to use blanks for unknown words, or you may use another word as a place marker. I call such words "sononyms." Sometimes after months of thinking about what Arielle said, I come to understand the meaning for her words.</p>
-
-          <p>You are likely to be surprised by some of the things that your bird says. If you fail to make a note of the bird's utterances, you will forget the sounds. Without written records, you are likely to miss startling communications made by your bird.</p>
-
-          <p>Start keeping records and you will find that your bird has learned an unexpected range of expressions. Are you listening to your bird, or do you ignore its statements?</p>
-        </section>
-      </aside>
-
-      <!-- Right Column - Main Content -->
-      <section class="main-content">
+    <div class="">
+      <section>
         <div class="difficulties-list">
           <h2>Some possible difficulties in discerning a bird's speech:</h2>
           <ol>
@@ -87,37 +41,195 @@ const description = "Understanding the challenges of speech as a means for inter
             <li>lack of eye contact or visual clues on sound recordings</li>
           </ol>
         </div>
+      </section>
+    </div>
 
+    <div class="two-column-layout">
+      <!-- Left Column -->
+      <aside class="sidebar">
+        <div class="challenge-box">
+          <p>
+            Challenge your listening skills with a sample of Arielle's spontaneous speech. (Sound slowed to help you.)
+          </p>
+        </div>
+
+        <AudioPlayer src="/media/TrackD211T12_FBPUFT3.wav" title="Arielle's Speech Sample" />
+        <a href="/media/TrackD211T12_FBPUFT3.wav" class="audio-caption" target="_blank"
+          >(Click this text to hear sound if play button is missing)</a
+        >
+
+        <div class="challenge-box">
+          <!-- <p></p> -->
+          <p>
+            Check your transcription of Arielle's statements by referring to the yellow text block near the end of this
+            page.
+          </p>
+        </div>
+
+        <figure class="sidebar-image">
+          <img
+            src="/images/Climbing_onto_my_shoulder.jpg"
+            alt="Arielle climbing onto shoulder"
+            width="308"
+            height="194"
+          />
+          <figcaption>
+            <span class="photo-credit">Photo by Linda Carpenter</span>
+            <span class="caption-text">Arielle climbs to her favorite spot</span>
+          </figcaption>
+        </figure>
+
+        <section class="vocabulary-section">
+          <h2>Make a Vocabulary List</h2>
+
+          <p>
+            Most pet bird owners do not keep track of words spoken by their birds. Without notes, it is almost
+            impossible to determine anything unusual said by the bird. A basic reporting system for words uttered by a
+            bird is sufficient.
+          </p>
+
+          <p>
+            The simplest method is to write a file card for each utterance and file entries in a box, or one can jot
+            sayings into alphabetized sections of a notebook. In either case, owners create a mechanism to refer to
+            words, phrases, and sentences spoken by their bird. Keep track of the date for each entry with notes about
+            new additions.
+          </p>
+
+          <p>
+            I'd like to learn about your results, because the data is scarce about the rate of growth for a bird's
+            vocabulary. You might be surprised, as I was, to learn that a bird can learn words faster than young
+            children!
+          </p>
+
+          <p>
+            Many people will convert their records to a computer database. Electronic filing makes it easier to sort
+            unique entries, to count the entries, and to order and print the list in different formats.
+          </p>
+
+          <p>
+            Regardless of how you keep your records, it's a good idea to have an accounting for your bird's speech.
+            There are several reasons. First, each bird's education provides an unusual way to identify one's pet. There
+            is the likelihood that the world will learn more about the capabilities of talking birds if you have a
+            written record for your bird's vocabulary. Memory is unreliable. There is another reason too. It is hard for
+            some people to imagine, but we humans can learn about birds and from birds, as a result of their speaking
+            ability.
+          </p>
+
+          <p>
+            One of the most important records to keep is a list of the parrot's hard-to-understand sayings. You may have
+            to use blanks for unknown words, or you may use another word as a place marker. I call such words
+            "sononyms." Sometimes after months of thinking about what Arielle said, I come to understand the meaning for
+            her words.
+          </p>
+
+          <p>
+            You are likely to be surprised by some of the things that your bird says. If you fail to make a note of the
+            bird's utterances, you will forget the sounds. Without written records, you are likely to miss startling
+            communications made by your bird.
+          </p>
+
+          <p>
+            Start keeping records and you will find that your bird has learned an unexpected range of expressions. Are
+            you listening to your bird, or do you ignore its statements?
+          </p>
+        </section>
+      </aside>
+
+      
+
+      <!-- Right Column - Main Content -->
+      <section class="main-content">
         <h2 class="section-title">Interspecies Communication</h2>
 
-        <p>There are several problems in receiving messages from a talking bird. Part of the problem is reflected by a statement about "inattentional deafness" by Temple Grandin in <em>Animals in Translation</em>.</p>
+        <p>
+          There are several problems in receiving messages from a talking bird. Part of the problem is reflected by a
+          statement about "inattentional deafness" by Temple Grandin in <em>Animals in Translation</em>.
+        </p>
 
-        <p>A listener must be interested enough to determine the message transmitted by a speaking bird. Since many bird owners neither actively listen to their birds nor pay much attention to the bird's speech, who then will receive the bird's message?</p>
+        <p>
+          A listener must be interested enough to determine the message transmitted by a speaking bird. Since many bird
+          owners neither actively listen to their birds nor pay much attention to the bird's speech, who then will
+          receive the bird's message?
+        </p>
 
-        <p>Many people enjoy hearing a parrot repeat stock phrases. However, the novelty wears off soon and then the difficulty becomes apparent; people assume that a bird's early speech is not meaningful, but they are often wrong. An owner needs to recognize and explore the bird's ability to use language during "a window of opportunity," usually during the bird's early dealings with its owner. Future communicative opportunities might be lost, because a bird simply gives up when it receives no response. Out of boredom, parrots revert to repeating mundane phrases that cause a reaction.</p>
+        <p>
+          Many people enjoy hearing a parrot repeat stock phrases. However, the novelty wears off soon and then the
+          difficulty becomes apparent; people assume that a bird's early speech is not meaningful, but they are often
+          wrong. An owner needs to recognize and explore the bird's ability to use language during "a window of
+          opportunity," usually during the bird's early dealings with its owner. Future communicative opportunities
+          might be lost, because a bird simply gives up when it receives no response. Out of boredom, parrots revert to
+          repeating mundane phrases that cause a reaction.
+        </p>
 
-        <p>If you listen to your bird and work with your bird, there is a much higher chance that you will be able to communicate at least on occasion. For example, Arielle learned to ask, "Hurt?" The word is posed with a rising pitch to indicate the questioning nature of the utterance. The full translation for her abbreviated question is: "Is that something that is likely to hurt me?" (Linguists call such words holophrases; in such utterances, a single word expresses a basic sentence.)</p>
+        <p>
+          If you listen to your bird and work with your bird, there is a much higher chance that you will be able to
+          communicate at least on occasion. For example, Arielle learned to ask, "Hurt?" The word is posed with a rising
+          pitch to indicate the questioning nature of the utterance. The full translation for her abbreviated question
+          is: "Is that something that is likely to hurt me?" (Linguists call such words holophrases; in such utterances,
+          a single word expresses a basic sentence.)
+        </p>
 
-        <p>My surprising finding is that people generally do not comprehend Arielle's speech, at least not the isolated taped speech of my macaw. Why is that?</p>
+        <p>
+          My surprising finding is that people generally do not comprehend Arielle's speech, at least not the isolated
+          taped speech of my macaw. Why is that?
+        </p>
 
-        <p>A child's parents usually understand their offspring's irregular speech, but a befuddled stranger often finds the child's speech incomprehensible. A parrot is considerably smaller than an adult human and has vocal characteristics similar to that of a toddler. The bird's voice emanates from its syrinx, which generates sound in a considerably different way from a human vocal tract. I believe these factors combined with those presented in the list above explain why people find understanding recordings of bird speech difficult. I work at analyzing Arielle's unclear speech.</p>
+        <p>
+          A child's parents usually understand their offspring's irregular speech, but a befuddled stranger often finds
+          the child's speech incomprehensible. A parrot is considerably smaller than an adult human and has vocal
+          characteristics similar to that of a toddler. The bird's voice emanates from its syrinx, which generates sound
+          in a considerably different way from a human vocal tract. I believe these factors combined with those
+          presented in the list above explain why people find understanding recordings of bird speech difficult. I work
+          at analyzing Arielle's unclear speech.
+        </p>
 
-        <p>What is surprising is the lack of interest in bird speech among parrot owners. Many enthusiasts buy a talking bird specifically for its ability to speak. Yet the typical owner, as well as the general public, is not tremendously interested in what a bird says or whether it communicates. People don't try hard enough to comprehend bird speech, and, as a result, they miss the exhilarating experience of hearing cognitive speech by their bird.</p>
+        <p>
+          What is surprising is the lack of interest in bird speech among parrot owners. Many enthusiasts buy a talking
+          bird specifically for its ability to speak. Yet the typical owner, as well as the general public, is not
+          tremendously interested in what a bird says or whether it communicates. People don't try hard enough to
+          comprehend bird speech, and, as a result, they miss the exhilarating experience of hearing cognitive speech by
+          their bird.
+        </p>
 
-        <p>One has to work to develop an appreciation for the messages transmitted by birds. Learning to transcribe a parrot's speech has been likened to learning a foreign language. People generally accommodate strangers attempting to speak English with a foreign accent. Yet, listeners are reluctant to grant the same courtesy to a talking bird that speaks with an accent. The least we can do is work to determine words spoken by a bird, because a parrot exerts an enormous effort to learn human language and to communicate in an unfamiliar way. The study of words spoken by a parrot is worthwhile. Parrots like Arielle try to communicate a range of information to their owners. One story about a communication by Arielle is reproduced on the <a href="/macaw-speech">MacawSpeech</a> page of this site.</p>
+        <p>
+          One has to work to develop an appreciation for the messages transmitted by birds. Learning to transcribe a
+          parrot's speech has been likened to learning a foreign language. People generally accommodate strangers
+          attempting to speak English with a foreign accent. Yet, listeners are reluctant to grant the same courtesy to
+          a talking bird that speaks with an accent. The least we can do is work to determine words spoken by a bird,
+          because a parrot exerts an enormous effort to learn human language and to communicate in an unfamiliar way.
+          The study of words spoken by a parrot is worthwhile. Parrots like Arielle try to communicate a range of
+          information to their owners. One story about a communication by Arielle is reproduced on the <a
+            href="/macaw-speech">MacawSpeech</a
+          > page of this site.
+        </p>
 
-        <p>Owners who listen intently will find that their talking birds are trying to communicate. Bird keepers can learn how to listen to parrot speech in order to decode the message. This is sometimes a daunting task, but one that will be greatly rewarded for the effort.</p>
+        <p>
+          Owners who listen intently will find that their talking birds are trying to communicate. Bird keepers can
+          learn how to listen to parrot speech in order to decode the message. This is sometimes a daunting task, but
+          one that will be greatly rewarded for the effort.
+        </p>
 
-        <p>We don't have to look to outer space for intelligent life with which to communicate. An intelligent, and sometimes very opinionated, creature could be as near as the parrot on one's shoulder.</p>
+        <p>
+          We don't have to look to outer space for intelligent life with which to communicate. An intelligent, and
+          sometimes very opinionated, creature could be as near as the parrot on one's shoulder.
+        </p>
 
         <h3>Got a problem?</h3>
 
-        <p>Are there portions of your bird's speech that you do not understand? I will try to assist in determining a short passage from your bird's speech. The following media are suggested: an audio compact cassette, a CD, or an attachment to an e-mail (sounds.wav file).</p>
+        <p>
+          Are there portions of your bird's speech that you do not understand? I will try to assist in determining a
+          short passage from your bird's speech. The following media are suggested: an audio compact cassette, a CD, or
+          an attachment to an e-mail (sounds.wav file).
+        </p>
 
         <p>You may be as surprised by what your bird is saying. I was.</p>
 
         <div class="answer-box">
-          <p>Arielle spoke in a higher-than-normal-frequency voice. In her first utterance, she says a rapidly spoken and shortened version of "(Do you) Feel better?" After a brief pause, she ends in a higher-pitch voice saying, "Put your foot there!"</p>
+          <p>
+            Arielle spoke in a higher-than-normal-frequency voice. In her first utterance, she says a rapidly spoken and
+            shortened version of "(Do you) Feel better?" After a brief pause, she ends in a higher-pitch voice saying,
+            "Put your foot there!"
+          </p>
           <p class="answer-credit">(From a February 2006 impromptu session.)</p>
         </div>
       </section>
@@ -151,15 +263,15 @@ const description = "Understanding the challenges of speech as a means for inter
   }
 
   .challenge-box {
-    background-color: #FFFF00;
+    background-color: #ffff00;
     padding: 15px;
-    color: #FF0000;
+    color: #ff0000;
     font-size: 1.1rem;
     line-height: 1.5;
   }
 
   .challenge-box a {
-    color: #0000FF;
+    color: #0000ff;
     font-size: 0.9rem;
   }
 
@@ -197,7 +309,7 @@ const description = "Understanding the challenges of speech as a means for inter
   }
 
   .vocabulary-section h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #000066;
     font-size: 1.25rem;
     margin-bottom: 20px;
@@ -231,12 +343,12 @@ const description = "Understanding the challenges of speech as a means for inter
   }
 
   .difficulties-list li {
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     font-size: 0.95rem;
   }
 
   .section-title {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: #663300;
     font-size: 1.25rem;
     margin-top: 30px;
@@ -256,7 +368,7 @@ const description = "Understanding the challenges of speech as a means for inter
   }
 
   .main-content a {
-    color: #0000FF;
+    color: #0000ff;
   }
 
   .main-content a:visited {
@@ -264,13 +376,13 @@ const description = "Understanding the challenges of speech as a means for inter
   }
 
   .answer-box {
-    background-color: #FFFF00;
+    background-color: #ffff00;
     padding: 20px;
     margin-top: 30px;
   }
 
   .answer-box p {
-    color: #FF0000;
+    color: #ff0000;
     font-size: 1.1rem;
     line-height: 1.5;
     font-weight: normal;
@@ -302,8 +414,8 @@ const description = "Understanding the challenges of speech as a means for inter
     margin-bottom: 1em;
   }
 
-  .audio-caption{
-    font-size:0.9rem;
+  .audio-caption {
+    font-size: 0.9rem;
     padding: 0;
     text-align: center;
   }
