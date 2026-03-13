@@ -134,16 +134,22 @@ const services = [
             her ability to use language called <u>Another Kind of Mind</u>: A Talking Bird Masters English. Enjoy the
             song about her!
           </p>
-          <div class="youtube-link">
-            <!-- <a href="https://youtu.be/qfeKKwGbbQk" target="_blank">http://youtu.be/qfeKKwGbbQk</a> -->
-            <iframe
+          <div class="video-container">
+            <video controls class="media-frame">
+              <source src="/media/Pretty_Parrot_VIDEO.mp4" type="video/mp4" />
+              Pretty Parrot VIDEO
+            </video>
+          </div>
+          <!-- <div class="youtube-link"> -->
+          <!-- <a href="https://youtu.be/qfeKKwGbbQk" target="_blank">http://youtu.be/qfeKKwGbbQk</a> -->
+          <!-- <iframe
               class="video-embed"
               src="https://www.youtube.com/embed/qfeKKwGbbQk?si=TXVxdZzK0imdp0Zg"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-          </div>
+              allowfullscreen></iframe> -->
+          <!-- </div> -->
           <p>
             <a href="/another-mind">Click here to go to the book page</a>
           </p>
@@ -209,6 +215,7 @@ const services = [
 
   .services-section {
     background: #f9f9f9;
+    border-left: 4px solid #663300;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -309,6 +316,7 @@ const services = [
   .song-feature {
     margin: 30px 0;
     padding: 20px;
+    border-left: 4px solid #000066;
     background: #f0f4ff;
     border-radius: 8px;
   }
