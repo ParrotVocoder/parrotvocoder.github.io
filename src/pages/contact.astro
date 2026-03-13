@@ -1,16 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Navigation from '../components/Navigation.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Breadcrumb from "../components/Breadcrumb.astro"
+import Footer from "../components/Footer.astro"
 
-const title = "Contact Us - ParrotSpeech.org";
-const description = "Contact Arielle or Mike about talking birds, cognitive speech research, and interspecies communication.";
+const title = "Contact Us - ParrotSpeech.org"
+const description =
+  "Contact Arielle or Mike about talking birds, cognitive speech research, and interspecies communication."
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="contact" />
-  
+
   <article>
     <Breadcrumb currentPage="Contact Us" />
 
@@ -28,43 +29,41 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
 
     <section class="intro-section">
       <p class="intro-text">
-        This site describes aspects of cognitive speech by a macaw called Arielle. Arielle is the first 
-        contemporary bird demonstrating that a parrot possesses advanced linguistic abilities.
+        This site describes aspects of cognitive speech by a macaw called Arielle. Arielle is the first contemporary
+        bird demonstrating that a parrot possesses advanced linguistic abilities.
       </p>
-      
+
       <div class="presentation-info">
         <p>
-          If you have a group such as a bird club, civic organization or a university class 
-          interested in learning more about Arielle and the abilities of talking birds to speak 
-          human language correctly, consider requesting an A/V presentation. Arielle attends 
-          some functions located close to her home.
+          If you have a group such as a bird club, civic organization or a university class interested in learning more
+          about Arielle and the abilities of talking birds to speak human language correctly, consider requesting an A/V
+          presentation. Arielle attends some functions located close to her home.
         </p>
       </div>
 
       <p class="michael-info">
-        Michael Dalton is interested in topics including speech as an indicator of the cognitive abilities 
-        of birds, the development of language in talking birds, linguistics, free speech by talking birds, 
-        people's poor speech perception, and evidence for consciousness in talking birds derived from 
-        an animal's cognitive speech. Contact him to explore requirements for unusual papers, 
-        presentations, or seminars.
+        Michael Dalton is interested in topics including speech as an indicator of the cognitive abilities of birds, the
+        development of language in talking birds, linguistics, free speech by talking birds, people's poor speech
+        perception, and evidence for consciousness in talking birds derived from an animal's cognitive speech. Contact
+        him to explore requirements for unusual papers, presentations, or seminars.
       </p>
     </section>
 
+    <div class="sidebar-intro">
+      <p>
+        Pet bird owners, parrot breeders, bird trainers, scientists, & hobbyists interested in cognitive speech by birds
+        please read the column below.
+      </p>
+    </div>
+
     <div class="content-grid">
       <aside class="sidebar">
-        <div class="sidebar-intro">
-          <p>
-            Pet bird owners, parrot breeders, bird trainers, scientists, & hobbyists 
-            interested in cognitive speech by birds please read the column below.
-          </p>
-        </div>
-
         <div class="qa-section">
           <div class="qa-item">
             <p class="question">Do you share my interest in talking birds?</p>
             <p class="answer">
-              Please contact me to tell me what you are doing. It doesn't matter 
-              whether you are a beginner or a professional; I will respond to correspondence.
+              Please contact me to tell me what you are doing. It doesn't matter whether you are a beginner or a
+              professional; I will respond to correspondence.
             </p>
           </div>
 
@@ -86,14 +85,15 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
           <div class="qa-item">
             <p class="question">Do you have "good ears" for decoding parrot speech or know someone who does?</p>
             <p class="answer">
-              I'd like to hear from people who are interested in learning more about 
-              untaught, free, speech by parrots.
+              I'd like to hear from people who are interested in learning more about untaught, free, speech by parrots.
             </p>
           </div>
 
           <div class="qa-item">
-            <p class="question">Send your e-mail message to the address below for communications and/or to request a call by telephone.</p>
-            <p class="email-address">Mike@ParrotSpeech.org</p>
+            <p class="question">
+              Send your e-mail message to the address below for communications and/or to request a call by telephone.
+            </p>
+            <a href="mailto:Mike@ParrotSpeech.org">Mike@ParrotSpeech.org</a>
           </div>
         </div>
       </aside>
@@ -101,74 +101,58 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
       <main class="main-content">
         <div class="article-content">
           <p>
-            To some people the idea of talking with animals seems silly, yet a 
-            handful of scientists have expended extraordinary effort to try to with 
-            individual great apes, one of the best publicized is Francine Patterson's 
-            study of the gorilla called Koko. Dr. Patterson has the distinction of 
-            conducting the longest ongoing study in the field of interspecies 
-            communication; she continues to investigate her gorilla friend after 
-            more than 30 years on the job.
+            To some people the idea of talking with animals seems silly, yet a handful of scientists have expended
+            extraordinary effort to try to with individual great apes, one of the best publicized is Francine
+            Patterson's study of the gorilla called Koko. Dr. Patterson has the distinction of conducting the longest
+            ongoing study in the field of interspecies communication; she continues to investigate her gorilla friend
+            after more than 30 years on the job.
           </p>
 
           <p>
-            Despite the studies of apes using visual communication (sign language), 
-            there has been little progress with communicating vocally with animals. 
-            One reason is that the anatomy of many creatures is not suited to 
-            duplicate the complex sounds of human speech. Lacking the ability to 
-            vocalize is an impediment.
+            Despite the studies of apes using visual communication (sign language), there has been little progress with
+            communicating vocally with animals. One reason is that the anatomy of many creatures is not suited to
+            duplicate the complex sounds of human speech. Lacking the ability to vocalize is an impediment.
           </p>
 
           <p>
-            Birds are animals that naturally use sound to communicate, although 
-            humans have yet to discover the precise meaning for the messages that 
-            birds transmit. Despite some limitations because of their size, many 
-            different birds including crows, ravens, mynah birds, parrots, and a 
-            number of songbirds have the knack for reproducing words from human 
-            speech. Vocal communication between birds and humans is possible 
-            because birds are able to reproduce sounds similar to human speech.
+            Birds are animals that naturally use sound to communicate, although humans have yet to discover the precise
+            meaning for the messages that birds transmit. Despite some limitations because of their size, many different
+            birds including crows, ravens, mynah birds, parrots, and a number of songbirds have the knack for
+            reproducing words from human speech. Vocal communication between birds and humans is possible because birds
+            are able to reproduce sounds similar to human speech.
           </p>
 
           <p>
-            In the past, accounts of talking birds were not accepted as examples of 
-            communications, but there is evidence that the skeptics were wrong. In 
-            ancient writings, there are accounts of birds capable of conversing; of 
-            course, we can't go back a millennium or more to verify such accounts. 
-            In the 1950s, an English researcher, Len Howard, wrote about teaching 
-            songbirds to understand words; she described how she taught one bird 
-            to respond by counting out numbers spoken to the bird in English. In 
-            <em>The Grey Parrot</em>, Wolfgang de Grahl described incidents of birds using 
-            language appropriately. The problem is that investigators have 
-            overlooked the reports, and the result is that the insightful observations 
-            remain unexplored.
+            In the past, accounts of talking birds were not accepted as examples of communications, but there is
+            evidence that the skeptics were wrong. In ancient writings, there are accounts of birds capable of
+            conversing; of course, we can't go back a millennium or more to verify such accounts. In the 1950s, an
+            English researcher, Len Howard, wrote about teaching songbirds to understand words; she described how she
+            taught one bird to respond by counting out numbers spoken to the bird in English. In
+            <em>The Grey Parrot</em>, Wolfgang de Grahl described incidents of birds using language appropriately. The
+            problem is that investigators have overlooked the reports, and the result is that the insightful
+            observations remain unexplored.
           </p>
 
           <p>
-            The ability of parrots to use words beyond simply repeating what 
-            they hear is generally unappreciated. I began my work with Arielle in 
-            1992. It took 18 years to arrive at my present understanding based on 
-            reading the literature and my personal experimental inquiries. I'm sure 
-            there are other pet owners and parties who are exploring the same 
-            topic. However, there is no organization dealing with birds 
-            communicating using human language, so individuals are left to invent 
-            ways to discuss intelligent speech by parrot-like birds. Those factors 
-            are the problem and a reason for this site.
+            The ability of parrots to use words beyond simply repeating what they hear is generally unappreciated. I
+            began my work with Arielle in 1992. It took 18 years to arrive at my present understanding based on reading
+            the literature and my personal experimental inquiries. I'm sure there are other pet owners and parties who
+            are exploring the same topic. However, there is no organization dealing with birds communicating using human
+            language, so individuals are left to invent ways to discuss intelligent speech by parrot-like birds. Those
+            factors are the problem and a reason for this site.
           </p>
 
           <p>
-            While I do not claim to be Dr. Doolittle, I have achieved a modest 
-            degree of success communicating with a parrot-like bird. Arielle 
-            illustrates that birds have many abilities that we did not suspect. 
-            Additionally, through speech we humans can learn a great deal about 
-            birds and, perhaps, something about how they think. We may be 
-            surprised to find that they are more like us that we ever considered.
+            While I do not claim to be Dr. Doolittle, I have achieved a modest degree of success communicating with a
+            parrot-like bird. Arielle illustrates that birds have many abilities that we did not suspect. Additionally,
+            through speech we humans can learn a great deal about birds and, perhaps, something about how they think. We
+            may be surprised to find that they are more like us that we ever considered.
           </p>
 
           <p>
-            Mankind has arrived at a stumbling point. In order to investigate 
-            meaningful speech by a bird, one has to conceive the possibility that 
-            birds have such an ability. For many people, accepting the idea that 
-            birds possess advanced mental abilities is a point of contention and a 
-            major obstacle to future studies.
+            Mankind has arrived at a stumbling point. In order to investigate meaningful speech by a bird, one has to
+            conceive the possibility that birds have such an ability. For many people, accepting the idea that birds
+            possess advanced mental abilities is a point of contention and a major obstacle to future studies.
           </p>
         </div>
       </main>
@@ -177,16 +161,18 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
     <section class="contact-cta">
       <h2>Contact Arielle or Mike, we love to get mail or questions about birds!</h2>
       <p class="email-cta">Respond to <a href="mailto:Mike@ParrotSpeech.org">Mike@ParrotSpeech.org</a></p>
-      
+
       <p class="contact-note">
         Use the e-mail address above to send a message.<br />
         Send your telephone number, IF you wish to converse by telephone (in the U.S.A.).
       </p>
+    </section>
 
+    <section>
       <div class="spam-notice">
         <p>
-          <strong>Please, no solicitations or commercial messages.</strong> Due to Spam abuse (Jan 2011), 
-          the contact form has been disabled. Use the e-mail address above for legitimate inquiries.
+          <strong>Please, no solicitations or commercial messages.</strong> Due to Spam abuse (Jan 2011), the contact form
+          has been disabled. Use the e-mail address above for legitimate inquiries.
         </p>
       </div>
     </section>
@@ -218,19 +204,6 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  .photo-credit {
-    display: block;
-    text-align: right;
-    font-size: 0.75rem;
-    color: #666;
-    margin-top: 5px;
-  }
-
-  .intro-section {
-    max-width: 750px;
-    margin: 0 auto 40px;
   }
 
   .intro-text {
@@ -325,6 +298,8 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
   }
 
   .main-content {
+    border-left: 4px solid #663300;
+    border-radius: 8px;
     background: #fff;
   }
 
@@ -416,6 +391,4 @@ const description = "Contact Arielle or Mike about talking birds, cognitive spee
       padding: 14px;
     }
   }
-
-  
 </style>

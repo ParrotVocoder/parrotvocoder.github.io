@@ -26,9 +26,11 @@ const description = "References for talking birds and cognitive speech by a maca
           <span class="arrow">«-</span>
           <span>You are here:<br/>Background</span>
         </div> -->
-        <div class="hero-image-container">
-          <img src="/images/Abba_Kissing_Arielle_s_tummy.jpg" alt="Abba Kissing Arielle's tummy" class="hero-image" />
-          <p class="photo-credit">Photo by Linda Carpenter</p>
+        <div class="image-wrapper">
+          <div class="image-container">
+            <img src="/images/Abba_Kissing_Arielle_s_tummy.jpg" alt="Abba Kissing Arielle's tummy" class="hero-image" />
+            <p class="photo-credit">Photo by Linda Carpenter</p>
+          </div>
           <p class="image-caption">Does Arielle look calm as I kiss her?</p>
         </div>
       </div>
@@ -638,24 +640,10 @@ const description = "References for talking birds and cognitive speech by a maca
 
 <style>
   /* Hero Image Section */
-  .hero-image-section {
-    margin-bottom: 40px;
-  }
-
   .hero-content {
     display: flex;
     gap: 20px;
     align-items: flex-start;
-  }
-
-  .you-are-here {
-    color: #00cccc;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-  }
-
-  .you-are-here .arrow {
-    font-size: 2.2rem;
   }
 
   .hero-image-container {
@@ -669,17 +657,12 @@ const description = "References for talking birds and cognitive speech by a maca
     border-radius: 4px;
   }
 
-  .photo-credit {
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    color: #666;
-    margin-top: 5px;
-  }
-
-  .image-caption {
-    color: #333;
-    /* font-weight: bold; */
-    margin-top: 10px;
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    items-align: center;
   }
 
   /* Reliable Sources */
