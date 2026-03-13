@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro"
 import AudioPlayer from "../components/AudioPlayer.astro"
 import HighlightBox from "../components/HighlightBox.astro"
 import Footer from "../components/Footer.astro"
+import NoticeSection from "../components/NoticeSection.astro"
 
 const title = "The home of the pioneering macaw Arielle"
 const description =
@@ -69,8 +70,8 @@ const description =
           To hear Arielle's greeting, click the play button to the right.<br />
           Arielle says, "Hi! ... Hello."<br />
           <small
-            >(<a href="/TrackD211T26_HI.wav">If player does not appear, click on this text to play speech.</a
-            >)</small
+            ><a href="/TrackD211T26_HI.wav">(If player does not appear, click on this text to play speech)</a
+            ></small
           >
         </p>
       </HighlightBox>
@@ -279,20 +280,22 @@ const description =
       </ul>
     </section>
 
-    <section class="parrot-interest">
+    <!-- <section class="parrot-interest">
       <p>
         <strong>How many people are interested in parrot speech?</strong><br />The counter shows how many new friends
         Arielle made.
       </p>
-    </section>
+    </section> -->
 
-    <section class="parrot-group">
-      <!-- <div class="group-join">
+    <NoticeSection />
+
+    <!-- <section class="parrot-group">
+      <div class="group-join">
         <a href="http://groups.yahoo.com/group/ParrotSpeech/join">
           <img src="http://us.i1.yimg.com/us.yimg.com/i/yg/img/i/us/ui/join.gif" alt="Click to join ParrotSpeech" />
           <p>Click to join ParrotSpeech</p>
         </a>
-      </div> -->
+      </div>
       <div class="group-description">
         <p><strong>Here are the details about the ParrotSpeech Group:</strong></p>
         <h3>Description</h3>
@@ -304,7 +307,7 @@ const description =
           <a href="mailto:parrotspeech@googlegroups.com">parrotspeech@googlegroups.com</a>
         </p>
       </div>
-    </section>
+    </section> -->
 
     <section class="caution">
       <p class="red"><strong>CAUTION!</strong></p>
