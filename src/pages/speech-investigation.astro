@@ -95,6 +95,7 @@ const audioClips = [
 
       <div class="answer-sheet-box">
         <iframe
+          class="answer-sheet-frame"
           src="https://docs.google.com/document/d/1SPBrzFQB4POafEBm24uziXhUjNZE3p0R/preview"
           width="100%"
           height="350"></iframe>
@@ -211,6 +212,12 @@ const audioClips = [
     margin: 30px 0;
   }
 
+  .answer-sheet-frame {
+    border: 0;
+    width: 100%;
+    min-height: 320px;
+  }
+
   .answer-sheet-link {
     font-size: 1rem;
     font-weight: bold;
@@ -321,6 +328,31 @@ const audioClips = [
     .clip-item audio {
       width: 100%;
       max-width: 300px;
+    }
+
+    .answer-sheet-box {
+      padding: 12px;
+    }
+
+    .answer-sheet-frame {
+      min-height: 240px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .clip-item {
+      padding: 10px 12px;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .clip-label {
+      font-size: 1rem;
+      min-width: auto;
+    }
+
+    .clips-list {
+      width: 100%;
     }
   }
 </style>

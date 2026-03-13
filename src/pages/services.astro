@@ -134,17 +134,16 @@ const services = [
             her ability to use language called <u>Another Kind of Mind</u>: A Talking Bird Masters English. Enjoy the
             song about her!
           </p>
-          <p class="youtube-link">
+          <div class="youtube-link">
             <!-- <a href="https://youtu.be/qfeKKwGbbQk" target="_blank">http://youtu.be/qfeKKwGbbQk</a> -->
             <iframe
-              width="640"
-              height="480"
+              class="video-embed"
               src="https://www.youtube.com/embed/qfeKKwGbbQk?si=TXVxdZzK0imdp0Zg"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen></iframe>
-          </p>
+          </div>
           <p>
             <a href="/another-mind">Click here to go to the book page</a>
           </p>
@@ -327,10 +326,18 @@ const services = [
 
   .youtube-link {
     font-size: 1.4rem;
+    width: min(100%, 760px);
+    margin: 0 auto;
   }
 
   .youtube-link a {
     color: #0000ff;
+  }
+
+  .video-embed {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
   }
 
   .coming-soon {
@@ -402,6 +409,25 @@ const services = [
 
     .header-image img {
       max-width: 100%;
+    }
+
+    .services-section,
+    .song-feature,
+    .coming-soon,
+    .contact-info {
+      padding: 20px;
+    }
+
+    .songs-section h2 {
+      font-size: 1.6rem;
+    }
+
+    .song-feature h3 {
+      font-size: 1.35rem;
+    }
+
+    .song-subtitle {
+      font-size: 1rem;
     }
   }
 </style>

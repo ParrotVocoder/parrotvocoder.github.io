@@ -86,22 +86,21 @@ const description =
         Interview about speech research/cognitive speech clip from WTVT-13 FOX, Tampa 29 September 2010
       </p>
       <!-- <p class="tv-link"><a href="/videos/Fox13_News_Animal_Talk_1.mp4">See Arielle on TV ... Hear her talking</a></p> -->
-      <video controls width="640" height="480">
-        <source src="/media/Fox13_News_Animal_Talk_1.mp4" type="video/mp4" />
-        See Arielle on TV ... Hear her talking
-      </video>
-      <p>
-        <div class="video-container">
-          <video controls width="640" height="480">
-            <source src="/media/arielle-2008-wtsp10-tampa-bay.mp4" type="video/mp4" />
-            <!-- Your browser does not support the video tag. -->
-          </video>
+      <div class="video-container">
+        <video controls class="media-frame">
+          <source src="/media/Fox13_News_Animal_Talk_1.mp4" type="video/mp4" />
+          See Arielle on TV ... Hear her talking
+        </video>
+
+        <video controls class="media-frame">
+          <source src="/media/arielle-2008-wtsp10-tampa-bay.mp4" type="video/mp4" />
+          <!-- Your browser does not support the video tag. -->
+        </video>
 
           <!-- <iframe width="640" height="480" src="https://www.youtube.com/embed/UcWKH9kjTVg?si=AtALqj_xYseF9ft1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-        </div>
         <!-- <a href="/videos/WTSP_July2008.mp4"><strong>Arielle's (2008) Appearance on WTSP-10 Tampa Bay's 10 TV</strong></a
         >. (Click to go to start and go to page.) -->
-      </p>
+      </div>
     </section>
 
     <section class="another-greeting">
@@ -134,7 +133,7 @@ const description =
       <section class="youtube-section">
         <p>Click below to hear the song Pretty Parrot featuring pictures of Arielle</p>
         <!-- <p><a href="https://youtu.be/qfeKKwGbbQk"><strong>https://youtu.be/qfeKKwGbbQk</strong></a></p> -->
-        <div class="" style="margin: 0 auto; text-align: center;">
+        <div class="video-container">
           <!-- <iframe
             width="640"
             height="480"
@@ -144,8 +143,14 @@ const description =
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe> -->
 
-            <iframe width="640"
-            height="480" src="https://www.youtube.com/embed/FiW_FP_t1zg?si=UjLUrmdFQIkyIUdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            class="media-frame"
+            src="https://www.youtube.com/embed/FiW_FP_t1zg?si=UjLUrmdFQIkyIUdI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
         </div>
       </section>
 
@@ -425,6 +430,19 @@ const description =
     margin-bottom: 30px;
   }
 
+  .video-container {
+    width: min(100%, 760px);
+    margin: 0 auto 16px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .media-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
+  }
+
   .tv-info {
     color: #663300;
     font-weight: bold;
@@ -594,5 +612,41 @@ const description =
 
   em.red {
     color: #ff0033;
+  }
+
+  @media (max-width: 768px) {
+    .book-info {
+      font-size: 1.25rem;
+    }
+
+    .greeting-text {
+      font-size: 1.05rem;
+    }
+
+    .youtube-section {
+      font-size: 1.1rem;
+    }
+
+    .events-table {
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .greeting-section,
+    .another-greeting {
+      gap: 12px;
+    }
+
+    .book-signing-info,
+    .check-listings,
+    .about-arielle,
+    .linguistic-abilities,
+    .caution {
+      font-size: 0.98rem;
+    }
   }
 </style>
