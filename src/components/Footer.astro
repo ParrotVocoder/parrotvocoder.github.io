@@ -1,8 +1,7 @@
----
-// Footer component with the signature tagline
----
-
 <footer class="site-footer">
+  <p class="visitor-counter">
+    Number of visitors: <span id="stats">Loading...</span>
+  </p>
   <p class="tagline">
     Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.
   </p>
@@ -11,12 +10,51 @@
   </p>
 </footer>
 
+<script is:inline>
+  (() => {
+    const statsEl = document.querySelector('#stats');
+    if (!statsEl) return;
+
+    const r = new XMLHttpRequest();
+    r.addEventListener('load', function () {
+      try {
+        const payload = JSON.parse(this.responseText);
+        statsEl.innerText = String(payload.count ?? 0);
+      } catch {
+        statsEl.innerText = 'N/A';
+      }
+    });
+
+    r.addEventListener('error', () => {
+      statsEl.innerText = 'N/A';
+    });
+
+    let path = location.pathname;
+    if (window.goatcounter && typeof window.goatcounter.get_data === 'function') {
+      const data = window.goatcounter.get_data();
+      if (data && data.p) path = data.p;
+    }
+
+    r.open(
+      'GET',
+      'https://parrotspeech.goatcounter.com/counter/' + encodeURIComponent(path) + '.json'
+    );
+    r.send();
+  })();
+</script>
+
 <style>
   .site-footer {
     margin-top: 40px;
     padding: 30px 20px;
     text-align: center;
     border-top: 2px solid #009966;
+  }
+
+  .visitor-counter {
+    font-size: 1rem;
+    color: #1f4d2e;
+    margin: 0 0 12px;
   }
 
   .tagline {
