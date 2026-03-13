@@ -70,8 +70,6 @@ const description =
           <img
             src="/images/Climbing_onto_my_shoulder.jpg"
             alt="Arielle climbing onto shoulder"
-            width="308"
-            height="194"
           />
           <figcaption>
             <span class="photo-credit">Photo by Linda Carpenter</span>
@@ -253,6 +251,26 @@ const description =
   @media (max-width: 800px) {
     .two-column-layout {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .challenge-box,
+    .answer-box p {
+      font-size: 1rem;
+    }
+
+    .vocabulary-section {
+      padding: 14px;
+    }
+
+    .difficulties-list ol {
+      padding-left: 20px;
+    }
+
+    .difficulties-list li,
+    .main-content p {
+      font-size: 0.95rem;
     }
   }
 

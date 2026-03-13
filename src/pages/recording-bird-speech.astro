@@ -207,7 +207,7 @@ const description = "Reasons for recording a talking bird and suggestions for ho
   .image-container {
     position: relative;
     flex: 1;
-    min-width: 300px;
+    min-width: 240px;
   }
 
   .image-container img {
@@ -228,7 +228,7 @@ const description = "Reasons for recording a talking bird and suggestions for ho
 
   .image-description {
     flex: 1;
-    min-width: 200px;
+    min-width: 0;
     color: #000066;
     font-weight: bold;
   }
@@ -340,12 +340,27 @@ const description = "Reasons for recording a talking bird and suggestions for ho
       flex-direction: column;
     }
 
+    .content {
+      line-height: 1.65;
+    }
+
     .page-header h1 {
       font-size: 1.8rem;
     }
 
     .page-header .subtitle {
       font-size: 1.4rem;
+    }
+
+    .audio-intro,
+    .audio-note,
+    .spectrogram-section p,
+    .spectrogram-section a {
+      font-size: 1rem;
+    }
+
+    .reasons-list {
+      padding-left: 24px;
     }
   }
 </style>
