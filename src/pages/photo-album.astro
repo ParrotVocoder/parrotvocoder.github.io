@@ -145,6 +145,7 @@ const description =
       display: flex;
       gap: 30px;
       justify-content: center;
+      align-items: flex-start;
     }
 
     .subtitle {
@@ -337,6 +338,21 @@ const description =
     }
 
     @media (max-width: 900px) {
+      .intro-content {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .hero-image-wrap {
+        min-width: 0;
+        width: min(100%, 31rem);
+      }
+
+      .message-box {
+        width: 100%;
+        margin: 0;
+      }
+
       .playground-section {
         grid-template-columns: 1fr;
       }
@@ -348,6 +364,14 @@ const description =
     }
 
     @media (max-width: 640px) {
+      .intro-content {
+        gap: 14px;
+      }
+
+      .hero-image-wrap {
+        width: 100%;
+      }
+
       .page-header h1 {
         font-size: 2.3rem;
       }

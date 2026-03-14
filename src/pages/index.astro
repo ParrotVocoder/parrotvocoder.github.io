@@ -38,7 +38,7 @@ const description =
     </section>
 
     <section class="intro-content">
-      <div class="arielle-image image-container">
+      <div class="image-container">
         <img
           src="/images/Arielle_standing_on_her_cup.png"
           alt="Arielle the Blue & Gold macaw"
@@ -363,6 +363,7 @@ const description =
     display: flex;
     gap: 30px;
     justify-content: center;
+    align-items: flex-start;
   }
 
   /* .intro-section {
@@ -648,6 +649,21 @@ const description =
   }
 
   @media (max-width: 768px) {
+    .intro-content {
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .intro-content .image-container {
+      width: min(100%, 24rem);
+    }
+
+    .arielle-description {
+      width: 100%;
+      min-width: 0;
+    }
+
     .book-info {
       font-size: 1.25rem;
     }
@@ -675,6 +691,10 @@ const description =
   }
 
   @media (max-width: 560px) {
+    .intro-content {
+      gap: 14px;
+    }
+
     .greeting-section,
     .another-greeting {
       gap: 12px;
