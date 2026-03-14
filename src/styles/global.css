@@ -356,7 +356,7 @@ table {
   /* width: 100%; */
   display: flex;
   /* flex: 1; */
-  min-width: 240px;
+  /* min-width: 240px; */
 }
 
 .image-container img {

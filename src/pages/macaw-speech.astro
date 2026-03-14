@@ -164,6 +164,10 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
 </BaseLayout>
 
 <style>
+  .image-container{
+    width: 100%;
+  }
+
   .intro-section {
     color: #663300;
     line-height: 1.8;
@@ -214,9 +218,9 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
     border-left: 4px solid #ff9900;
   }
 
-  /* .paragraph-container{
+  .paragraph-container{
     max-width: 70%;
-  } */
+  }
 
   .text-red {
     color: #ff0000;
@@ -236,6 +240,7 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
   @media (max-width: 600px) {
     .story-image {
       float: none;
+      display: block;
       max-width: 100%;
       margin: 0 0 20px 0;
     }
