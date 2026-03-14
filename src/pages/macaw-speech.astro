@@ -114,27 +114,29 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
           <img src="/images/Goblin_facsimile_4.jpg" alt="Halloween goblin decoration" />
           <span class="photo-credit">Halloween goblin decoration</span>
         </div>
+
+        <div class="paragraph-container">
+          <p>
+            During our customary walk this evening, Arielle said a distorted two-syllable word, one that I did not
+            immediately comprehend. As we walked, I made a mental note of the Halloween decorations, hanging in the
+            nearby trees, swaying in the wind. After thought, the word that fit her utterance came to mind: "goblin."
+          </p>
+
+          <p>
+            How had she learned to relate the ornamentation to that word? Arielle had previously seen Halloween trolls,
+            ghosts, goblins, and scarecrows around the neighborhood. When "Trick or Treaters" arrive at our home, I
+            allow the birds to observe the colorful costumes worn by little "kids."
+          </p>
+
+          <p>
+            To allay her fear, I told her, "Okay … No hurt!" and that the ghostly visitors were "goblins." I described
+            outdoor decorations hanging eerily from trees using the label goblin as well, so that is how Arielle learned
+            to say goblin.
+          </p>
+        </div>
       </div>
 
       <!-- <p class="copyright">&copy; 2003, 2012 by Michael Dalton</p> -->
-
-      <p>
-        During our customary walk this evening, Arielle said a distorted two-syllable word, one that I did not
-        immediately comprehend. As we walked, I made a mental note of the Halloween decorations, hanging in the nearby
-        trees, swaying in the wind. After thought, the word that fit her utterance came to mind: "goblin."
-      </p>
-
-      <p>
-        How had she learned to relate the ornamentation to that word? Arielle had previously seen Halloween trolls,
-        ghosts, goblins, and scarecrows around the neighborhood. When "Trick or Treaters" arrive at our home, I allow
-        the birds to observe the colorful costumes worn by little "kids."
-      </p>
-
-      <p>
-        To allay her fear, I told her, "Okay … No hurt!" and that the ghostly visitors were "goblins." I described
-        outdoor decorations hanging eerily from trees using the label goblin as well, so that is how Arielle learned to
-        say goblin.
-      </p>
     </section>
 
     <section class="npr-section">
@@ -205,16 +207,16 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
     color: #333;
   }
 
-  .story-image {
-    float: left;
-  }
-
   .note {
     background: #fff9e6;
     padding: 15px;
     border-radius: 8px;
     border-left: 4px solid #ff9900;
   }
+
+  /* .paragraph-container{
+    max-width: 70%;
+  } */
 
   .text-red {
     color: #ff0000;
@@ -224,6 +226,11 @@ const description = "Learn about Arielle's remarkable speech abilities and how s
     font-size: 0.85rem;
     color: #888;
     font-style: italic;
+  }
+
+  .story-image {
+    display: flex;
+    gap: 20px;
   }
 
   @media (max-width: 600px) {
