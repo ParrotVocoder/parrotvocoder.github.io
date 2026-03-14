@@ -523,6 +523,7 @@ const description =
     width: 100%;
     font-size: 1rem;
     border-collapse: collapse;
+    table-layout: fixed;
     background: #fff;
     margin-top: 40px;
   }
@@ -544,6 +545,20 @@ const description =
     color: #663300;
     /* font-weight: bold; */
     text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .events-table th {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .events-table a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .events-table .red {
@@ -650,9 +665,15 @@ const description =
 
     .events-table {
       font-size: 0.9rem;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
+      display: table;
+      width: 100%;
+      max-width: 100%;
+      table-layout: fixed;
+    }
+
+    .events-table th,
+    .events-table td {
+      padding: 0.4rem;
     }
   }
 

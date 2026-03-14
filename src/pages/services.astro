@@ -26,7 +26,7 @@ const services = [
     <header class="page-header">
       <h1>Songs & Services</h1>
       <div class="header-image">
-        <img src="/images/P4120482_Arielle_and_Mike_vertStraight.png" alt="Arielle and Mike" style="max-width:600px;" />
+        <img src="/images/P4120482_Arielle_and_Mike_vertStraight.png" alt="Arielle and Mike" />
         <p class="photo-credit">Photo by Patricia Dalton</p>
       </div>
     </header>
@@ -168,9 +168,7 @@ const services = [
             frameborder="0"
             width="100%"
             height="624"
-            allowfullscreen="true"
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"></iframe>
+            allowfullscreen></iframe>
         </section>
 
         <div class="coming-soon">
@@ -216,7 +214,18 @@ const services = [
 <style>
   .header-image {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: min(100%, 37.5rem);
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .header-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .services-section {
@@ -420,8 +429,8 @@ const services = [
       flex-direction: column;
     }
 
-    .header-image img {
-      max-width: 100%;
+    .header-image {
+      width: 100%;
     }
 
     .services-section,
@@ -441,6 +450,12 @@ const services = [
 
     .song-subtitle {
       font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .header-image {
+      padding-inline: 0.25rem;
     }
   }
 </style>

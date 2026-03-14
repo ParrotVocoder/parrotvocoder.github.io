@@ -21,7 +21,7 @@ const description =
     <header class="page-header">
       <h1>Words and Sound:<br />Difficulties with Speech as a Means<br />for Interspecies Communication</h1>
     </header>
-    <div>
+    <div class="hero-image-block">
       <figure class="image-wrapper">
         <div class="image-container">
           <img src="/images/Climbing_onto_my_shoulder.png" alt="Arielle climbing onto shoulder" />
@@ -233,6 +233,40 @@ const description =
 </BaseLayout>
 
 <style>
+  .hero-image-block {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .image-wrapper {
+    width: min(100%, 32rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: block;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-caption {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
   .two-column-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -248,6 +282,14 @@ const description =
   }
 
   @media (max-width: 560px) {
+    .hero-image-block {
+      padding-inline: 0.25rem;
+    }
+
+    .image-wrapper {
+      width: 100%;
+    }
+
     .answer-box p {
       font-size: 1rem;
     }
