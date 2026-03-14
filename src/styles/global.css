@@ -297,7 +297,7 @@ table {
 }
 
 .page-header h1 {
-  font-family: "Comic Sans MS", "Schoolbell", "Times New Roman", cursive, sans-serif;
+  font-family: var(--font-comic-handwritten);
   font-size: 2rem;
   /* color: #663300; */
   color: #009966;
@@ -305,7 +305,7 @@ table {
 }
 
 .page-header h2 {
-  font-family: "Comic Sans MS", "Schoolbell", "Times New Roman", cursive, sans-serif;
+  font-family: var(--font-comic-handwritten);
   font-size: 1.3rem;
   /* color: #663300; */
   color: #009966;
