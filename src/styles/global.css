@@ -28,7 +28,7 @@ html {
 
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 0.97rem + 0.2vw, 1.1rem);
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -41,7 +41,7 @@ article {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 /* Main layout */
@@ -58,7 +58,7 @@ article {
   width: min(var(--nav-width), 100%);
   max-width: 100%;
   flex-shrink: 0;
-  padding: 10px 5px;
+  padding: 0.625rem 0.3125rem;
 }
 
 /* Main content area */
@@ -66,7 +66,7 @@ article {
   flex: 1;
   width: 100%;
   min-width: 0;
-  padding: 20px;
+  padding: clamp(0.9rem, 0.8rem + 0.6vw, 1.25rem);
   max-width: 100%;
 }
 
@@ -140,11 +140,22 @@ section > p {
   padding: 20px;
 }
 
-/* Images */
-/* img {
+/* Media elements should always fit smaller screens */
+img,
+video,
+canvas,
+svg {
   max-width: 100%;
   height: auto;
-} */
+}
+
+iframe {
+  max-width: 100%;
+}
+
+audio {
+  max-width: 100%;
+}
 
 .image-center {
   display: block;
@@ -278,6 +289,13 @@ table {
   .btn-large {
     font-size: 1.5rem;
     padding: 12px 20px;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

@@ -154,9 +154,7 @@ const description =
           frameborder="0"
           width="100%"
           height="624"
-          allowfullscreen="true"
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"></iframe>
+          allowfullscreen></iframe>
       </section>
 
       <table class="events-table">
@@ -359,7 +357,7 @@ const description =
   .breadcrumb {
     color: #00cccc;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 20px;
   }
 
@@ -395,7 +393,7 @@ const description =
   }
 
   .arielle-image img {
-    width: revert-layer;
+    width: min(100%, 18.75rem);
 
     /* max-width: 100%; */
     /* height: auto; */
@@ -403,7 +401,7 @@ const description =
 
   .arielle-description {
     flex: 1;
-    min-width: 250px;
+    min-width: min(15.625rem, 100%);
     color: #000066;
     /* font-weight: bold; */
     line-height: 1.5;
@@ -434,11 +432,11 @@ const description =
     /* color: #006644; */
     /* #006644; */
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .greeting-text small {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .tv-section {
@@ -453,7 +451,7 @@ const description =
   }
 
   .tv-link {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .tv-link a {
@@ -472,7 +470,7 @@ const description =
   .book-signing-info {
     color: #663300;
     font-family: var(--font-comic-handwritten);
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .check-listings {
@@ -486,16 +484,16 @@ const description =
 
   .more-info .red {
     color: #ff0000;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .more-info a {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .youtube-section {
     /* color: #000066; */
-    /* font-size: 24px; */
+    /* font-size: 1.5rem; */
     margin: 20px 0;
   }
 
@@ -505,8 +503,20 @@ const description =
     margin: 0 auto;
   }
 
-  .section-slide{
+  .section-slide {
     width: 100%;
+  }
+
+  .section-slide iframe {
+    display: block;
+    width: 100%;
+    min-height: clamp(16rem, 45vw, 39rem);
+  }
+
+  .media-frame {
+    display: block;
+    width: min(100%, 40rem);
+    margin: 0 auto;
   }
 
   .events-table {
@@ -581,14 +591,14 @@ const description =
 
   .group-description {
     flex: 1;
-    min-width: 300px;
+    min-width: min(18.75rem, 100%);
     color: #663300;
     font-weight: bold;
   }
 
   .group-description h3 {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #663300;
   }
 
@@ -609,7 +619,7 @@ const description =
 
   .summary-text {
     color: #663300;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .top-sites {
@@ -658,6 +668,10 @@ const description =
     .linguistic-abilities,
     .caution {
       font-size: 0.98rem;
+    }
+
+    .events-table {
+      font-size: 0.85rem;
     }
   }
 </style>
