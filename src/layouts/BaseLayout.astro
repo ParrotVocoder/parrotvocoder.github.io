@@ -4,6 +4,9 @@ interface Props {
   description?: string
   keywords?: string
   currentPage?: string
+  ogImage?: string
+  ogType?: "website" | "article"
+  noindex?: boolean
 }
 
 const {
@@ -11,7 +14,28 @@ const {
   description = "Arielle the Blue and Gold Macaw speaks English - Research on talking birds and interspecies communication",
   keywords = "talking bird, macaw speech, Arielle, blue and gold macaw, parrot communication, bird language",
   currentPage = "",
+  ogImage = "/images/Arielle_s_Head_Pict_50_for_web_page.png",
+  ogType = "website",
+  noindex = false,
 } = Astro.props
+
+const siteName = "ParrotSpeech.org"
+const siteUrl = Astro.site ? new URL(Astro.site) : new URL(Astro.url.origin)
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString()
+const socialImageUrl = new URL(ogImage, siteUrl).toString()
+const pageTitle = `${title} - ${siteName}`
+const robotsContent = noindex
+  ? "noindex, nofollow"
+  : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteName,
+  url: siteUrl.toString(),
+  description,
+  inLanguage: "en",
+}
 ---
 
 <!doctype html>
@@ -19,17 +43,38 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content={robotsContent} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="author" content="ParrotSpeech.org" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} - ParrotSpeech.org</title>
+    <meta name="author" content={siteName} />
+
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+    <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content={title} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+
+    <title>{pageTitle}</title>
 
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
   </head>
   <body>
     <script data-goatcounter="https://parrotspeech.goatcounter.com/count"
