@@ -37,13 +37,11 @@ const description =
       </p>
     </section>
 
-    <section class="main-content">
+    <section class="intro-content">
       <div class="arielle-image image-container">
         <img
           src="/images/Arielle_standing_on_her_cup.png"
           alt="Arielle the Blue & Gold macaw"
-          width="300"
-          height="449"
         />
         <span class="photo-credit">Arielle the Blue & Gold macaw</span>
       </div>
@@ -361,6 +359,12 @@ const description =
     margin-bottom: 20px;
   }
 
+  .intro-content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+
   /* .intro-section {
     margin-bottom: 30px;
   } */
@@ -392,16 +396,9 @@ const description =
     flex-wrap: wrap;
   }
 
-  .arielle-image img {
-    width: min(100%, 18.75rem);
-
-    /* max-width: 100%; */
-    /* height: auto; */
-  }
-
   .arielle-description {
     flex: 1;
-    min-width: min(15.625rem, 100%);
+    min-width: min(24rem, 100%);
     color: #000066;
     /* font-weight: bold; */
     line-height: 1.5;

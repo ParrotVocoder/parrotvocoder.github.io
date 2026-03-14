@@ -21,26 +21,28 @@ const description =
       <h1>Photo Album</h1>
     </header>
 
-    <section class="hero-section">
-      <div class="image-wrapper">
-        <div class="image-container">
-          <img src="/images/Arielle_on_perch_foot_up.png" style="width:500px;" alt="Arielle perched with one foot raised" />
-          <p class="photo-credit">Photo by Linda Carpenter</p>
+    <section class="intro-content">
+      <div class="hero-image-wrap">
+        <div class="image-wrapper">
+          <div class="image-container">
+            <img src="/images/Arielle_on_perch_foot_up.png" alt="Arielle perched with one foot raised" />
+            <p class="photo-credit">Photo by Linda Carpenter</p>
+          </div>
+        </div>
+        <div class="hero-captions">
+          <p>Do you think I'm left footed?</p>
+          <p>Do you want to guess again whether I'm left footed?</p>
         </div>
       </div>
-      <div class="hero-captions">
-        <p>Do you think I'm left footed?</p>
-        <p>Do you want to guess again whether I'm left footed?</p>
-      </div>
-    </section>
 
-    <section class="message-box blue-text">
-      <p>Arielle transmits a basic message. Her gesture means: "Please pick me up!"</p>
-      <p>
-        She makes herself understood. If her message is misunderstood, or if the response is too slow, she vocalizes
-        repeatedly until she gets her way. By chanting "Come up! Come up! Come up!" or "Want up! Want up! Want up!" she
-        annoys her companion human and succeeds at obtaining her goal.
-      </p>
+      <div class="message-box blue-text">
+        <p>Arielle transmits a basic message. Her gesture means: "Please pick me up!"</p>
+        <p>
+          She makes herself understood. If her message is misunderstood, or if the response is too slow, she vocalizes
+          repeatedly until she gets her way. By chanting "Come up! Come up! Come up!" or "Want up! Want up! Want up!"
+          she annoys her companion human and succeeds at obtaining her goal.
+        </p>
+      </div>
     </section>
 
     <HighlightBox>
@@ -139,19 +141,20 @@ const description =
   </article>
 
   <style>
+    .intro-content {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+
     .subtitle {
       color: #00cccc;
       font-size: 1.1rem;
       font-weight: 700;
     }
 
-    .hero-section {
-      /* margin: 20px 0 28px; */
-    }
-
-
     .hero-image-wrap {
-      max-width: 430px;
+      min-width: 50%;
       margin: 0 auto;
       text-align: center;
     }
@@ -161,12 +164,14 @@ const description =
       border-radius: 10px;
     }
 
+    .into-image {
+      width: 80%;
+    }
+
     .hero-captions {
       margin-top: 18px;
       text-align: center;
       color: #663300;
-      font-size: 1.3rem;
-      line-height: 1.35;
     }
 
     .hero-captions p {
