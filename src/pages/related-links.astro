@@ -29,14 +29,10 @@ const description =
     <!-- Audio Feature Section -->
     <section class="audio-feature">
       <HighlightBox>
-        <div class="label">
-          Arielle said, "I want out!"
-        </div>
+        <div class="label">Arielle said, "I want out!"</div>
         <p class="content">
-            Arielle can be a demanding bird.<br />
-            She says what one might expect 
-            from a bird in this position, click 
-            the play button to hear her speak.
+          Arielle can be a demanding bird.<br />
+          She says what one might expect from a bird in this position, click the play button to hear her speak.
         </p>
         <AudioPlayer src="/media/Track_CC.wav" caption="Arielle: I want out!" />
         <!-- <p class="audio-note">The transcription is in the yellow box below.</p> -->
@@ -57,8 +53,10 @@ const description =
       <h3>Link About Apes</h3>
       <p>
         This link takes you to the site for the language-using gorilla, Koko at
-        <a href="http://www.gorilla.org/" target="_blank" rel="noopener noreferrer">The Gorilla Foundation</a>
-        <span class="url-display">• www.gorilla.org</span>
+        <strong>The Gorilla Foundation</strong>
+        <a href="http://www.gorilla.org/" target="_blank" rel="noopener noreferrer" class="url-display"
+          >www.gorilla.org</a
+        >
       </p>
     </section>
 
@@ -68,12 +66,24 @@ const description =
       <p>
         This site is mainly about cetaceans, but it also deals with a variety of subjects related to interspecies
         communication. [Interspecies Inc., Friday Harbor, WA] Go to
-        <a href="http://www.interspecies.com/" target="_blank" rel="noopener noreferrer">the interspecies site</a>
-        <span class="url-display">www.interspecies.com</span>
+        <strong>the interspecies site</strong>
+        <a href="www.interspecies.com" target="_blank" rel="noopener noreferrer" class="url-display"
+          >www.interspecies.com</a
+        >
       </p>
       <p class="article-reference">
         Article about Arielle:<br />
         Nollman, James. "Slow Dreaming." <em>Interspecies</em>, Winter 2004.
+      </p>
+
+      <iframe
+        class="answer-sheet-frame"
+        src="https://docs.google.com/document/d/1rz9eKZhaQi07T6kdoKGK-VLzbq2k3Gm_/preview"
+        width="100%"
+        height="350"></iframe>
+
+      <p class="doc-download-link">
+        <a href="/files/INTERSPECIES%20Winter%202004.doc" download>Download INTERSPECIES Winter 2004</a>
       </p>
     </section>
 
@@ -81,10 +91,10 @@ const description =
     <section class="link-category">
       <h3>Links About Keeping & Training Pet Birds</h3>
       <p>
-        <a href="http://www.afabirds.org/" target="_blank" rel="noopener noreferrer"
-          >American Federation of Aviculture</a
+        <strong>American Federation of Aviculture</strong>
+        <a href="http://www.afabirds.org/" target="_blank" rel="noopener noreferrer" class="url-display"
+          >www.afabirds.org</a
         >
-        <span class="url-display">• www.afabirds.org</span>
       </p>
       <!-- <p>
         An extensive web site with information about parrots including the owner's Grey parrot, Kibibi, is at
@@ -324,7 +334,7 @@ const description =
 
   .link-category p {
     color: #663300;
-    font-weight: bold;
+    /* font-weight: bold; */
     line-height: 1.6;
     margin-bottom: 10px;
   }
@@ -345,6 +355,12 @@ const description =
   .article-reference {
     margin-top: 15px;
     padding-left: 20px;
+  }
+
+  .doc-download-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
   }
 
   .article-list {
