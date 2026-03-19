@@ -273,31 +273,35 @@ const description =
           <tr><td colspan="4">&nbsp;</td></tr>
         </tbody>
       </table>
-
-      
     </section>
 
-
     <section class="youtube-section">
-        <p class="song-intro">
-          Enjoy this song segment featuring Arielle. Introductory text appears before the "Blue and Gold Macaws" song.
-        </p>
-        <div class="video-container">
-          <video controls class="media-frame">
-            <source src="/media/Pretty_Parrot_VIDEO.mp4" type="video/mp4" />
-            Blue and Gold Macaws SONG
-          </video>
-          <p class="video-caption">Click video to hear the Blue and Gold Macaws song featuring pictures of Arielle</p>
-        </div>
-      </section>
+      <p class="song-intro">
+        Enjoy this song segment featuring Arielle. Introductory text appears before the "Blue and Gold Macaws" song.
+      </p>
+      <div class="video-container">
+        <video controls class="media-frame">
+          <source src="/media/Pretty_Parrot_VIDEO.mp4" type="video/mp4" />
+          Blue and Gold Macaws SONG
+        </video>
+        <p class="video-caption">Click video to hear the Blue and Gold Macaws song featuring pictures of Arielle</p>
+      </div>
+    </section>
 
     <section class="section-slide">
-      <iframe
+      <!-- <iframe
         src="https://docs.google.com/presentation/d/e/2PACX-1vQvRi3NpIRvaoZkW3XPS4Zs4HYA45NP2ApTAgI4ubZJNjuGO0UB8Tm_-bMDle2_wg/pubembed?start=true&loop=true&delayms=2000"
         frameborder="0"
         width="100%"
         height="auto"
-        allowfullscreen></iframe>
+        allowfullscreen></iframe> -->
+      <div class="video-container">
+        <video controls class="media-frame-max">
+          <source src="/media/Blue-and-GOLD-MACAWS.mp4" type="video/mp4" />
+          Blue and Gold Macaws SONG
+        </video>
+        <p class="video-caption">Blue and Gold Macaws SONG</p>
+      </div>
     </section>
 
     <!-- <section class="parrot-interest">
@@ -531,6 +535,12 @@ const description =
   .media-frame {
     display: block;
     width: min(100%, 40rem);
+    margin: 0 auto;
+  }
+
+  .media-frame-max {
+    display: block;
+    width: 100%;
     margin: 0 auto;
   }
 
