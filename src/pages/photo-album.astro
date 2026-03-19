@@ -90,19 +90,21 @@ const description =
     </HighlightBox>
 
     <section class="egg-section">
-      <h2>Arielle's First Egg</h2>
-      <p class="egg-subtitle">(January 2012, Arielle ~20+ yrs.)</p>
-      <div class="pinawor-grid">
+      <div class="pinawor-grid egg-layout">
         <figure>
           <img src="/images/1773171614535blob.png" alt="1773171614535blob" />
         </figure>
-        <figure>
-          <img
-            src="/images/Arielle_s_Egg_with_scale.png"
-            style="width: 100%;height: auto;display: block;"
-            alt="Arielle's first egg with scale"
-          />
-        </figure>
+        <div class="egg-right">
+          <h2>Arielle's First Egg</h2>
+          <p class="egg-subtitle">(January 2012, Arielle ~20+ yrs.)</p>
+          <figure>
+            <img
+              src="/images/Arielle_s_Egg_with_scale.png"
+              style="width: 100%;height: auto;display: block;"
+              alt="Arielle's first egg with scale"
+            />
+          </figure>
+        </div>
       </div>
 
       <!-- <section class="pinawor-section">
@@ -135,6 +137,17 @@ const description =
       <!-- <section class="closing-statement">
         <p>Arielle understands speech and speaks thoughtfully using English words, phrases, and sentences.</p>
       </section> -->
+
+      <section class="the-great-escape">
+        <iframe
+            class="doc-embed"
+            src="https://drive.google.com/file/d/12jfpn_ZLcEql5S41tmSxciGnEPzKAlVG/preview"
+            width="100%"
+            height="1000"
+            allow="autoplay"
+          >
+          </iframe>
+      </section>
 
       <Footer />
     </section>
@@ -253,6 +266,19 @@ const description =
     .egg-subtitle {
       color: #663300;
       margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .egg-layout {
+      align-items: start;
+    }
+
+    .egg-right {
+      text-align: left;
+    }
+
+    .egg-right h2 {
+      text-align: left;
     }
 
     .egg-section figure {
