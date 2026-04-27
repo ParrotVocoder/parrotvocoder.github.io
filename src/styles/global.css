@@ -250,6 +250,10 @@ table {
   margin: 20px 0;
 }
 
+figure {
+  margin: 0;
+}
+
 .photo-gallery figure {
   margin: 0;
   text-align: center;
