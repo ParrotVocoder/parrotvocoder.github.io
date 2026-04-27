@@ -26,7 +26,13 @@ async function listAssetFiles(rootDir) {
       if (entry.isDirectory()) {
         await walk(fullPath);
       } else if (assetExtensions.has(path.extname(entry.name).toLowerCase())) {
-        files.push(fullPath);
+        try {
+          const stats = await fs.stat(fullPath);
+          files.push({ fullPath, mtime: stats.mtime.toISOString() });
+        } catch (err) {
+          // If stat fails for some reason, still include the file without mtime
+          files.push({ fullPath, mtime: null });
+        }
       }
     }
   }
@@ -44,11 +50,14 @@ function ensureTrailingSlash(url) {
   return url.endsWith('/') ? url : `${url}/`;
 }
 
-function assetSitemapXml(urls) {
+function assetSitemapXml(entries) {
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...urls.map((url) => `  <url>\n    <loc>${url}</loc>\n  </url>`),
+    ...entries.map((entry) => {
+      const lastmod = entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : '';
+      return `  <url>\n    <loc>${entry.url}</loc>${lastmod}\n  </url>`;
+    }),
     '</urlset>',
     '',
   ].join('\n');
