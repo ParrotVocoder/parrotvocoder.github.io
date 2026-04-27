@@ -118,7 +118,8 @@ section > p {
 }
 
 .highlight-box .label {
-  color: var(--secondary-color);
+  font-family: var(--font-comic-handwritten);
+  color: var(--primary-color);
   font-weight: bold;
   font-size: 1.1em;
 }

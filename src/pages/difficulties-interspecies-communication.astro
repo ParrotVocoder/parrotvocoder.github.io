@@ -218,7 +218,7 @@ const description =
 
     <HighlightBox>
       <div class="answer-box">
-        <p>
+        <p class="answer-quote">
           Arielle spoke in a higher-than-normal-frequency voice. In her first utterance, she says a rapidly spoken and
           shortened version of "(Do you) Feel better?" After a brief pause, she ends in a higher-pitch voice saying,
           "Put your foot there!"
@@ -384,8 +384,12 @@ const description =
     margin-top: 6px;
   }
 
+  .answer-quote {
+    font-family: var(--font-comic-handwritten);
+    font-size: 1rem;
+  }
+
   .answer-box p {
-    color: #ff0000;
     font-size: 1.1rem;
     line-height: 1.5;
     font-weight: normal;
