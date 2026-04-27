@@ -95,12 +95,14 @@ export default defineConfig({
           const distDir = dir.pathname;
           const baseUrl = ensureTrailingSlash('https://parrotspeech.org');
           const assetFiles = await listAssetFiles(publicDir);
-          const urls = assetFiles
-            .map((file) => path.relative(publicDir, file).split(path.sep).join('/'))
-            .map((assetPath) => `${baseUrl}${assetPath}`)
-            .sort();
+          const entries = assetFiles
+            .map(({ fullPath, mtime }) => {
+              const relativePath = path.relative(publicDir, fullPath).split(path.sep).join('/');
+              return { url: `${baseUrl}${relativePath}`, lastmod: mtime };
+            })
+            .sort((a, b) => a.url.localeCompare(b.url));
 
-          const assetsXml = assetSitemapXml(urls);
+          const assetsXml = assetSitemapXml(entries);
           const assetsSitemapPath = path.join(distDir, 'sitemap-assets.xml');
           await fs.writeFile(assetsSitemapPath, assetsXml, 'utf-8');
 
