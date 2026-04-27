@@ -83,6 +83,33 @@ function escapeXml(value) {
     .replaceAll("'", '&apos;');
 }
 
+function cleanText(value) {
+  return value
+    .replace(/<[^>]*>/g, ' ')
+    .replaceAll('&nbsp;', ' ')
+    .replaceAll('&amp;', '&')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&apos;', "'")
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&copy;', '©')
+    .replaceAll('&reg;', '®')
+    .replaceAll('&mdash;', '—')
+    .replaceAll('&ndash;', '–')
+    .replaceAll('&hellip;', '…')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function humanizeFilename(src) {
+  const filename = path.basename(src, path.extname(src));
+  return cleanText(
+    filename
+      .replace(/[_-]+/g, ' ')
+      .replace(/\b\w/g, (character) => character.toUpperCase())
+  );
+}
+
 function pagePathToUrl(pagePath, pagesDir, baseUrl) {
   const relativePath = path.relative(pagesDir, pagePath).split(path.sep).join('/');
   const withoutExtension = relativePath.replace(/\.astro$/, '');
@@ -98,16 +125,51 @@ function pagePathToUrl(pagePath, pagesDir, baseUrl) {
   return ensureTrailingSlash(`${baseUrl}${routePath}`);
 }
 
-function extractImageSources(pageSource) {
-  const sources = new Set();
-  const imgTagRegex = /<img\b[^>]*\bsrc=(['"])(.*?)\1/gi;
-  for (const match of pageSource.matchAll(imgTagRegex)) {
-    const src = match[2];
-    if (src.startsWith('/')) {
-      sources.add(src);
+function extractImageMetadata(pageSource) {
+  const images = new Map();
+  const figureRegex = /<figure\b[^>]*>([\s\S]*?)<\/figure>/gi;
+  for (const match of pageSource.matchAll(figureRegex)) {
+    const figureBlock = match[1];
+    const figureCaptionMatch = figureBlock.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/i);
+    const figureCaption = figureCaptionMatch ? cleanText(figureCaptionMatch[1]) : '';
+    const imgTagRegex = /<img\b[^>]*\bsrc=(['"])(.*?)\1[^>]*>/gi;
+
+    for (const imgMatch of figureBlock.matchAll(imgTagRegex)) {
+      const tag = imgMatch[0];
+      const src = imgMatch[2];
+      if (!src.startsWith('/')) {
+        continue;
+      }
+
+      const altMatch = tag.match(/\balt=(['"])(.*?)\1/i);
+      const altText = altMatch ? cleanText(altMatch[2]) : '';
+      const title = altText || humanizeFilename(src);
+      const caption = figureCaption || altText || title;
+
+      images.set(src, { src, title, caption });
     }
   }
-  return [...sources].sort();
+
+  const imgTagRegex = /<img\b[^>]*\bsrc=(['"])(.*?)\1[^>]*>/gi;
+  for (const imgMatch of pageSource.matchAll(imgTagRegex)) {
+    const tag = imgMatch[0];
+    const src = imgMatch[2];
+    if (!src.startsWith('/')) {
+      continue;
+    }
+
+    if (images.has(src)) {
+      continue;
+    }
+
+    const altMatch = tag.match(/\balt=(['"])(.*?)\1/i);
+    const altText = altMatch ? cleanText(altMatch[2]) : '';
+    const title = altText || humanizeFilename(src);
+    const caption = altText || title;
+    images.set(src, { src, title, caption });
+  }
+
+  return [...images.values()].sort((left, right) => left.src.localeCompare(right.src));
 }
 
 function sitemapXml(entries) {
@@ -117,7 +179,11 @@ function sitemapXml(entries) {
     ...entries.map((entry) => {
       const lastmod = entry.lastmod ? `\n    <lastmod>${escapeXml(entry.lastmod)}</lastmod>` : '';
       const images = (entry.images ?? [])
-        .map((imageUrl) => `\n    <image:image>\n      <image:loc>${escapeXml(imageUrl)}</image:loc>\n    </image:image>`)
+        .map((image) => {
+          const title = image.title ? `\n      <image:title>${escapeXml(image.title)}</image:title>` : '';
+          const caption = image.caption ? `\n      <image:caption>${escapeXml(image.caption)}</image:caption>` : '';
+          return `\n    <image:image>\n      <image:loc>${escapeXml(image.url)}</image:loc>${title}${caption}\n    </image:image>`;
+        })
         .join('');
       return `  <url>\n    <loc>${escapeXml(entry.url)}</loc>${lastmod}${images}\n  </url>`;
     }),
@@ -146,7 +212,11 @@ export default defineConfig({
             const pageSource = await fs.readFile(pageFile, 'utf-8');
             const stats = await fs.stat(pageFile);
             const pageUrl = pagePathToUrl(pageFile, pagesDir, baseUrl);
-            const images = extractImageSources(pageSource).map((src) => `${baseUrl}${src.replace(/^\//, '')}`);
+            const images = extractImageMetadata(pageSource).map((image) => ({
+              url: `${baseUrl}${image.src.replace(/^\//, '')}`,
+              title: image.title,
+              caption: image.caption,
+            }));
             pageEntries.push({ url: pageUrl, lastmod: stats.mtime.toISOString(), images });
           }
 
