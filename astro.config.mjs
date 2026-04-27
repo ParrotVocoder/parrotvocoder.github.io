@@ -125,6 +125,20 @@ function pagePathToUrl(pagePath, pagesDir, baseUrl) {
   return ensureTrailingSlash(`${baseUrl}${routePath}`);
 }
 
+function getPageSitemapHints(pageUrl) {
+  const pathname = new URL(pageUrl).pathname;
+
+  if (pathname === '/') {
+    return { changefreq: 'daily', priority: '1.0' };
+  }
+
+  if (['/contact/', '/services/', '/related-links/'].includes(pathname)) {
+    return { changefreq: 'monthly', priority: '0.4' };
+  }
+
+  return { changefreq: 'weekly', priority: '0.8' };
+}
+
 function extractImageMetadata(pageSource) {
   const images = new Map();
   const figureRegex = /<figure\b[^>]*>([\s\S]*?)<\/figure>/gi;
@@ -178,14 +192,17 @@ function sitemapXml(entries) {
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
     ...entries.map((entry) => {
       const lastmod = entry.lastmod ? `\n    <lastmod>${escapeXml(entry.lastmod)}</lastmod>` : '';
+      const changefreq = entry.changefreq ? `\n    <changefreq>${escapeXml(entry.changefreq)}</changefreq>` : '';
+      const priority = entry.priority ? `\n    <priority>${escapeXml(entry.priority)}</priority>` : '';
       const images = (entry.images ?? [])
         .map((image) => {
           const title = image.title ? `\n      <image:title>${escapeXml(image.title)}</image:title>` : '';
           const caption = image.caption ? `\n      <image:caption>${escapeXml(image.caption)}</image:caption>` : '';
-          return `\n    <image:image>\n      <image:loc>${escapeXml(image.url)}</image:loc>${title}${caption}\n    </image:image>`;
+          const license = image.license ? `\n      <image:license>${escapeXml(image.license)}</image:license>` : '';
+          return `\n    <image:image>\n      <image:loc>${escapeXml(image.url)}</image:loc>${title}${caption}${license}\n    </image:image>`;
         })
         .join('');
-      return `  <url>\n    <loc>${escapeXml(entry.url)}</loc>${lastmod}${images}\n  </url>`;
+      return `  <url>\n    <loc>${escapeXml(entry.url)}</loc>${lastmod}${changefreq}${priority}${images}\n  </url>`;
     }),
     '</urlset>',
     '',
@@ -204,6 +221,7 @@ export default defineConfig({
           const pagesDir = path.join(process.cwd(), 'src', 'pages');
           const distDir = dir.pathname;
           const baseUrl = ensureTrailingSlash('https://parrotspeech.org');
+          const imageLicenseUrl = `${baseUrl}license`;
 
           const pageFiles = await listPageFiles(pagesDir);
           const pageEntries = [];
@@ -216,8 +234,16 @@ export default defineConfig({
               url: `${baseUrl}${image.src.replace(/^\//, '')}`,
               title: image.title,
               caption: image.caption,
+              license: imageLicenseUrl,
             }));
-            pageEntries.push({ url: pageUrl, lastmod: stats.mtime.toISOString(), images });
+            const hints = getPageSitemapHints(pageUrl);
+            pageEntries.push({
+              url: pageUrl,
+              lastmod: stats.mtime.toISOString(),
+              changefreq: hints.changefreq,
+              priority: hints.priority,
+              images,
+            });
           }
 
           const assetsXml = sitemapXml(pageEntries.sort((a, b) => a.url.localeCompare(b.url)));
