@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -46,38 +45,83 @@ async function listAssetFiles(rootDir) {
   return files;
 }
 
+async function listPageFiles(rootDir) {
+  const files = [];
+  async function walk(dir) {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(fullPath);
+      } else if (entry.isFile() && fullPath.endsWith('.astro')) {
+        files.push(fullPath);
+      }
+    }
+  }
+
+  try {
+    await walk(rootDir);
+  } catch (error) {
+    if (error?.code !== 'ENOENT') {
+      throw error;
+    }
+  }
+
+  return files;
+}
+
 function ensureTrailingSlash(url) {
   return url.endsWith('/') ? url : `${url}/`;
 }
 
-function assetSitemapXml(entries) {
-  return [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...entries.map((entry) => {
-      const lastmod = entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : '';
-      return `  <url>\n    <loc>${entry.url}</loc>${lastmod}\n  </url>`;
-    }),
-    '</urlset>',
-    '',
-  ].join('\n');
+function escapeXml(value) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&apos;');
 }
 
-function addAssetSitemapToIndex(indexXml, assetSitemapUrl) {
-  if (indexXml.includes(`<loc>${assetSitemapUrl}</loc>`)) {
-    return indexXml;
+function pagePathToUrl(pagePath, pagesDir, baseUrl) {
+  const relativePath = path.relative(pagesDir, pagePath).split(path.sep).join('/');
+  const withoutExtension = relativePath.replace(/\.astro$/, '');
+
+  if (withoutExtension === 'index') {
+    return baseUrl;
   }
 
-  const sitemapEntry = `  <sitemap>\n    <loc>${assetSitemapUrl}</loc>\n  </sitemap>`;
-  if (indexXml.includes('</sitemapindex>')) {
-    return indexXml.replace('</sitemapindex>', `${sitemapEntry}\n</sitemapindex>`);
-  }
+  const routePath = withoutExtension.endsWith('/index')
+    ? withoutExtension.slice(0, -'/index'.length)
+    : withoutExtension;
 
+  return ensureTrailingSlash(`${baseUrl}${routePath}`);
+}
+
+function extractImageSources(pageSource) {
+  const sources = new Set();
+  const imgTagRegex = /<img\b[^>]*\bsrc=(['"])(.*?)\1/gi;
+  for (const match of pageSource.matchAll(imgTagRegex)) {
+    const src = match[2];
+    if (src.startsWith('/')) {
+      sources.add(src);
+    }
+  }
+  return [...sources].sort();
+}
+
+function sitemapXml(entries) {
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    sitemapEntry,
-    '</sitemapindex>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+    ...entries.map((entry) => {
+      const lastmod = entry.lastmod ? `\n    <lastmod>${escapeXml(entry.lastmod)}</lastmod>` : '';
+      const images = (entry.images ?? [])
+        .map((imageUrl) => `\n    <image:image>\n      <image:loc>${escapeXml(imageUrl)}</image:loc>\n    </image:image>`)
+        .join('');
+      return `  <url>\n    <loc>${escapeXml(entry.url)}</loc>${lastmod}${images}\n  </url>`;
+    }),
+    '</urlset>',
     '',
   ].join('\n');
 }
@@ -86,39 +130,36 @@ function addAssetSitemapToIndex(indexXml, assetSitemapUrl) {
 export default defineConfig({
   site: 'https://parrotspeech.org',
   integrations: [
-    sitemap(),
     {
       name: 'sitemap-assets',
       hooks: {
         'astro:build:done': async ({ dir }) => {
           const publicDir = path.join(process.cwd(), 'public');
+          const pagesDir = path.join(process.cwd(), 'src', 'pages');
           const distDir = dir.pathname;
           const baseUrl = ensureTrailingSlash('https://parrotspeech.org');
-          const assetFiles = await listAssetFiles(publicDir);
-          const entries = assetFiles
-            .map(({ fullPath, mtime }) => {
-              const relativePath = path.relative(publicDir, fullPath).split(path.sep).join('/');
-              return { url: `${baseUrl}${relativePath}`, lastmod: mtime };
-            })
-            .sort((a, b) => a.url.localeCompare(b.url));
 
-          const assetsXml = assetSitemapXml(entries);
-          const assetsSitemapPath = path.join(distDir, 'sitemap-assets.xml');
-          await fs.writeFile(assetsSitemapPath, assetsXml, 'utf-8');
+          const pageFiles = await listPageFiles(pagesDir);
+          const pageEntries = [];
 
-          const indexPath = path.join(distDir, 'sitemap-index.xml');
-          let indexXml = '';
+          for (const pageFile of pageFiles) {
+            const pageSource = await fs.readFile(pageFile, 'utf-8');
+            const stats = await fs.stat(pageFile);
+            const pageUrl = pagePathToUrl(pageFile, pagesDir, baseUrl);
+            const images = extractImageSources(pageSource).map((src) => `${baseUrl}${src.replace(/^\//, '')}`);
+            pageEntries.push({ url: pageUrl, lastmod: stats.mtime.toISOString(), images });
+          }
+
+          const assetsXml = sitemapXml(pageEntries.sort((a, b) => a.url.localeCompare(b.url)));
+          await fs.writeFile(path.join(distDir, 'sitemap.xml'), assetsXml, 'utf-8');
+
           try {
-            indexXml = await fs.readFile(indexPath, 'utf-8');
+            await fs.unlink(path.join(distDir, 'sitemap-assets.xml'));
           } catch (error) {
             if (error?.code !== 'ENOENT') {
               throw error;
             }
           }
-
-          const assetsSitemapUrl = `${baseUrl}sitemap-assets.xml`;
-          const updatedIndex = addAssetSitemapToIndex(indexXml, assetsSitemapUrl);
-          await fs.writeFile(indexPath, updatedIndex, 'utf-8');
         },
       },
     },
