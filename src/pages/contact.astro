@@ -4,30 +4,60 @@ import Navigation from "../components/Navigation.astro"
 import Breadcrumb from "../components/Breadcrumb.astro"
 import Footer from "../components/Footer.astro"
 
-const title = "Contact Us - ParrotSpeech.org"
+const title = "Contact Us About Talking Birds & Parrot Cognitive Speech | ParrotSpeech.org"
 const description =
-  "Contact Arielle or Mike about talking birds, cognitive speech research, and interspecies communication."
+  "Contact Arielle and Mike Dalton about cognitive speech in parrots, interspecies communication research, and talking bird linguistics. Pet bird owners, researchers, and scientists welcome."
 ---
 
 <BaseLayout title={title} description={description}>
   <Navigation slot="navigation" currentPage="contact" />
 
+  {/* ContactPage structured data for Google rich results */}
+  <script type="application/ld+json" slot="head">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact ParrotSpeech.org",
+      "description": "Contact page for ParrotSpeech.org — reach Arielle and Michael Dalton about cognitive speech research in parrots and interspecies communication.",
+      "url": "https://www.parrotspeech.org/contact",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Michael Dalton",
+        "email": "ParrotSpeech@Yahoo.com",
+        "knowsAbout": [
+          "cognitive speech in parrots",
+          "talking birds",
+          "interspecies communication",
+          "avian linguistics",
+          "bird consciousness"
+        ]
+      }
+    })}
+  </script>
+
   <article>
     <Breadcrumb currentPage="Contact Us" />
 
     <header class="page-header">
-      <h1>Arielle requests that you contact us.</h1>
+      <h1>Contact Us About Talking Birds & Parrot Speech Research</h1>
       <h2 class="subheading">"Don't Be Shy"</h2>
     </header>
 
     <div class="hero-section">
       <div class="hero-image">
-        <img src="/images/The_back_o_the_tail_to_ya.png" alt="Arielle the macaw" />
+        <img
+          src="/images/The_back_o_the_tail_to_ya.png"
+          alt="Arielle the blue-and-gold macaw, a parrot who demonstrates advanced cognitive speech abilities"
+          width="500"
+          height="auto"
+          loading="lazy"
+          decoding="async"
+        />
         <span class="photo-credit">Photo by Linda Carpenter</span>
       </div>
     </div>
 
-    <section class="intro-section">
+    <section class="intro-section" aria-label="About ParrotSpeech.org">
       <p class="intro-text">
         This site describes aspects of cognitive speech by a macaw called Arielle. Arielle is the first contemporary
         bird demonstrating that a parrot possesses advanced linguistic abilities.
@@ -57,7 +87,7 @@ const description =
     </div>
 
     <div class="content-grid">
-      <aside class="sidebar">
+      <aside class="sidebar" aria-label="Contact questions and email">
         <div class="qa-section">
           <div class="qa-item">
             <p class="question">Do you share my interest in talking birds?</p>
@@ -93,7 +123,7 @@ const description =
             <p class="question">
               Send your e-mail message to the address below for communications and/or to request a call by telephone.
             </p>
-            <a href="mailto:ParrotSpeech@Yahoo.com">ParrotSpeech@Yahoo.com</a>
+            <a href="mailto:ParrotSpeech@Yahoo.com" aria-label="Send email to ParrotSpeech at Yahoo dot com">ParrotSpeech@Yahoo.com</a>
           </div>
         </div>
       </aside>
@@ -158,9 +188,9 @@ const description =
       </main>
     </div>
 
-    <section class="contact-cta">
+    <section class="contact-cta" aria-label="Contact call to action">
       <h2>Contact Arielle or Mike, we love to get mail or questions about birds!</h2>
-      <p class="email-cta">Respond to <a href="mailto:ParrotSpeech@Yahoo.com">ParrotSpeech@Yahoo.com</a></p>
+      <p class="email-cta">Respond to <a href="mailto:ParrotSpeech@Yahoo.com" aria-label="Email ParrotSpeech at Yahoo dot com">ParrotSpeech@Yahoo.com</a></p>
 
       <p class="contact-note">
         Use the e-mail address above to send a message.<br />

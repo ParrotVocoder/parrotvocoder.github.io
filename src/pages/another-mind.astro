@@ -58,27 +58,59 @@ const audioTracks = [
   },
   { page: "196", location: "9May'01", type: "Phrase", file: "/files/Track_Z.wav", track: "Track Z" },
 ]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: "Another Kind of Mind: A Talking Bird Masters English",
+  description: description,
+  image: "/images/Arielle_s_Head_Pict_50_for_web_page.png",
+  numberOfPages: 288,
+  bookFormat: "https://schema.org/Hardcover",
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    price: "24.95",
+    priceCurrency: "USD",
+    seller: {
+      "@type": "Organization",
+      name: "Arielle Publishing",
+    },
+  },
+}
 ---
 
 <BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
   <Navigation slot="navigation" currentPage="book" />
 
-  <article>
+  <article itemscope itemtype="https://schema.org/Book">
     <Breadcrumb currentPage="Another Mind (Book)" />
 
     <header class="page-header">
-      <h1>Another Kind of Mind:</h1>
+      <h1 itemprop="name">Another Kind of Mind:</h1>
       <h2>A Talking Bird Masters English</h2>
     </header>
 
-    <section class="hero-section">
+    <section class="hero-section" aria-label="Book cover portrait">
       <div class="hero-image">
-        <img src="/images/Arielle_s_Head_Pict_50_for_web_page.png" alt="Arielle's portrait" />
+        <img
+          src="/images/Arielle_s_Head_Pict_50_for_web_page.png"
+          alt="Arielle the macaw — cover portrait for Another Kind of Mind"
+          width="700"
+          height="700"
+          loading="eager"
+          fetchpriority="high"
+          itemprop="image"
+        />
         <span class="photo-credit">© Michael Dalton</span>
       </div>
     </section>
 
-    <section class="intro-section">
+    <section class="intro-section" aria-label="Book introduction">
       <p>
         Arielle speaks freely and through the words she has learned, she assembles coherent combinations of sentences,
         which represent her thoughts. She is the first macaw to reveal such a linguistic ability through her free
@@ -92,7 +124,7 @@ const audioTracks = [
       </p>
     </section>
 
-    <section class="radio-interview">
+    <section class="radio-interview" aria-label="Podcast interview">
       <!-- <p><strong>Click on the following link to listen to a radio interview about the book,</strong></p> -->
       <!-- <a href="/files/Book_Interview_WTAN_comp_18Oct2012.mp3" target="_blank">
           <em>Another Kind of Mind: A Talking Bird Masters English</em>
@@ -108,10 +140,11 @@ const audioTracks = [
         frameborder="0"
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"></iframe>
+        loading="lazy"
+        title="Another Kind of Mind — Spotify podcast interview"></iframe>
     </section>
 
-    <section class="order-section">
+    <section class="order-section" aria-label="Order the book">
       <h3>Order Your Copy</h3>
       <!-- <p>
         To order a signed copy of <em>Another Kind of Mind</em> (288-page hardcover), send a check 
@@ -120,9 +153,9 @@ const audioTracks = [
       </p> -->
       <p>
         To order a signed copy of Another Kind of Mind (288-page hardcover), contact the author at the site's e-mail
-        address <a href="mailto:ParrotSpeech@Yahoo.com">ParrotSpeech@Yahoo.com</a> . If an inscription is desired be sure to
-        clearly specify the name for the inscription and any special dedication you dessire. (The book is available for resale,
-        contact us for volume pricing.)
+        address <a href="mailto:ParrotSpeech@Yahoo.com">ParrotSpeech@Yahoo.com</a> . If an inscription is desired be sure
+        to clearly specify the name for the inscription and any special dedication you dessire. (The book is available for
+        resale, contact us for volume pricing.)
       </p>
       <!-- <p class="florida-price">In Florida the price is $31.65 including state sales tax and shipping.</p>
       <p>
@@ -133,7 +166,7 @@ const audioTracks = [
         ** <u>Be sure to clearly specify an inscription if one is desired</u>.
       </p> -->
       <p>
-        <a href="/files/AKOM_Press_Release.pdf" target="_blank" class="btn">
+        <a href="/files/AKOM_Press_Release.pdf" target="_blank" rel="noopener noreferrer" class="btn">
           Click here to read a press release about the book
         </a>
       </p>
@@ -154,11 +187,11 @@ const audioTracks = [
 
     <hr />
 
-    <section class="book-title-section">
-      <h2>Another Kind of Mind: A Talking Bird Masters English</h2>
+    <section class="book-title-section" aria-labelledby="book-title-heading">
+      <h2 id="book-title-heading" itemprop="name">Another Kind of Mind: A Talking Bird Masters English</h2>
     </section>
 
-    <section class="about-book">
+    <section class="about-book" aria-label="About the book" itemprop="description">
       <p>
         What animal speaks using coherent language that is understandable by man? A talking bird called Arielle does.
         The interspecies barrier broke when Arielle began to communicate by volunteering information through English
@@ -207,20 +240,23 @@ const audioTracks = [
       </p>
     </section>
 
-    <section class="audio-section">
-      <h2>Sound clips supporting the text for</h2>
+    <section class="audio-section" aria-labelledby="audio-section-heading">
+      <h2 id="audio-section-heading">Sound clips supporting the text for</h2>
       <h3>Another Kind of Mind: A Talking Bird Masters English</h3>
 
       <div class="audio-content">
         <div class="audio-table-wrapper">
           <table class="audio-table">
+            <caption class="visually-hidden">
+              Audio recordings by Arielle the macaw, with page references from the book
+            </caption>
             <thead>
               <tr>
-                <th>Page</th>
-                <th>Location</th>
-                <th>Type</th>
-                <th>Audio Player</th>
-                <th>Track</th>
+                <th scope="col">Page</th>
+                <th scope="col">Location</th>
+                <th scope="col">Type</th>
+                <th scope="col">Audio Player</th>
+                <th scope="col">Track</th>
               </tr>
             </thead>
             <tbody>
@@ -231,12 +267,12 @@ const audioTracks = [
                     <td>{track.location}</td>
                     <td>{track.type}</td>
                     <td>
-                      <audio controls>
+                      <audio controls aria-label={`${track.track} — ${track.type}`}>
                         <source src={track.file} type="audio/wav" />
                       </audio>
                     </td>
                     <td>
-                      <a href={track.file} target="_blank">
+                      <a href={track.file} target="_blank" rel="noopener noreferrer">
                         {track.track}
                       </a>
                     </td>
@@ -248,7 +284,7 @@ const audioTracks = [
           <p class="copyright-notice">All materials are protected under copyright laws.</p>
         </div>
 
-        <aside class="listening-tips">
+        <aside class="listening-tips" aria-label="Tips for listening to Arielle's audio clips">
           <h4>Suggestions for listening to Arielle's speech samples</h4>
           <p>
             Good isolating headphones offer superior listening to the speech samples because room acoustics are
@@ -273,17 +309,23 @@ const audioTracks = [
       </div>
     </section>
 
-    <section class="photo-section">
+    <section class="photo-section" aria-label="Photo of Arielle hanging upside down">
       <div class="hanging-around">
         <div class="image-container">
-          <img src="/images/Arielle_hanging_up-side_down.png" alt="Arielle hanging upside down" />
+          <img
+            src="/images/Arielle_hanging_up-side_down.png"
+            alt="Arielle the macaw hanging upside down on her perch"
+            width="508"
+            height="400"
+            loading="lazy"
+          />
           <p class="photo-credit">Photo by Linda Carpenter</p>
         </div>
         <p class="image-caption">Just hanging around</p>
       </div>
     </section>
 
-    <section class="events-section">
+    <section class="events-section" aria-label="Book events and appearances">
       <p>
         Information about appearances, presentations, events to "meet the author" and attend a book signing for <em
           >Another Kind of Mind: A Talking Bird Masters English</em
@@ -294,10 +336,16 @@ const audioTracks = [
       </p> -->
     </section>
 
-    <section class="mug-section">
+    <section class="mug-section" aria-label="Limited edition Arielle mugs">
       <div class="mug-content">
         <div class="mug-image">
-          <img src="/images/parrotmugpreviewfinal022508.png" alt="Limited Edition Arielle Mug" />
+          <img
+            src="/images/parrotmugpreviewfinal022508.png"
+            alt="Limited edition ceramic mug featuring Arielle the macaw"
+            width="300"
+            height="300"
+            loading="lazy"
+          />
         </div>
         <div class="mug-details">
           <h3>Limited Edition Mugs</h3>
@@ -317,6 +365,18 @@ const audioTracks = [
 </BaseLayout>
 
 <style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .hero-section {
     text-align: center;
     /* margin-bottom: 30px; */
@@ -656,7 +716,6 @@ const audioTracks = [
     }
   }
 
-  .hanging-around{
-    
+  .hanging-around {
   }
 </style>

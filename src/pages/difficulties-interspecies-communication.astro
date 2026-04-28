@@ -7,12 +7,18 @@ import AudioPlayer from "../components/AudioPlayer.astro"
 import HighlightBox from "../components/HighlightBox.astro"
 import NoticeSection from "../components/NoticeSection.astro"
 
-const title = "Words and Sound: Difficulties with Interspecies Communication"
+const title = "Interspecies Communication: Difficulties Understanding Talking Bird Speech"
 const description =
-  "Understanding the challenges of speech as a means for interspecies communication with talking birds."
+  "Explore the key challenges of understanding parrot and talking bird speech, from vocal differences and intonation to listener inexperience—plus tips for building a bird vocabulary list."
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage="/images/Climbing_onto_my_shoulder.png"
+  ogType="article"
+>
   <Navigation slot="navigation" currentPage="difficulties" />
 
   <article>
@@ -25,7 +31,14 @@ const description =
     <section class="hero-image-block">
       <div class="image-wrapper">
         <div class="image-container">
-          <img src="/images/Climbing_onto_my_shoulder.png" alt="Arielle climbing onto shoulder" />
+          <img
+            src="/images/Climbing_onto_my_shoulder.png"
+            alt="Arielle the macaw climbing onto her owner's shoulder during an interspecies communication session"
+            width="640"
+            height="480"
+            loading="eager"
+            decoding="async"
+          />
           <span class="photo-credit">Photo by Linda Carpenter</span>
         </div>
       </div>
@@ -72,7 +85,7 @@ const description =
         </div>
 
         <section class="vocabulary-section">
-          <h2>Make a Vocabulary List</h2>
+          <h2>Make a Parrot Vocabulary List</h2>
 
           <p>
             Most pet bird owners do not keep track of words spoken by their birds. Without notes, it is almost
@@ -129,7 +142,7 @@ const description =
 
       <!-- Right Column - Main Content -->
       <section class="main-content">
-        <h2 class="section-title">Interspecies Communication</h2>
+        <h2 class="section-title">Interspecies Communication with Talking Birds</h2>
 
         <p>
           There are several problems in receiving messages from a talking bird. Part of the problem is reflected by a
@@ -204,7 +217,7 @@ const description =
           sometimes very opinionated, creature could be as near as the parrot on one's shoulder.
         </p>
 
-        <h3>Got a problem?</h3>
+        <h3>Need Help Decoding Your Bird's Speech?</h3>
 
         <p>
           Are there portions of your bird's speech that you do not understand? I will try to assist in determining a
