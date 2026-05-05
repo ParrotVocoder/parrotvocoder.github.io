@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
+
+const title = "404 Not Found"
+const description = "The requested page could not be found on ParrotSpeech.org."
+---
+
+<BaseLayout title={title} description={description} noindex={true}>
+  <Navigation slot="navigation" currentPage="404" />
+
+  <article>
+    <header class="page-header">
+      <h1>404 — Page Not Found</h1>
+      <h2>Sorry — the page you requested could not be found.</h2>
+    </header>
+
+    <section class="content-section">
+      <p>
+        The URL you requested does not match any page on this site. Please check the address for errors or try one
+        of the links below.
+      </p>
+
+      <ul>
+        <li><a href="/">Return to the home page</a></li>
+        <li><a href="/sitemap.xml">View the sitemap</a></li>
+        <li><a href="/contact/">Contact us for help</a></li>
+      </ul>
+    </section>
+  </article>
+
+  <Footer />
+</BaseLayout>
